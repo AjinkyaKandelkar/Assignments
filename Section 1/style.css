@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+h1
+{
+    color: black;
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 52px;
+    letter-spacing: 1.3px;
+    line-height: 58px;     
+}
+header
+{
+    background-color: #2E94CC;
+    text-align: center;
+    color: white;
+    /* margin-top: 25px; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    line-height: 30px;
+}
+.uppercase
+{
+    text-transform: uppercase;
+}
+article
+{
+    max-width: 850px;
+    margin: auto;
+    padding: 8px;
+    padding-top: 70px;
+}
+.post-auth
+{
+    color: #6c6c6c;
+    font-size: 12px;
+    line-height: 18px;
+}
+.share-post, 
+.link-title
+{
+    font-size: 12px;
+    font-weight: 600px;
+    line-height:22px;
+}
+.shareipost span
+{
+    margin-right: 4px;
+}
+.share-post img
+{
+    vertical-align: middle;
+}
+.link-title
+{
+    margin-bottom: 12px;
+}
+
+.work-img
+{
+    margin: 50px 0px;
+}
+.work-img img
+{
+    max-width: 100%;
+}
+#title-sec
+{
+    margin-bottom: 50px;
+}
+.contenct-sec
+{
+    max-width: 680px;
+    margin: auto;
+}
+iframe{
+    margin: 50px 0px;
+    max-width: 100%;
+}
+footer
+{
+    background-color: #f1f1f1;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px 15px;
+}
+footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+footer ul li{
+    margin-bottom: 12px;
+}
+footer ul li:last-of-type
+{
+    margin-bottom: 0;
+}
+article p
+{
+    font-size: 16px;
+    line-height: 24px;
+}
+a{
+    color: #2e94cc;
+}
