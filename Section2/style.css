@@ -2,7 +2,7 @@ body
 {
     font-family: 'Heebo', sans-serif ;
     margin: 0;
-    min-height: 3000px;
+    
     padding-top: 80px;
 }
 .uppercase
@@ -181,6 +181,31 @@ section.best-sellers .product-slider .product
     text-align: center;
     margin: 0 8px;
     padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.best-sellers .product-slider .product img
+{
+    max-width: 100%;
+} 
+section.best-sellers .product-slider .product.new::before 
+{
+   content: "NEW";
+   background-color: red; 
+   position: absolute;
+   top: 12px;
+   right:12px; 
+   color: #FFF;
+   font-size: 14px;
+   font-weight: 700;
+   letter-spacing: 0.35px;
+   line-height: 21px;
+   text-align: center;
+   padding: 4px 17px; 
+   border-radius: 40px;
+   background-color: #EC1C1C;
 }
 section.best-sellers .product-slider .product  .product-info
 {
@@ -188,9 +213,162 @@ section.best-sellers .product-slider .product  .product-info
 }
 section.best-sellers .product-slider .product  .product-info .categories
 {
-    color: #3E50E5;
-  font-family: Heebo;
-  font-size: 14px;
-  letter-spacing: 0.35px;
-  line-height: 30px;
+        color: #3E50E5;
+        font-family: Heebo;
+        font-size: 14px;
+        letter-spacing: 0.35px;
+        line-height: 30px;
+        margin-bottom: 8px;
+        margin-top: 0;
+        text-align: center;
+}
+section.best-sellers .product-slider .product  .product-info .title
+{
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        line-height: 26px;
+        margin-bottom: 6px;
+        font-weight: normal;
+        margin-top: 0;
+}
+section.best-sellers .product-slider .product  .product-info .price
+{
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 0.7px;
+        line-height: 30px;
+        margin-bottom: 16px;
+        margin-top:0;       
+}
+section.best-sellers .product-slider .product  .product-info .price .discount-price
+{
+    color: #EC1C1C;
+
+}
+section.best-sellers .product-slider .product  .product-info .price .original-price
+{
+    color: #9B9B9B;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    line-height: 30px;
+    text-decoration: line-through;
+}
+section.best-sellers .product-slider .product  .product-info button
+{
+    height: 50px;
+    width: 219.5px;
+    border-radius: 220px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: white;
+}
+section.newsletter
+{
+    background-color: rgba(200,200,200,0.18);
+    max-width: 955px;
+    text-align: center;
+    padding: 72px 0;
+    margin: 80px auto;
+}
+section.newsletter h3
+{
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.6px;
+    line-height: 42px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+section.newsletter p{
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 42px;
+    margin-bottom: 20px;
+}
+section.newsletter form
+{
+    display: flex;
+    justify-content: center;
+}
+section.newsletter input
+{
+    height: 50px;
+    width: 326px;
+    box-sizing: border-box;
+    border-radius: 60px 0 0 60px;
+    border: 1px solid #3E3E3E;
+    padding-left: 22px;
+}
+section.newsletter button
+{
+    max-width: 20%;
+    width: 145px;
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 0 60px 60px 0;
+    background-color: #3E50E5;
+    border: 1px solid #3E50E5;
+    box-sizing: border-box;
+}
+
+
+footer .bottom-nav
+{
+    padding: 60px 0;
+    background-color: #3E3E3E;
+}
+
+footer .bottom-nav .container
+{
+    max-width: 955px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .bottom-nav ul
+{
+    list-style: none;
+    
+}
+footer .bottom-nav ul .list
+{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+footer .bottom-nav ul li a
+{
+   color:  #E0E0E0;
+   font-size: 16px;
+   letter-spacing: 0.4px;
+   line-height: 22px;
+   margin-top: 0 ;
+   margin-bottom: 10px;
+   text-decoration: none;
+   display: block;
+   
+}
+footer .copyright
+{
+    background-color: #2B2B2B;
+    color: #E0E0E0;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
