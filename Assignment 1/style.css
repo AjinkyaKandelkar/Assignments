@@ -1,0 +1,13 @@
+header nav
+{
+    display: inline-block;
+    float: right;
+
+}
+
+#image
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
