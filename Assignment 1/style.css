@@ -1,13 +1,28 @@
-header nav
+header
 {
-    display: inline-block;
-    float: right;
-
+    font-size: 40px;
+    background-color: #2E94CC;
+    color: white;
+    text-align: center;
 }
-
+h1
+{
+    text-align: center;
+}
+div
+{
+    text-align: center;
+}
+span
+{
+    font-weight: bold;
+}
 #image
 {
-    display: flex;
-    position: relative;
-    justify-content: center;
+    height:316px;
+    width:220px;
+}
+li
+{
+    font-size: 15px;
 }
