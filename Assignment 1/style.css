@@ -1,21 +1,11 @@
-body
-{
-    background-color: gainsboro;
-}
-header
-{
-    font-size: 40px;
-    background-color: #2E94CC;
-    color: white;
-    text-align: center;
-}
 h1
 {
     text-align: center;
 }
-div
+#img-div
 {
     text-align: center;
+    width: 100%;
 }
 span
 {
@@ -23,21 +13,51 @@ span
 }
 #image
 {
-    height:316px;
-    width:220px;
+    width: 1080px;
     position: relative;
     border: 8px solid #555
+}
+@media (max-width: 460px)
+{
+    #image
+    {
+        width: 50%;
+        position: relative;
+        border: 8px solid #555
+    }
+    #img-caption 
+    {
+      font-size: 1.4rem;
+    }
 }
 li
 {
     font-size: 17px;
     margin-bottom: 15px;
+    text-align: left;
 }
-.line
-{
-    font-style: italic;
-}
+
 #tribute-link
 {
+    font-size: large;
+}
+#img-caption
+{
+    font-size: 17px;
+    font-weight: normal;
+}
+#tribute-info 
+{
+   
+   padding-top: 20px;
+   background-color: wheat;
+   margin: 0 15% ;
+}
+.content{
+    padding: 5% 20%;
+}
+footer
+{
+    padding: 0 20%;
     font-size: large;
 }

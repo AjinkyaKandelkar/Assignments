@@ -1,0 +1,11 @@
+header
+{
+    background-image: url("Images/design.jpg");
+    
+    text-align: center;
+    height: 70px;
+    padding-top: 50px;
+    font-size: x-large;
+    font-weight: bold;
+    color: #fff;
+}

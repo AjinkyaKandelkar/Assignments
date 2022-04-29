@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assignment 2/style.css">
+    <title>Survey Form</title>
+    <header>
+        <nav id="title">
+            Gaming Survey
+        </nav>
+    </header>
+</head>
+<body>
+    <div class="main">
+            <p id="description" >
+                This is survey for gamers. It will be used to collect see how many gamers are india. and which games they like most to play.
+            </p>
+            <form id="survey-form" action="#">
+                
+                <label for="name"   id="name-label">   Name   </label> 
+                    <input id="name"  type="text" placeholder="John">
+                <label for="email"  id="email-label">  E-mail </label> 
+                    <input id="email" type="email" placeholder="@gmail.com">
+                <label for="number" id="number-label"> Age  </label> 
+                    <input id="number" type="number" placeholder="20"> <br>
+                
+                
+
+                <span>Gender </span>  
+                <input type="radio" name="gender" value="Male"> Male 
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other
+                
+                <span>State </span> &nbsp; 
+                <select name="City" id="dropdown">     
+                    <option value="Maharashtra"> -Select state- </option>
+                    <option value="Maharashtra"> Maharashtra  </option>
+                    <option value="Madhyapradesh"> Madhyapradesh</option>
+                    <option value="Utterpradesh"> Utterpradesh </option>
+                    <option value="Rajastan"> Rajastan</option>
+                    <option value="Andrpradesh"> Andrpradesh</option>
+                </select> 
+                <br>
+                <span> Which type of Games have you played recently ? </span>
+                <br>
+                <input type="checkbox" value="Arcade">
+                <label for="game"> Arcade </label>
+                <input type="checkbox" value="Action">
+                <label for="game"> Action </label>
+                <input type="checkbox" value="Puzzle">
+                <label for="game"> Puzzle </label>
+                <input type="checkbox" value="Advendture">
+                <label for="game"> Advendture</label> 
+                <br>
+
+                <span>Describe about recentgame you played</span>
+                <br>
+                <textarea name="Description" id="des" cols="30" rows="10">  </textarea>
+
+            </form>
+    </div>
+    
+</body>
+</html>
