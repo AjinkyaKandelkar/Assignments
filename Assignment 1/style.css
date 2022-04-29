@@ -1,3 +1,7 @@
+body
+{
+    background-color: gainsboro;
+}
 header
 {
     font-size: 40px;
@@ -21,8 +25,19 @@ span
 {
     height:316px;
     width:220px;
+    position: relative;
+    border: 8px solid #555
 }
 li
 {
-    font-size: 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.line
+{
+    font-style: italic;
+}
+#tribute-link
+{
+    font-size: large;
 }
