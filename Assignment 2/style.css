@@ -1,11 +1,36 @@
-header
+body
 {
-    background-image: url("Images/design.jpg");
-    
+    color: white;
+}
+.main
+{
+    margin: 0 17%;
+    padding: 5%;
+    background-color: rgb(0,0,128);
+}
+h1
+{
     text-align: center;
-    height: 70px;
-    padding-top: 50px;
-    font-size: x-large;
-    font-weight: bold;
-    color: #fff;
+}
+#name,#email,#number
+{
+    width: 90%;
+}
+select,textarea
+{
+    width: 91%; 
+    
+}
+.int
+{
+    margin-top: 100px;
+}
+button
+{
+    width: 92%;
+    color: white;
+    background-color: green;
+}
+i{
+    color: red;
 }
