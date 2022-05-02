@@ -6,19 +6,9 @@ body
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.5;
 }
-.navbar-head 
-{
-    
-    padding-top: 2%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #4d4e53;
-    color: aliceblue;
-}
 #navbar
 {
-    position: fixed;
+       
     min-width: 290px;
     top: 0px;
     left: 0px;
@@ -54,11 +44,18 @@ body
 #main-doc 
 {
     position: absolute;
-    padding-top: 3%;
-    margin-left: 320px;
 }
 header
 {
     font-size: xx-large;
     color: black;
+}
+.fix-cols
+{
+    position: fixed;
+}
+
+.scrollcolumn{
+    margin-left: 340px;
+    
 }

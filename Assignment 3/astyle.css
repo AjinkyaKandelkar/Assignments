@@ -6,22 +6,24 @@ body
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.5;
 }
-.navbar
+.navbar1
 {
     
     padding-top: 2%;
     width: 100%;
+    
     position: sticky;
     top: 0;
     background-color: red;
     color: aliceblue;
 }
-#navbar
+#navbar 
 {
     position: fixed;
     min-width: 290px;
-    top: 0px;
+    
     left: 0px;
+    margin-top: 0%;
     width: 300px;
     height: 100%;
     border-right: solid;
