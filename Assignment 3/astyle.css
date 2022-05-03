@@ -69,3 +69,11 @@ img{
     width: 20px;
     color: white;
 }
+#bot-nav
+{
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

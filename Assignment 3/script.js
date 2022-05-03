@@ -77,3 +77,38 @@ function redirects()
     }
     
 }
+flag=true
+function hinav()
+{
+   
+
+    if(flag)
+    {
+        document.getElementById('bot-nav').style.display='flex'
+        flag=false;
+    }
+    else
+    {
+        document.getElementById('bot-nav').style.display='none'
+        flag=true; 
+    }   
+}
+var i=1;
+function zo_btun(num)
+{
+   
+    
+    if(num==1)
+    {
+        console.log((i++)*100)
+        document.getElementById("main-doc").style.zoom=((i++)*100)+"%"
+    }
+    else if(num==0.5)
+    {
+        document.getElementById("main-doc").style.zoom=((i--)*100)+"%"
+    }
+    else
+    {
+        document.getElementById("main-doc").style.zoom="150%"
+    }
+}

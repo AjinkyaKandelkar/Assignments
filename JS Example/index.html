@@ -20,54 +20,25 @@
 
     <title>Document</title>
     <script src="/Assignments/JS Example/script.js"></script>
+    <link rel="stylesheet" href="/Assignments/JS Example/style.css">
 </head>
 
 <body>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Sign Up</h4>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body mx-3">
+    <footer>
+        <ul class="nav bg-warning justify-content-center" id="bot-nav">
+            <li class="nav-item"><a href="#" class="nav-link active">1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">3</a></li>
+        </ul>
+    </footer>
 
-                    <div id="myform" class="md-form mb-5">
-                        <label data-error="wrong" data-success="right" for="defaultForm-name">Name </label>
-                        <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="text" id="defaultForm-name" class="form-control validate">
-                    </div>
-                    <div class="md-form mb-5">
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-                        <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="text" id="defaultForm-email" class="form-control validate">
-                    </div>
 
-                    <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                        <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="password" id="defaultForm-pass1" class="form-control validate">
-                    </div>
-                    <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Repeat password</label>
-                        <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="password" id="defaultForm-pass2" class="form-control validate">
-                    </div>
-
-                </div>
-                <div class="modal-footer d-flex justify-content-between">
-                    <button class="btn btn-danger"  onclick="cleasrs()"> cancel</button>
-                    <button class="btn btn-primary" onclick="ValidateEmail(event)">Sign Up</button>
-                </div>
-            </div>
-        </div>
+    <div class="text-center mt-5">
+        <button class="btn btn-primary" onclick="hinav()">
+            Change View
+        </button>
     </div>
-    <div class="container"></div>
-    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</button>
 </body>
 
 </html>
