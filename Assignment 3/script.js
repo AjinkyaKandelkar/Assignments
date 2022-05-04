@@ -76,23 +76,26 @@ function redirects()
     {   alert("You have entered an invalid email address!")
     }
     
+    var pass=document.getElementById("l-pass").value
+    if(pass=="")
+    {
+        alert('Password is Empty !!')
+    }
 }
-flag=true
+
 function hinav()
 {
-   
-
-    if(flag)
-    {
+        document.getElementById('top-nav').style.display='none'
         document.getElementById('bot-nav').style.display='flex'
-        flag=false;
-    }
-    else
-    {
-        document.getElementById('bot-nav').style.display='none'
-        flag=true; 
-    }   
+        document.getElementById('head-nav').style.display='flex'  
 }
+function close_hinav()
+{
+    document.getElementById('top-nav').style.display='flex'
+    document.getElementById('bot-nav').style.display='none'
+    document.getElementById('head-nav').style.display='none'   
+}
+
 var i=1;
 function zo_btun(num)
 { 
@@ -113,4 +116,9 @@ function zo_btun(num)
     {
         document.getElementById("main-doc").style.zoom="100%"
     }
+}
+function clear_mail_pass()
+{
+    document.getElementById("l-email").value=''
+    document.getElementById("l-pass").value=''   
 }

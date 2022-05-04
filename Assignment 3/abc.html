@@ -27,37 +27,43 @@
         aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-header text-center">
+                <div class="modal-header border-0">
                     <h4 class="modal-title w-100 font-weight-bold">Sign Up</h4>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clear_all()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body mx-3">
-                    <div id="myform" class="md-form mb-5">
-                        <label data-error="wrong" data-success="right" for="defaultForm-name">Name </label>
+                    <div id="myform" class="md-form mb-4 ">
+                        <label  class="font-weight-normal" data-error="wrong" data-success="right" for="defaultForm-name"> <b>Name </b></label>
                         <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="text" id="defaultForm-name" class="form-control validate">
+                        <input type="text" id="defaultForm-name" class="form-control validate" placeholder="ex. John">
                     </div>
-                    <div class="md-form mb-5">
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                    <div class="md-form mb-4">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email"> <b>Your email </b></label>
                         <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="@google.com">
                     </div>
 
                     <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass"> <b>Your password </b></label>
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="password" id="defaultForm-pass1" class="form-control validate">
+                        <input type="password" id="defaultForm-pass1" class="form-control validate" placeholder="password">
                     </div>
                     <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Repeat password</label>
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass"><b> Repeat password </b></label>
                         <i class="fas fa-lock prefix grey-text"></i>
                         <input type="password" id="defaultForm-pass2" class="form-control validate">
                     </div>
-
+                    <div class="md-form mb-4">
+                        <input type="checkbox" id="rem-me">
+                        <label for=" rem-me">Remember Me </label> 
+                    </div>
+                    <div class="md-form mb-4">
+                        <label for="tc"> By clicking on Signup you are agreed to our <a href="https://www.websitepolicies.com/blog/sample-terms-conditions-template"> Terms and conditions </a></label> 
+                    </div>
                 </div>
-                <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer border-0 d-flex justify-content-md-start">
                     <button class="btn btn-danger" onclick="clear_all()"> cancel</button>
                     <button class="btn btn-primary" onclick="ValidateEmail(event)">Sign Up</button>
                 </div>
@@ -67,14 +73,13 @@
     <!-- End of Signup Model-->
 
     <!-- Start of Login Model-->
-    <!-- Modal -->
     <div class="modal fade" id="login-model" tabindex="-1" role="dialog" aria-labelledby="login-model"
         aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-header text-center">
+                <div class="modal-header border-0">
                     <h4 class="modal-title w-100 font-weight-bold">Login</h4>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clear_mail_pass()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -82,19 +87,20 @@
 
 
                     <div class="md-form mb-5">
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                        <label data-error="wrong" data-success="right" for="defaultForm-email"><b> Your email </b></label>
                         <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="text" id="l-email" class="form-control validate">
+                        <input type="text" id="l-email" class="form-control validate" placeholder="@waiin.com">
                     </div>
 
                     <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass"><b> Your password</b></label>
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="password" id="l-pass" class="form-control validate">
+                        <input type="password" id="l-pass" class="form-control validate" placeholder="*****">
                     </div>
 
                 </div>
-                <div class="modal-footer d-flex justify-content-center">
+                <div class="modal-footer border-0 d-flex justify-content-md-start">
+                    <button class="btn btn-danger" onclick="clear_mail_pass()"> cancel</button>
                     <button class="btn btn-primary" onclick="redirects()">Login</button>
                 </div>
             </div>
@@ -103,11 +109,11 @@
 
     <!-- End of Login Model-->
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="top-nav">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Technical Documentation Page</a>
-            <!--
-            <span class="badge bg-info">+follow</span> -->
+            <a class="navbar-brand" href="#">Technical Documentation Page 
+                <!-- <p class="text-muted fs-6"> waiin Technologies <span class="badge bg-info">+follow</span> </p>   -->
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -175,7 +181,7 @@
             <div class="col-9 scrollcolumn">
                 <main id="main-doc">
                     <section class="main-section" id="Introduction">
-                        <header>Introduction</header>
+                        <header id="head-t">Introduction</header>
                         <article>
                             <p>
                                 JavaScript is a cross-platform, object-oriented scripting language. It
@@ -210,7 +216,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="What_you_should_already_know">
-                        <header>What you should already know</header>
+                        <header id="head-t">What you should already know</header>
                         <article>
                             <p>This guide assumes you have the following basic background:</p>
 
@@ -227,7 +233,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="JavaScript_and_Java">
-                        <header>JavaScript and Java</header>
+                        <header id="head-t">JavaScript and Java</header>
                         <article>
                             <p>
                                 JavaScript and Java are similar in some ways but fundamentally different
@@ -259,7 +265,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Hello_world">
-                        <header>Hello world</header>
+                        <header id="head-t">Hello world</header>
                         <article>
                             To get started with writing JavaScript, open the Scratchpad and write your
                             first "Hello world" JavaScript code:
@@ -272,7 +278,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Variables">
-                        <header>Variables</header>
+                        <header id="head-t">Variables</header>
                         <p>
                             You use variables as symbolic names for values in your application. The
                             names of variables, called identifiers, conform to certain rules.
@@ -291,7 +297,7 @@
                         </p>
                     </section>
                     <section class="main-section" id="Declaring_variables">
-                        <header>Declaring variables</header>
+                        <header id="head-t">Declaring variables</header>
                         <article>
                             You can declare a variable in three ways:
                             <p>
@@ -311,7 +317,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Variable_scope">
-                        <header>Variable scope</header>
+                        <header id="head-t">Variable scope</header>
                         <article>
                             <p>
                                 When you declare a variable outside of any function, it is called a
@@ -340,7 +346,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Global_variables">
-                        <header>Global variables</header>
+                        <header id="head-t">Global variables</header>
                         <article>
                             <p>
                                 Global variables are in fact properties of the global object. In web
@@ -358,7 +364,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Constants">
-                        <header>Constants</header>
+                        <header id="head-t">Constants</header>
                         <article>
                             <p>
                                 You can create a read-only, named constant with the const keyword. The
@@ -393,7 +399,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Data_types">
-                        <header>Data types</header>
+                        <header id="head-t">Data types</header>
                         <article>
                             <p>The latest ECMAScript standard defines seven data types:</p>
                             <ul>
@@ -426,7 +432,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="if...else_statement">
-                        <header>if...else statement</header>
+                        <header id="head-t">if...else statement</header>
                         <article>
                             Use the if statement to execute a statement if a logical condition is
                             true. Use the optional else clause to execute a statement if the condition
@@ -465,7 +471,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="while_statement">
-                        <header>while statement</header>
+                        <header id="head-t">while statement</header>
                         <article>
                             A while statement executes its statements as long as a specified condition
                             evaluates to true. A while statement looks as follows:
@@ -508,7 +514,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Function_declarations">
-                        <header>Function declarations</header>
+                        <header id="head-t">Function declarations</header>
                         <article>
                             A function definition (also called a function declaration, or function
                             statement) consists of the function keyword, followed by:
@@ -545,7 +551,7 @@
                         </article>
                     </section>
                     <section class="main-section" id="Reference">
-                        <header>Reference</header>
+                        <header id="head-t">Reference</header>
                         <article>
                             <ul>
                                 <li>
@@ -569,7 +575,13 @@
             <li class="nav-item"><button class=" btn btn-secondary" onclick=" zo_btun(100)"> Reset</button></li>
         </ul>
     </footer>
-
+    <div>
+        <ul class="nav nav-dark bg-dark justify-content-end" id="head-nav">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="close_hinav()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </ul>
+    </div>
 
 </body>
 <!-- This is Modal-->
