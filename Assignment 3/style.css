@@ -110,10 +110,6 @@ div #head-nav button
     {
         padding-top: 3%;
     }    
-    #main-doc
-    {
-        background-color: yellow;
-    }
 }
 @media screen and (max-width:960px) {
     
@@ -128,6 +124,5 @@ div #head-nav button
     {
         padding-top: 5%;
     }
-
 }
 
