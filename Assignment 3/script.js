@@ -95,9 +95,7 @@ function hinav()
 }
 var i=1;
 function zo_btun(num)
-{
-   
-    
+{ 
     if(num==1)
     {
         console.log((i++)*100)
@@ -107,8 +105,12 @@ function zo_btun(num)
     {
         document.getElementById("main-doc").style.zoom=((i--)*100)+"%"
     }
-    else
+    else if(num==0.25)
     {
         document.getElementById("main-doc").style.zoom="150%"
+    }
+    else
+    {
+        document.getElementById("main-doc").style.zoom="100%"
     }
 }
