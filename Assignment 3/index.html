@@ -18,10 +18,6 @@
 
 
     <script src="/Assignments/Assignment 3/script.js"></script>
-
-
-
-
 </head>
 
 <body>
@@ -76,7 +72,8 @@
                     </div>
                 </div>
                 <div class="modal-footer border-0 d-flex justify-content-md-start">
-                    <button class="btn btn-danger" onclick="clear_all()" class="close" data-bs-dismiss="modal"> cancel</button>
+                    <button class="btn btn-danger" onclick="clear_all()" class="close" data-bs-dismiss="modal">
+                        cancel</button>
                     <button class="btn btn-primary" onclick="ValidateEmail(event)">Sign Up</button>
                 </div>
             </div>
@@ -115,7 +112,8 @@
 
                 </div>
                 <div class="modal-footer border-0 d-flex justify-content-md-start">
-                    <button class="btn btn-danger" onclick="clear_mail_pass()" class="close" data-bs-dismiss="modal"> cancel</button>
+                    <button class="btn btn-danger" onclick="clear_mail_pass()" class="close" data-bs-dismiss="modal">
+                        cancel</button>
                     <button class="btn btn-primary" onclick="redirects()">Login</button>
                 </div>
             </div>
@@ -137,119 +135,81 @@
 
             <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <button class="btn btn-outline-secondary heart">
-                            <img src="/Assignments/Assignment 3/Images/love_small.png" alt="love">
-                        </button>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <button class="btn btn-outline-secondary" type="button">
-                            <img class="run" src="/Assignments/Assignment 3/Images/run-white.png" alt=""> Run
-                        </button>
-                    </a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="#">
-                        <button class="btn btn-secondary" type="button">Setting</button>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <button class="btn btn-secondary" type="button" onclick="hinav()">Change View</button>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</button>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="#" class="nav-link">
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
-                        data-bs-target="#login-model">Log In</button>
-                      </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            
-<!--      This is old one      
-            
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
-                       <li class="nav-item">
-                           <a href="#">
-                                <button class="btn btn-outline-secondary heart">
-                                    <img src="/Assignments/Assignment 3/Images/love_small.png" alt="">
-                                </button>
-                            </a>
-                       </li> 
-                       <li class="nav-item">
-                           <button class="btn btn-outline-secondary" type="button">
-                               <img class="run" src="/Assignments/Assignment 3/Images/run-white.png" alt=""> Run
-                           </button>
-                       </li>
-                       <li class="nav-item">
-                           <a href="#">
-                               <button class="btn btn-secondary" type="button">Setting</button>
-                           </a>
-                       </li>
-                       <li class="nav-item">
-                           <button class="btn btn-secondary" type="button" onclick="hinav()">Change View</button>
-                       </li>
-                       <li class="nav-item">
-                           <button class="btn btn-success" type="button" data-bs-toggle="modal"
-                               data-bs-target="#exampleModal">Sign Up</button>
-                       </li>
-                       <li class="nav-item">
-                           <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
-                               data-bs-target="#login-model">Log In</button>
-                       </li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-outline-secondary heart">
+                                <img src="/Assignments/Assignment 3/Images/love_small.png" alt="love">
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <img class="run" src="/Assignments/Assignment 3/Images/run-white.png" alt=""> Run
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-secondary" type="button">Setting</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-secondary" type="button" onclick="hinav()">Change View</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-success" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Sign Up</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <button class="btn btn-secondary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#login-model">Log In</button>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
--->
-    <div class="container-fluid mt-4 ">
+
+    <div class="container-fluid" id="mar-top">
         <div class="row">
-            <div class="col-3 fix-cols">
+            <div class="col-lg-2 col-md-4 col-sm-6 xm">
                 <nav id="navbar">
-                    <header id="lft-nv">JS Documentation</header>
-                    <ul>
-                        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-                        <li>
-                            <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
-                        </li>
-                        <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
-                        <li><a class="nav-link" href="#Variables">Variables</a></li>
-                        <li>
-                            <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
-                        </li>
-                        <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
-                        <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
-                        <li><a class="nav-link" href="#Constants">Constants</a></li>
-                        <li><a class="nav-link" href="#Data_types">Data types</a></li>
-                        <li>
-                            <a class="nav-link" href="#if...else_statement">if...else statement</a>
-                        </li>
-                        <li><a class="nav-link" href="#while_statement">while statement</a></li>
-                        <li>
-                            <a class="nav-link" href="#Function_declarations">Function declarations</a>
-                        </li>
-                        <li><a class="nav-link" href="#Reference">Reference</a></li>
-                    </ul>
+                    <header id="lft-nv"> JS Documentation</header>
+                        <ul>
+                            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                            <li>
+                                <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+                            </li>
+                            <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+                            <li><a class="nav-link" href="#Variables">Variables</a></li>
+                            <li>
+                                <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+                            </li>
+                            <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+                            <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+                            <li><a class="nav-link" href="#Constants">Constants</a></li>
+                            <li><a class="nav-link" href="#Data_types">Data types</a></li>
+                            <li>
+                                <a class="nav-link" href="#if...else_statement">if...else statement</a>
+                            </li>
+                            <li><a class="nav-link" href="#while_statement">while statement</a></li>
+                            <li>
+                                <a class="nav-link" href="#Function_declarations">Function declarations</a>
+                            </li>
+                            <li><a class="nav-link" href="#Reference">Reference</a></li>
+                        </ul>
                 </nav>
             </div>
-            <div class="col-9 scrollcolumn">
+            <div class="col-lg-10 col-md-8 col-sm-6 ">
                 <main id="main-doc">
                     <section class="main-section" id="Introduction">
                         <header id="head-t">Introduction</header>
@@ -335,6 +295,7 @@
                             </p>
                         </article>
                     </section>
+                    
                     <section class="main-section" id="Hello_world">
                         <header id="head-t">Hello world</header>
                         <article>
@@ -348,25 +309,7 @@
                             browser!
                         </article>
                     </section>
-                    <section class="main-section" id="Variables">
-                        <header id="head-t">Variables</header>
-                        <p>
-                            You use variables as symbolic names for values in your application. The
-                            names of variables, called identifiers, conform to certain rules.
-                        </p>
-                        <p>
-                            A JavaScript identifier must start with a letter, underscore (_), or
-                            dollar sign ($); subsequent characters can also be digits (0-9). Because
-                            JavaScript is case sensitive, letters include the characters "A" through
-                            "Z" (uppercase) and the characters "a" through "z" (lowercase).
-                        </p>
-                        <p>
-                            You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers.
-                            You can also use the Unicode escape sequences as characters in
-                            identifiers. Some examples of legal names are Number_hits, temp99, and
-                            _name.
-                        </p>
-                    </section>
+
                     <section class="main-section" id="Declaring_variables">
                         <header id="head-t">Declaring variables</header>
                         <article>
@@ -387,6 +330,7 @@
                             </p>
                         </article>
                     </section>
+
                     <section class="main-section" id="Variable_scope">
                         <header id="head-t">Variable scope</header>
                         <article>
@@ -416,6 +360,7 @@
                         defined</code>
                         </article>
                     </section>
+
                     <section class="main-section" id="Global_variables">
                         <header id="head-t">Global variables</header>
                         <article>
@@ -469,6 +414,7 @@
                             <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
                         </article>
                     </section>
+
                     <section class="main-section" id="Data_types">
                         <header id="head-t">Data types</header>
                         <article>
@@ -502,6 +448,7 @@
                             your application can perform.
                         </article>
                     </section>
+
                     <section class="main-section" id="if...else_statement">
                         <header id="head-t">if...else statement</header>
                         <article>
@@ -541,6 +488,7 @@
                             <code>if ((x = y)) { /* statements here */ }</code>
                         </article>
                     </section>
+
                     <section class="main-section" id="while_statement">
                         <header id="head-t">while statement</header>
                         <article>
@@ -584,6 +532,7 @@
                             </p>
                         </article>
                     </section>
+
                     <section class="main-section" id="Function_declarations">
                         <header id="head-t">Function declarations</header>
                         <article>
@@ -633,6 +582,7 @@
                             </ul>
                         </article>
                     </section>
+
                 </main>
             </div>
         </div>

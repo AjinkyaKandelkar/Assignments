@@ -9,13 +9,10 @@ body
 }
 
 #navbar
-{
-       
-    min-width: 290px;
-    top: 0px;
+{ 
+    position: fixed;
+    top: 70px;
     margin-left: -13px;
-    width: 300px;
-    height: 750px;
     border-right: solid;
     border-color: rgba(0, 22, 22, 0.4);
 }
@@ -47,6 +44,8 @@ body
 #main-doc 
 {
     position: absolute;
+    padding-left: 140px;
+   
 }
 header
 {
@@ -57,13 +56,14 @@ header
 {
     padding-top: 60px;
 }
-.fix-cols
+#lft-nv
 {
-    position: fixed;
+    padding-left: 10px;
 }
 
 .scrollcolumn{
-    margin-left: 340px;
+    margin-left: 17%;
+    width: 100%;
 }
 img{
     width: 50%;
@@ -88,17 +88,13 @@ img{
 {
     display: none;
     overflow: hidden;
-    margin-top: -55px;
+    top:0;
     padding: 10px;
     position: fixed;
     width: 100%;
     border: solid; 
 }
-#lft-nv
-{
-    padding-left: 10px;
-    padding-top: 10px;
-}
+
 div #head-nav button
 {
     margin-right: 10px;
@@ -110,19 +106,47 @@ div #head-nav button
     {
         padding-top: 3%;
     }    
+    
 }
-@media screen and (max-width:960px) {
+@media screen and (max-width:992px) {
     
     body
     {
-        padding-top: 4%;
-    }  
-    
-}
-@media screen and (max-width:576px) {
-    body
-    {
-        padding-top: 5%;
+        padding-top: 2%;
     }
+    #navbar
+    { top:63px;}  
+    #mar-top
+    {
+        margin-top: 500px;
+    }
+    #main-doc 
+    {
+        padding-left: 50px;
+    
+    }
+    
+}
+@media screen and (max-width:576px) 
+{
+    body
+    {
+        padding-top: 2%;
+    }
+    #navbar
+    { 
+        width: 40%;
+    }
+   
 }
 
+#mar-top
+{
+    margin-top: 2.7rem;
+}
+
+.box
+{
+    padding: 15px;
+    background-color: teal;
+}
