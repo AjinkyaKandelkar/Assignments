@@ -1,0 +1,28 @@
+body
+{
+   
+}
+form
+{
+    border: solid;
+    border-color: orangered;
+    text-align: center;
+}
+input[type="text"]
+    [type="email"]
+{
+    margin: 0 0 1rem 0;
+    padding: 10px;
+}
+input[type="submit"] {
+  border: 3px solid #333;
+  background-color: rgb(245, 0, 0);
+  border-radius: 5px;
+  padding: 10px 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+}
