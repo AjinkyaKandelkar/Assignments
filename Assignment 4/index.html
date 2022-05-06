@@ -5,34 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        
+
     <link rel="stylesheet" href="style.css">
     <script src="/Assignments/Assignment 4/script.js"></script>
 </head>
 <body>
-    <h3 id="title">User Form</h3>
-    <p id="description">
-        This is user form.
-    </p>
-    <form action="#">
-        <div class="wrapper">
-            <div>
-                <label for="name"> Name </label>
-                <input id="name" type="text" placeholder="First Name">     
+    <div id="main">
+        
+            <div class="form container">
+                <div class="row mt-5 align-items-center">
+        
+                    <div class="col-lg-2 col-md-2 col-sm-1">
+                        <img class="img-fluid" src="https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094739-stock-illustration-profile-icon-male-avatar.jpg" 
+                        alt="image"  height="auto">
+                    </div>
+                    <div class="col-6">
+        
+                        <div class="row">
+                            <div class="col-lg-6  md-form mb-2"> 
+                                    <input type="text" id="fname" class="form-control validate" placeholder="ex. John">
+                            </div>
+                            <div class="col-lg-6 mb-2">
+                                <input type="text" id="lname" class="form-control validate" placeholder="ex. Doe">
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="md-form mb-2 input-group">
+                            <label data-error="wrong" data-success="right" for="email"> Email ID
+                            </label>
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="material-icons" style="color:rgb(201, 200, 200)">email</i></span>
+                                </div>
+                                <input type="text" id="email" class="form-control" placeholder="notification@intimepros.com" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+        
+                        <div class="md-form mb-2 input-group">
+                            <label data-error="wrong" data-success="right" for="password"> Password
+                            </label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-eye"  viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                </svg></span>
+                                </div>
+                                <input type="password" id="password" class="form-control" placeholder="Password" aria-label="password" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary d-flex" type="submit" id="submit" onclick="all_validation(event)">Save</button>
+                        </div>
+                    </div> 
+                </div>
             </div>
-
-            <div>
-                <label for="mail"> Email </label>
-                <input id="mail" type="email" placeholder="Email">
-            </div>
-            <div>
-                <label for="password"> password </label>
-                <input type="password" id="password" >
-            </div>
-            <div class="button">
-                <button type="submit"> save </button>
-            </div>
-        </div>   
-    </form>
-   
+        
+    </div>
 </body>
 </html>
