@@ -1,5 +1,17 @@
-.box
+body
 {
-    padding:15px;
-    background-color: teal;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    height: 100vh;
+}
+form
+{
+    padding: 10px;
+}
+img{
+    width: 100%;
+    max-width: 100px;
+    height: auto;
 }
