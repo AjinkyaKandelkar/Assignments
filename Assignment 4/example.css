@@ -6,10 +6,7 @@ body
     align-items: center;
     height: 100vh;
 }
-form
-{
-    padding: 10px;
-}
+
 img{
     width: 100%;
     max-width: 100px;
