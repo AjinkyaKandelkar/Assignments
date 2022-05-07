@@ -12,3 +12,7 @@ img{
     max-width: 100px;
     height: auto;
 }
+@media screen and (max-width:540px) 
+{
+    
+}

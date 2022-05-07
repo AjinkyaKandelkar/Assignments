@@ -1,14 +1,21 @@
 function all_validation(event)
 {
     event.preventDefault();
-    var nameValid=validName();
-    var emailValid=validEmail();
-    var passValid=validPass();
-    if(!nameValid||!emailValid||!passValid)
+    
+    if(!validName()||!validEmail()||!validPass())
     {
         return;
     }
+
     event.target.submit();
+}
+function colour_fname()
+{
+    var flname=validName()
+    if(!flname)
+    {
+        
+    }
 }
 function validName()
 {
