@@ -1,0 +1,24 @@
+a ,.b_color{
+    color: rgba(0, 255, 255, 0.856);
+}
+.b_color:hover{
+    color: rgba(0, 255, 255, 0.856);
+}
+.breadcrumb li {
+    font-size: large;
+}
+.clr{
+    background-color: rgba(255, 131, 107);
+    color: white;
+    border: 0;
+}
+.mn{
+    padding: 0 2rem 0 2rem;
+} 
+td .btn:focus {
+    outline: none;
+    box-shadow: none;
+    }
+a.page-link{
+    border: 0;
+}
