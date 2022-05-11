@@ -1,8 +1,8 @@
 a ,.b_color{
-    color: rgba(0, 255, 255, 0.856);
+    color: rgb(22, 178, 191);
 }
 .b_color:hover{
-    color: rgba(0, 255, 255, 0.856);
+    color: rgb(22, 178, 191);
 }
 .breadcrumb li {
     font-size: large;
@@ -21,4 +21,22 @@ td .btn:focus {
     }
 a.page-link{
     border: 0;
+}
+.mar,.mar:hover
+{
+    margin-left: 6px;
+    background-color: rgb(22, 178, 191);
+    color: white;
+}
+div.modal-footer li.page-item a.page-link
+{
+   margin-left: .10rem;
+}
+.bgcolor
+{
+   background-color: rgb(22, 178, 191); 
+   color: white;
+}
+.page-item.active .page-link {
+    background-color: rgb(22, 178, 191); 
 }
