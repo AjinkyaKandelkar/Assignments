@@ -19,8 +19,10 @@ td .btn:focus {
     outline: none;
     box-shadow: none;
     }
-a.page-link{
+nav ul.pagination li.page-item a.page-link{
     border: 0;
+    margin-left: .2rem;
+
 }
 .mar,.mar:hover
 {
@@ -39,4 +41,22 @@ div.modal-footer li.page-item a.page-link
 }
 .page-item.active .page-link {
     background-color: rgb(22, 178, 191); 
+}
+.serch-icon{
+position: absolute;
+margin-right: 62px;
+margin-top: 6px;
+color:rgb(22, 178, 191);}
+
+.search{
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+      
+}
+ .search .bi-search{
+
+     position: absolute;
+     top: 8px;
+     right: 30px;
+     color:rgb(22, 178, 191);   
 }

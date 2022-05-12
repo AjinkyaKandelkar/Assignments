@@ -19,7 +19,7 @@
 
 <body>
     <!-- Top Navbar -->
-    <nav class="navbar navbar-expand-lg  bg-light  navbar-light p-2">
+    <nav class="navbar navbar-expand-lg  bg-light  navbar-light p-2 ">
         <div class="container-fluid">
 
             <div class="nav-itemdropdown">
@@ -57,7 +57,7 @@
             <ol class=" nav-item breadcrumb">
                 <li class="breadcrumb-item"><a href="#" style="text-decoration:none ;" class="b_color">Customers</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                <li class="breadcrumb-item active" aria-current="page"><small> Manage customer and customer user </small></li>
             </ol>
         </div>
         <div>
@@ -70,17 +70,22 @@
     <div class="container shadow">
         <!-- Container for Customer and Search -->
         <div class="row mt-4 mb-3">
-            <div class="col-lg-8 col-md-6">
+            <div class="col-lg-6 col-md-6 col-sm-4">
                 <h5> Customers </h5>
             </div>
-            <div class="col-lg-4 col-md-6 d-flex justify-content-end">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-
-                <button class="btn btn mar"> <i class="bi bi-arrow-repeat"></i></button>
+            <div class="col-lg-6 col-md-6 col-sm-8">
+                <div class="row">
+                    <div class="col-lg-10 col-md-11  col-sm-10 search">
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <di class="col-lg-2   col-md-1   col-sm-2">
+                        <button class="btn btn mar"> <i class="bi bi-arrow-repeat"></i></button>
+                    </di>
+                </div>
             </div>
-
         </div>
-
+        <!-- Table -->
         <div class="table-responsive">
             <table class="table table-borderless">
                 <thead>
@@ -180,9 +185,9 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="">
+            <div>
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-start">
+                    <ul class="pagination pagination-sm justify-content-start">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
                         </li>
@@ -192,6 +197,8 @@
                         <li class="page-item active"><a class="page-link " href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
                         <li class="page-item">
                             <a class="page-link" href="#">&gt;</a>
                         </li>
@@ -204,7 +211,7 @@
         </div>
     </div>
 
-    <!-- Create user Model -->
+    <!-- Create New Customer Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -218,12 +225,12 @@
                         <div class="row">
                             <div class="col-6 mb-1">
                                 <p class="modal-item"> Customer Name* </p>
-                                <input class="form-control" type="text" placeholder="Enter customer name">
+                                <input class="form-control" id="fname" type="text" placeholder="Enter customer name">
                                 <small class="text-muted">Please Enter Customer Name</small>
                             </div>
                             <div class="col-6 mb-1">
                                 <p class="modal-item"> Customer Email* </p>
-                                <input class="form-control" type="text" placeholder="Enter customer email">
+                                <input class="form-control" id="email" type="text" placeholder="Enter customer email">
                                 <small class="text-muted">Please Enter Customer Email</small>
                             </div>
                         </div>
@@ -239,31 +246,38 @@
                                 <small class="text-muted">Please enter your registration date</small>
                             </div>
                         </div>
+                        <div class="row mt-3 mb-4">
+                            <div class="col-lg-2 col-md-4">
+                                <div class="dropdown modal-footer-item">
+                                    <a href="#" class="btn dropdown-toggle border rounded" role="button" id="user-select"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        select user
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="user-select">
+                                        <li> <a class="dropdown-item" href="#"> User 1 </a></li>
+                                        <li> <a class="dropdown-item" href="#"> User 2 </a></li>
+                                        <li> <a class="dropdown-item" href="#"> User 3 </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-8">
+                                <button type="button" class="btn clr modal-footer-item">
+                                    <i class="bi bi-plus-lg"></i> Add User
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer justify-content-start border-0">
+                <div class="modal-footer justify-content-end">
                     <div class="modal-footer-item">
-
+                        <button class="btn border mr-2" data-bs-dismiss="modal">Cancel</button>
+                        <button class="btn btn-border clr" onclick="all_validation(event)">Save Customer</button> 
                     </div>
-                    <div class="dropdown modal-footer-item">
-                        <a href="#" class="btn dropdown-toggle border rounded" role="button" id="user-select"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            select user
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="user-select">
-                            <li> <a class="dropdown-item" href="#"> User 1 </a></li>
-                            <li> <a class="dropdown-item" href="#"> User 2 </a></li>
-                            <li> <a class="dropdown-item" href="#"> User 3 </a></li>
-                        </ul>
-                    </div>
-                    <button type="button" class="btn clr modal-footer-item">
-                        <i class="bi bi-plus-lg"></i> Add User
-                    </button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Users Model -->
+    <!-- View User Modal -->
     <div class="modal fade" id="usermodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="usermodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -274,8 +288,9 @@
                             <div class="col-lg-8">
                                 <h5>Customer User</h5>  
                             </div> 
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 search">
                                 <input class="form-control" type="text" placeholder="search">
+                                <i class="bi bi-search"></i>
                             </div>
                         </div>
                     </div>

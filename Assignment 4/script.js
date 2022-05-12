@@ -9,14 +9,6 @@ function all_validation(event)
 
     event.target.submit();
 }
-function colour_fname()
-{
-    var flname=validName()
-    if(!flname)
-    {
-        
-    }
-}
 function validName()
 {
     var firstname=document.getElementById("fname").value
