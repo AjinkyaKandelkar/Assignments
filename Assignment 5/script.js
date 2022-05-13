@@ -34,10 +34,20 @@ function validEmail()
     var email=document.getElementById("email").value
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
     {
-        return (true)
+        return (true);
     }
     else
-    {   alert("You have entered an invalid email address!")
-        return (false)
+    {   alert("You have entered an invalid email address!");
+        return (false);
     }
+}
+
+function magic()
+{
+    document.getElementById("hide").style.display="block"
+    document.getElementById("unide").style.display="none";
+}
+function hidemain()
+{
+    document.getElementById("hide").style.display="none";
 }

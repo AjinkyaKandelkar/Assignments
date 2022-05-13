@@ -60,3 +60,10 @@ color:rgb(22, 178, 191);}
      right: 30px;
      color:rgb(22, 178, 191);   
 }
+#hide{
+    display: none;  
+}
+.mar-l
+{
+    margin-left:-120px ;
+}
