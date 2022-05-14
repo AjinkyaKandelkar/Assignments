@@ -1,0 +1,50 @@
+body
+{
+    margin-top: 100px;;
+}
+
+.box
+{
+    background-color: teal;
+    padding: 15px;
+}
+.box1
+{
+    background-color: rgb(184, 0, 0);
+    padding: 15px;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+#hide1,#hide2,#hide3
+{
+    margin-top: -2px;
+    display: none;
+    border-top:3px solid crimson;
+}
+.cen{
+    text-align: end;
+}
+.img-wrapper
+{
+    position: relative;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    
+  }
+  .img-overlay:before {
+    content: ' ';
+    display: block;
+    height: 50%;
+  }
