@@ -3,17 +3,7 @@ body
     margin-top: 100px;;
 }
 
-.box
-{
-    background-color: teal;
-    padding: 15px;
-}
-.box1
-{
-    background-color: rgb(184, 0, 0);
-    padding: 15px;
-}
-.btn:focus {
+nav .btn:focus {
     outline: none;
     box-shadow: none;
 }
@@ -41,10 +31,36 @@ img{
     left: 0;
     right: 0;
     text-align: center;
-    
   }
   .img-overlay:before {
+    content: ' ';
+    display: flex;
+    height: 50%;
+  }
+  .img-arrow {
+    position: absolute;
+    color:#2A5A27;
+    top: 0;
+    bottom: -75%;
+    left: 0;
+    right: 0;
+    text-align: center;   
+    transition:  width 2s, height 4s;  
+  }
+  .img-arrow:before {
     content: ' ';
     display: block;
     height: 50%;
   }
+.arrow-icon
+{
+    transition: font-size 2s;
+}
+  .arrow-icon:hover
+  {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }  
+
+

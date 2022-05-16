@@ -1,0 +1,112 @@
+/* Top nav */
+body
+{
+    
+}
+#hide1,#hide2,#hide3
+{
+    margin-top: -2px;
+    display: none;
+    border-top:3px solid crimson;
+}
+nav .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.cen{
+    text-align: end;
+}
+/* Hover Arrow */
+.img-arrow
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 50%;
+    margin-top: 23%;
+    text-align: center;
+}
+.arrow-icon
+{
+    transition: font-size 2s;
+}
+  .arrow-icon:hover
+  {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }  
+/* End of it */
+/* End of top nav */
+/* Start of first Image */
+section.hero img
+{
+    width: 100%;
+   
+}
+.hero-content
+{
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+section .lbs 
+{
+    width: fit-content;
+    height: 100%;
+}
+.hero-content button
+{   
+    transform: scale(100%); 
+    
+}
+@media only screen and (max-width: 600px) {
+   
+    .hero-content button
+    { 
+        font-size: 10px;
+        margin-top: 15px;
+    }  
+}
+@media only screen and (max-width: 442px) {
+   
+   .hero-content button
+   { 
+       
+        font-size: 7px;
+        margin-top: 15px;
+        
+   }  
+}
+/* End of First image container */
+
+section .product-container
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+}
+section .product
+{
+    border-radius: 8px;
+    width: 30%;
+    margin: 2% 1%;
+}
+.product-picture,.product-info
+{
+    margin-left: 2rem;
+    margin-top:2rem;
+}
+.last img
+{width: 100%;}
+.lm
+{
+    max-width: 12%;
+}
+.sm
+{
+    max-width: 6%;
+}
