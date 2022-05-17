@@ -12,6 +12,7 @@ nav .btn:focus {
 }
 .cen{
     text-align: end;
+    margin-top: 20px;
 }
 /* Hover Arrow */
 .img-arrow
@@ -113,11 +114,25 @@ div .footer-images img
 }
 div .footer-images img.footer-image1
 {
-  width: 15%;
+  width: 12%;
 }
 div .footer-images img.footer-image2
 {width: 25%;}
 .footer-links
 {
   font-size: x-small;
+}
+.search{
+  position: relative;
+}
+.search .bi-search{
+
+   position: absolute;
+   top: 4px;
+   left:23px;
+   color:rgb(194, 192, 192);
+}
+#hidden-logo
+{
+  display: none;
 }
