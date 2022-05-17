@@ -1,57 +1,30 @@
-body
-{
-    margin-top: 100px;;
-}
+/* Top nav */
 
-nav .btn:focus {
-    outline: none;
-    box-shadow: none;
-}
 #hide1,#hide2,#hide3
 {
     margin-top: -2px;
     display: none;
     border-top:3px solid crimson;
 }
+nav .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
 .cen{
     text-align: end;
 }
-.img-wrapper
+/* Hover Arrow */
+.img-arrow
 {
-    position: relative;
-}
-img{
-    max-width: 100%;
-    height: auto;
-}
-.img-overlay {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top:0;
+    left:0;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 50%;
+    margin-top: 23%;
     text-align: center;
-  }
-  .img-overlay:before {
-    content: ' ';
-    display: flex;
-    height: 50%;
-  }
-  .img-arrow {
-    position: absolute;
-    color:#2A5A27;
-    top: 0;
-    bottom: -75%;
-    left: 0;
-    right: 0;
-    text-align: center;   
-    transition:  width 2s, height 4s;  
-  }
-  .img-arrow:before {
-    content: ' ';
-    display: block;
-    height: 50%;
-  }
+}
 .arrow-icon
 {
     transition: font-size 2s;
@@ -62,5 +35,89 @@ img{
     font-size: 2rem;
     cursor: pointer;
   }  
+/* End of it */
+/* End of top nav */
 
+/* Start of first Image */
+section.hero img
+{
+    width: 100%;
+   
+}
+.hero-content
+{
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+section .lbs 
+{
+    width: fit-content;
+    height: 100%;
+}
+.hero-content button
+{   
+    transform: scale(100%); 
+    
+}
+@media only screen and (max-width: 600px) {
+   
+    .hero-content button
+    { 
+        font-size: 10px;
+        margin-top: 15px;
+    }  
+}
+@media only screen and (max-width: 442px) {
+   
+   .hero-content button
+   { 
+       
+        font-size: 7px;
+        margin-top: 15px;
+        
+   }  
+}
+/* End of First image container */
 
+.last-card
+{
+  transition: box-shadow 4s;
+}
+.last-card:hover
+{
+  box-shadow: 1px 1px 5px 2px;
+  cursor: pointer;
+}
+.first-card
+{
+   
+  box-shadow: 1px 1px 94px 13px rgba(0,0,0,0.4) inset;
+  border-radius: 15px;
+}
+.first-card:hover{
+  box-shadow: 0px 0px 0px 0px inset;
+  border-radius: 15px;}
+.last-image img
+{
+  width: 100%;
+}
+.card-img-top
+{
+  width: fit-content;
+}
+div .footer-images img
+{
+  width: 20%;
+}
+div .footer-images img.footer-image1
+{
+  width: 15%;
+}
+div .footer-images img.footer-image2
+{width: 25%;}
+.footer-links
+{
+  font-size: x-small;
+}

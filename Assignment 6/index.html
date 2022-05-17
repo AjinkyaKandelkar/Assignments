@@ -1,150 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <script src="/script.js"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css"> 
-</head>
-
-<body>
-    <!-- Start Of TopNavbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <img src="/Images/Acadmy-logo.png" alt="">
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <title>index</title>
+        <link rel="stylesheet" href="/style.css">
+        <script src="/script.js"></script>
+    </head>
+    <body>
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <img src="/Images/Acadmy-logo.png" alt="" >
             
-            <div class="col-lg-9 col-md-12 mb-1">
-                <input type="text" class="form-control form-control-sm" placeholder="search">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <div class="col-lg-9 col-md-12 mb-1">
+                    <input type="text" class="form-control form-control-sm" placeholder="search">
+                </div>
+                <div class="col-lg-3 col-md-12 cen">
+                    <button class="btn btn-sm btn-primary pl-4 pr-4 mr-2">Login</button>
+                    <button class="btn btn-sm btn-outline-danger pl-3 pr-3">Signup</button>
+                </div>    
+                <div class="row mt-1 ml-3">
+                    <div class="col-12">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <button class="nav-button btn mr-5 ">Home</button>
+                            </li>
+                            <li class="nav-item  mr-5 ">
+                                <button class="nav-button btn" id="learndrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide1)">
+                                    Learn   <i class="bi bi-chevron-down ml-1" ></i>
+                                    <div id="hide1"> </div>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="learndrop">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                           
+                            <li class="nav-item dropdown mr-5">
+                                <button class="nav-button btn " id="navbarDropdown " role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide2)">
+                                    Crediential <i class="bi bi-chevron-down ml-1" ></i>
+                                    <div id="hide2"> </div>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+    
+                            <li class="nav-item dropdown mr-5">
+                                <button class="nav-button btn" id="Crediential-drop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide3)">
+                                    For Companies <i class="bi bi-chevron-down ml-1" ></i>
+                                    <div id="hide3"> </div>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="Crediential-drop">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-12 cen">
-                <button class="btn btn-sm btn-primary pl-4 pr-4 mr-2">Login</button>
-                <button class="btn btn-sm btn-outline-danger pl-3 pr-3">Signup</button>
-            </div>    
-            <div class="row mt-1 ml-3">
-                <div class="col-12">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <button class="nav-button btn mr-5 ">Home</button>
-                        </li>
-                        <li class="nav-item  mr-5 ">
-                            <button class="nav-button btn" id="learndrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide1)">
-                                Learn   <i class="bi bi-chevron-down ml-1" ></i>
-                                <div id="hide1"> </div>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="learndrop">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                       
-                        <li class="nav-item dropdown mr-5">
-                            <button class="nav-button btn " id="navbarDropdown " role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide2)">
-                                Crediential <i class="bi bi-chevron-down ml-1" ></i>
-                                <div id="hide2"> </div>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
+        </nav>
+        <!-- End of top Navbar -->
 
-                        <li class="nav-item dropdown mr-5">
-                            <button class="nav-button btn" id="Crediential-drop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide3)">
-                                For Companies <i class="bi bi-chevron-down ml-1" ></i>
-                                <div id="hide3"> </div>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="Crediential-drop">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
+        <!-- Start of First image -->
+        <section class="hero position-relative">
+            <img src="/Images/main-elephant-icon.svg" alt="">
+            <div class="hero-content  position-absolute">
+                <div class="container lbs d-flex justify-content-center flex-column">
+                    <button class="btn btn-sm btn-danger">Get Started for free </button>
+                </div>
+                <div class="img-arrow">
+                    <i class="bi bi-chevron-double-down arrow-icon"></i>
+                </div>
+            </div>
+        </section>
+        <!-- End of first image -->
+
+        <!-- start of Documents -->
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 mt-3">
+                    <h2 style="text-align:center;"> AAA Academy is the fun way to learn</h2> 
+                </div> 
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+                    <div class="card first-card">
+                        <div class="card-img-top ml-3 mt-3">
+                            <img src="/Images/Book-icon.svg" alt="">
+                        </div>
+                        <div class="card-body ">
+                            <h6 class="card-title">
+                                Learn in-demand skills
+                            </h6>
+                            <p class="card-text">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+                    <div class="card border-0">
+                        <div class="card-img-top ml-3 mt-3">
+                            <img src="/Images/documet-icon.svg" alt="" >
+                        </div> 
+                        <div class="card-body ">
+                            <h6 class="card-title">
+                                Earn Resume-Worthy Credentials
+                            </h6>
+                            <p class="card-text">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+                    <div class="card border-0 last-card">
+                        <div class="card-img-top ml-3 mt-3">
+                            <img src="/Images/earth-icon.svg" alt="">
+                        </div>
+                        <div class="card-body ">
+                            <h6 class="card-title">
+                                Connect to opportunities
+                            </h6>
+                            <p class="card-text">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="last-image mt-4">
+            <div class="last">
+                <img src="/Images/Mask Group 27@2x.png" alt="">
+            </div>
+        </section>
+        <!-- Table -->
+        <div class="footer">
+            <div class="container table-responsive mt-4 ">
+                <table class="table table-sm table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Learn</th>
+                        <th scope="col">Credentials</th>
+                        <th scope="col">Extras</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-muted small">
+                            <td>Trails</td>
+                            <td>superbadges</td>
+                            <td>MyTrailHead</td>
+                        </tr>
+                        <tr class="text-muted small">
+                            <td>Trailmixes</td>
+                            <td>Certifications</td>
+                            <td>Customer Stories</td>
+                        </tr>
+                        <tr class="text-muted small">
+                            <td>Modules</td>
+                            <td>Main Certfications</td>
+                            <td>Trail Tracker</td>
+                        </tr>
+                        <tr class="text-muted small">
+                            <td>Projets</td>
+                            <td>verify Certifications</td>
+                            <td>Sample Gallery</td>
+                        </tr>
+                        <tr class="text-muted small">
+                            <td>Trail Academy</td>
+                            <td>Take Free Certification prep</td>
+                            <td>TrailHead Store</td>
+                        </tr>
+                        <tr class="text-muted small">
+                            <td>Career Paths Trails</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-9">
+                        <img src="/Images/Play.png" alt="" style="width: 100%; max-width:fit-content;">
+                    </div> 
+                    <div class="col-3 footer-images">
+                        <img src="/Images/Twitter.png" alt=""  class="footer-image1">
+                        <img src="/Images/Facebook.png" alt="" class="footer-image2">
+                    </div>
+                </div>
+            </div> 
+            <div class="container footer-links mt-3">
+                <div class="row">
+                    <ul class="nav" style="text-align:center;">
+                        <li class="nav-item"><a href="#" class="nav-link"><img src="/Images/Acadmy-logo.png" alt="" style="width: 50%;"></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">&#169; 2021 salesforce.com, inc. All rights reserved.</a> </li>
+                        <li class="nav-item"><a href="#" class="nav-link">privacy statement</a> </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a> </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Use of Cookies</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Trust</a> </li>
+                        <li class="nav-item"><a href="#" class="nav-link"> Accessibility</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"> Help</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"> Cookies Preferences</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"> </a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </nav>
-    <!-- End of Navbar -->
-    <!-- Main Container -->
-    <div class="continer fluid">
-        <!-- First Image -->
-        <div class="img-wrapper">
-            <img src="/Images/main-elephant-icon.svg" alt="">
-            <div class="img-overlay">
-                <button class="btn btn-danger first-button"> Get Started for Free</button> 
-            </div>
-            <div class="img-arrow">
-                <i class="bi bi-chevron-double-down arrow-icon"></i>
-            </div>
-        </div>  
-        <!-- End of first Image -->
-        <!-- <div class="mt-4">
-            <h2 style="text-align:center;"> AAA Academy is the fun way to learn </h2>
-            <div class="container mt-4 d-flex justify-content-around">
-                <div class="product">
-                    <div class="product-header"> 
-                        <img src="/Images/Book-icon.svg" alt="">
-                    </div>
-                    <div class="product-body"> 
-                        <h6>
-                            Learn in demand skills
-                        </h6>
-                        <small>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since
-                        </small>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-header"> 
-                        <img src="/Images/Book-icon.svg" alt="">
-                    </div>
-                    <div class="product-body"> 
-                        <h6>
-                            Learn in demand skills
-                        </h6>
-                        <small>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since
-                        </small> 
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-header"> 
-                        <img src="/Images/Book-icon.svg" alt="">
-                    </div>
-                    <div class="product-info"> 
-                        <h6>
-                            Learn in demand skills
-                        </p>
-                        <small>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since
-                        </small>
-                    </div>
-                    
-                </div>
-            </div>
-        </div> -->
-    </div>
-</body>
-
+    </body>
+    
 </html>
