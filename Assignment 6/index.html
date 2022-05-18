@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- JavaScript Bundle with Popper -->
+        <!-- CSS only -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -29,25 +31,27 @@
                     <i class="bi bi-search"></i>
                 </div>
                 <div class="col-lg-3 col-md-12 cen">
-                    <button class="btn btn-sm btn-primary pl-4 pr-4 mr-2">Login</button>
-                    <button class="btn btn-sm btn-outline-danger pl-3 pr-3">Signup</button>
+                    <button class="btn btn-sm btn-primary pl-4 pr-4 mr-2" onclick="window.location.href='login.html'">Login</button>
+                    <button class="btn btn-sm btn-outline-danger pl-3 pr-3" onclick="window.location.href='ex.html'">Signup</button>
                 </div>    
-                <div class="row mt-1 ml-3">
+                <div class="row mt-1 ">
                     <div class="col-12">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <button class="nav-button btn mr-4 ">Home</button>
                             </li>
                             <li class="nav-item  mr-4 ">
-                                <button class="nav-button btn" id="learndrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide1)">
-                                    Learn   <i class="bi bi-chevron-down ml-1" ></i>
-                                    <div id="hide1"> </div>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="learndrop">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="">
+                                    <button class="nav-button btn" id="learndrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="unhidefun(hide1)">
+                                        Learn   <i class="bi bi-chevron-down ml-1" ></i>
+                                        <div id="hide1"> </div>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="learndrop">
+                                        <a class="dropdown-item" href="#">A</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
                                 </div>
                             </li>
                            
@@ -202,6 +206,7 @@
                     </tbody>
                 </table>
             </div> 
+            <!-- Facebook playstore row -->
             <div class="container mt-2">
                 <div class="row">
                     <div class="col-9">
@@ -213,32 +218,36 @@
                     </div>
                 </div>
             </div> 
+            <!-- Bottom Line and dropdown -->
             <div class="container mt-3 ">
                 <div class="row">
                     <ul class="nav footer-links" style="text-align:center;">
                         <li class="nav-item"><a href="#" class="img-fluid"><img src="/Images/Acadmy-logo.png" alt="" style="width: 40px;"></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">&#169; 2021 salesforce.com, inc. All rights reserved.</a> </li>
+                        <li class="nav-item"><a href="#" class="nav-link disabled">&#169; 2021 salesforce.com, inc. All rights reserved.</a> </li>
                         <li class="nav-item"><a href="#" class="nav-link">privacy statement</a> </li>
                         <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a> </li>
-                        <li class="nav-item"><a href="#" class="nav-link">Use of Cookies</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active">Use of Cookies</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Trust</a> </li>
                         <li class="nav-item"><a href="#" class="nav-link"> Accessibility</a></li>
                         <li class="nav-item"><a href="#" class="nav-link"> Help</a></li>
                         <li class="nav-item"><a href="#" class="nav-link"> Cookies Preferences</a></li>
                         <li class="nav-item"><a href="#" class="nav-link"> </a></li>
-                    </ul>
-                    <div class="btn-group-sm dropup">
-                        <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="buttonchange()">
-                            United Kingdom
-                            <i class="bi bi-chevron-down"id="first-logo" ></i>
-                            <i class="bi bi-chevron-up" id="hidden-logo"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"></a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Singapor</a>
+            
+                        <div class="dropup-center btn-group dropup d-inline">
+                            <button type="button" class="btn btn-sm" id="last-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="buttonchange()">
+                              United Kingdom &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <i class="bi bi-chevron-down" id="first-logo"></i>
+                            </button>   
+                            <ul class="dropdown-menu" aria-labelledby="last-drop" >
+                                <li><button class="btn dropdown-item"> United Arab Emirates </button></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><button class="btn dropdown-item"> Western India </button></li>
+                                <li><button class="btn dropdown-item"> Zambia </button></li>
+                                <li><button class="btn dropdown-item"> Singapore </button></li>
+                            </ul>
                         </div>
-                      </div>
+                    </ul>
+                      
                 </div>
             </div>
         </div>

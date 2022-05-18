@@ -4,7 +4,12 @@
 {
     margin-top: -2px;
     display: none;
-    border-top:3px solid crimson;
+    border-top:2px solid rgb(29, 164, 254);
+}
+.bi-chevron-down
+{
+  color: rgb(29, 164, 254);
+  font-size: bold;
 }
 nav .btn:focus {
     outline: none;
@@ -132,7 +137,26 @@ div .footer-images img.footer-image2
    left:23px;
    color:rgb(194, 192, 192);
 }
-#hidden-logo
+.nav-link{
+  color: gray;
+}
+.nav-link:hover{
+  color:rgb(29, 164, 254) ;
+}
+.active
 {
-  display: none;
+  color:rgb(29, 164, 254) ;
+}
+
+.btn-primary{
+  background-color: rgb(29, 164, 254);
+  border: none;
+  border-radius: 0% ;
+
+}.btn-primary:hover{
+  background-color: rgb(29, 164, 254) ;
+  border-color: none;
+}
+.btn-outline-danger{
+  border-radius: 0%;
 }

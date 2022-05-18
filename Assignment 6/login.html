@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <title>Login</title>
+    <style>
+      body{
+          background: url("Images/Login-background-img.png") no-repeat center center fixed;
+          -webkit-background-size:cover;  
+          -moz--background-size:cover;
+          -o-background-size:cover;
+          background-size: cover;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .card
+        {
+            width: 25rem;
+            text-align: center;
+        }
+        .btn-classic
+        {
+            font-weight: 600;
+            color: rgb(29, 164, 254);
+            border:1px solid rgba(10, 10, 10, 0.171);
+            --bs-btn-hover-color:rgb(29, 164, 254) ;
+            --bs-btn-hover-bg: rgba(10, 10, 10, 0.075);
+            --bs-btn-hover-border-color: rgba(10, 10, 10, 0.075);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="card shadow">
+        <div class="card-header border-0 mt-5"> <h6> Let's get you</h6> <h4><b> Logged In</b> </h4> 
+        </div>
+        <div class="card-body">
+            <div class="form d-grid gap-3 m-3">
+                <button class="btn btn-classic shadow-sm form-inline" type="button"> <img src="/Images/Google.png" alt="" width="24" style="margin-top:-3px ; margin-left:-20px; margin-right: 14px;"> Sign In with Google</button>
+                <button class="btn btn-classic shadow-sm" type="button"><img src="/Images/Microsoft-logo.png" alt="" width="24" style="margin-top:-3px ; margin-right:10px; margin-left: -5px;"> Sign In with Microsoft</button>
+                <button class="btn btn-classic shadow-sm" type="button"><img src="/Images/Linked-in.png" alt="" width="24" style="margin-top:-3px ; margin-right:18px; margin-left: -5px;">Sign In with Linked In</button>
+                <button class="btn btn-classic shadow-sm" type="button" onclick="window.location.href='sign-in.html'"><i class="bi bi-envelope-fill"  style="color: rgba(0, 0, 0, 0.651); margin-right: 19px; margin-left: -24px;"></i> Sign In with Email</button>
+                <small class="text-muted" style="font-size: 11px; font-weight: 600;"> Already Have An account?</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

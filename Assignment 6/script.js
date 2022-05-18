@@ -19,17 +19,14 @@ function buttonchange()
     
     if(y==true)
     {  
-        console.log("First call");
-        document.getElementById("first-logo").style.display="none";
-        document.getElementById("hidden-logo").style.display="block";
-        y=false;
         
+        document.getElementById("first-logo").setAttribute("class","bi bi-chevron-up");
+        y=false;
     }
-    else
+     else
     {
-        document.getElementById("hidden-logo").style.display="none";
+        document.getElementById("first-logo").setAttribute("class","bi bi-chevron-down");
         y=true;
-        document.getElementById("first-logo").style.display="block";
     }
     
 }
