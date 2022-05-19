@@ -1,15 +1,17 @@
 var x=true;
 var y=true;
-function unhidefun(yes)
+function unhidefun(yes,change_clr)
 {
     if(x)
     {
         yes.style.display="block";
+        change_clr.style.color="rgb(29, 164, 254)";
         x=false;
     }
     else
     { 
         yes.style.display="none";
+        change_clr.style.color="black";
         x=true;
     }
 }

@@ -8,7 +8,6 @@
 }
 .bi-chevron-down
 {
-  color: rgb(29, 164, 254);
   font-size: bold;
 }
 nav .btn:focus {
@@ -159,4 +158,16 @@ div .footer-images img.footer-image2
 }
 .btn-outline-danger{
   border-radius: 0%;
+}
+
+/* Dropdown */
+.lerndrop{
+  margin-left: 130px;
+  width: 670px;
+}
+.Credentialsdrop{
+  width: 600px;
+}
+.For_componies{
+  width: 600px;
 }
