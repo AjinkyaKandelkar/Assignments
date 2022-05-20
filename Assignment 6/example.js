@@ -1,8 +1,12 @@
-setInterval(function(){
-    var currentTime=new Date();
-    var hours=currentTime.getHours();
-    var minute=currentTime.getMinutes();
-    var second=currentTime.getSeconds();
-    console.log(hours +"/"+ minute + "/" +second);
-});
-document.getElementById("hours")
+var z = document.getElementById("inputBox");
+z.addEventListener("focusin", myFocusFunction);
+z.addEventListener("focusout", myBlurFunction);
+
+function myFocusFunction() {
+document.getElementById("searchIcon").style.display="none";
+}
+
+function myBlurFunction() {
+document.getElementById("searchIcon").style.display= "block";
+} 
+

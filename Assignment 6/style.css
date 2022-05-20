@@ -15,9 +15,9 @@ nav .btn:focus {
     box-shadow: none;
 }
 .cen{
-    text-align: end;
-    margin-top: 20px;
+    text-align: center;
 }
+
 /* Hover Arrow */
 .img-arrow
 {
@@ -129,10 +129,10 @@ div .footer-images img.footer-image2
 .search{
   position: relative;
 }
-.search .bi-search{
+.bi-search{
 
    position: absolute;
-   top: 4px;
+   top: 2px;
    left:23px;
    color:rgb(194, 192, 192);
 }
@@ -166,8 +166,98 @@ div .footer-images img.footer-image2
   width: 670px;
 }
 .Credentialsdrop{
-  width: 600px;
+  width: 700px;
 }
 .For_componies{
-  width: 600px;
+  width: 750px;
 }
+.lerndrop div.row{
+  cursor: pointer;
+  transition: cursor 1s;
+}
+#animateHover:hover{
+  text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.295);
+  transition: text-shadow;
+}
+.Credentialsdrop div.row .col-md-6 div.row:hover{
+  cursor: pointer;
+  background-color: rgba(29, 164, 254, 0.103);
+}
+.For_componies .container div.row .col-md-6 div.row:hover{
+  cursor: pointer;
+  background-color:rgba(29, 164, 254, 0.103);
+}
+
+    /*===================*/
+                /* WOOBLE VERTICAL
+                /*===================*/
+
+                @-webkit-keyframes wobble-vertical-on-hover {
+                  16.65% {
+                      -webkit-transform: translateY(8px);
+                      transform: translateY(8px);
+                  }
+                  33.3% {
+                      -webkit-transform: translateY(-6px);
+                      transform: translateY(-6px);
+                  }
+                  49.95% {
+                      -webkit-transform: translateY(4px);
+                      transform: translateY(4px);
+                  }
+                  66.6% {
+                      -webkit-transform: translateY(-2px);
+                      transform: translateY(-2px);
+                  }
+                  83.25% {
+                      -webkit-transform: translateY(1px);
+                      transform: translateY(1px);
+                  }
+                  100% {
+                      -webkit-transform: translateY(0);
+                      transform: translateY(0);
+                  }
+                  }
+                  @keyframes wobble-vertical-on-hover {
+                  16.65% {
+                      -webkit-transform: translateY(8px);
+                      transform: translateY(8px);
+                  }
+                  33.3% {
+                      -webkit-transform: translateY(-6px);
+                      transform: translateY(-6px);
+                  }
+                  49.95% {
+                      -webkit-transform: translateY(4px);
+                      transform: translateY(4px);
+                  }
+                  66.6% {
+                      -webkit-transform: translateY(-2px);
+                      transform: translateY(-2px);
+                  }
+                  83.25% {
+                      -webkit-transform: translateY(1px);
+                      transform: translateY(1px);
+                  }
+                  100% {
+                      -webkit-transform: translateY(0);
+                      transform: translateY(0);
+                  }
+                  }
+                  .wobble-vertical-on-hover {
+                  vertical-align: middle;
+                  -webkit-transform: perspective(1px) translateZ(0);
+                  transform: perspective(1px) translateZ(0);
+                  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                  }
+                  .wobble-vertical-on-hover:hover, .wobble-vertical-on-hover:focus, .wobble-vertical-on-hover:active {
+                  -webkit-animation-name: wobble-vertical-on-hover;
+                  animation-name: wobble-vertical-on-hover;
+                  -webkit-animation-duration: 1s;
+                  animation-duration: 1s;
+                  -webkit-animation-timing-function: ease-in-out;
+                  animation-timing-function: ease-in-out;
+                  -webkit-animation-iteration-count: 1;
+                  animation-iteration-count: 1;
+                  background-color:rgba(29, 164, 254, 0.274);
+                  }

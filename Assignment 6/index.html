@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="/style.css">
         <script src="/script.js"></script>
     </head>
-    <body>
+    <body id="document">
         <!-- Top Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <img src="/Images/Acadmy-logo.png" alt="" width="90">
@@ -26,11 +26,11 @@
           
             <div class="row collapse navbar-collapse" id="navbarSupportedContent">
                 
-                <div class="col-lg-9 col-md-12 mb-1 search">
-                    <input type="text" class="form-control form-control-sm border-0" placeholder="       search">
-                    <i class="bi bi-search"></i>
+                <div class="col-lg-9 col-md-8 col-sm-6 mb-1 ">
+                    <input type="text" class="form-control form-control-sm border-0 search" placeholder="       search" id="inputBox">
+                    <i class="bi bi-search" id="searchIcon"></i>
                 </div>
-                <div class="col-lg-3 col-md-12 cen">
+                <div class="col-lg-3 col-md-4 col-sm-6 cen">
                     <button class="btn btn-sm btn-primary pl-4 pr-4 mr-2" onclick="window.location.href='login.html'">Login</button>
                     <button class="btn btn-sm btn-outline-danger pl-3 pr-3" onclick="window.location.href='ex.html'">Signup</button>
                 </div>    
@@ -41,14 +41,14 @@
                                 <button class="nav-button btn mr-4 ml-2">Home</button>
                             </li>
                             <li class="nav-item  mr-4 ">
-                                <div>
+                                <div class="">
                                     <button class="nav-button btn" id="learndrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-display="static" onclick="unhidefun(hide1,changecolor1)">
                                         Learn   <i class="bi bi-chevron-down ml-1" id="changecolor1" ></i>
                                         <div id="hide1"> </div>
                                     </button>
                                     <div class="dropdown-menu lerndrop" aria-labelledby="learndrop">
                                         <div class="row mt-3">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6" id="animateHover">
                                                 <div class="row">
                                                         <div class="col-md-4" >
                                                             <img src="/Images/Dropdown/Guided_learning_path.png" alt="image" class="ml-2" >
@@ -160,65 +160,67 @@
                                     <div id="hide2"> </div>
                                 </button>
                                 <div class="dropdown-menu Credentialsdrop" aria-labelledby="learndrop">
-                                    <div class="row mt-3">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                    <div class="col-md-4" >
-                                                        <img src="/Images/Dropdown/shild_screen.png" alt="image" class="ml-4" >
+                                    <div class="container">
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <div class="row " style="background-color:rgba(29, 164, 254, 0.103);" id="super">
+                                                        <div class="col-md-3" >
+                                                            <img src="/Images/Dropdown/shild_screen.png" alt="image" >
+                                                        </div>
+                                                        <div class="col-md-9" style="margin-left:-25px ;">
+                                                            <h10 style="font-size:14px; font-weight:600;">Superbadges
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
+                                                            </h10> 
+                                                        </div>
+                                                </div>     
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                    <div class="col-md-3" >
+                                                        <img src="/Images/Dropdown/shild_screen.png" alt="image"  >
                                                     </div>
-                                                    <div class="col-md-8 mt-1" style="margin-left: -25px;">
-                                                        <h10 style="font-size:14px; font-weight:600;">Superbadges
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
+                                                    <div class="col-md-9"style="margin-left:-25px ;" >
+                                                        <h10 style="font-size:14px; font-weight:600;">Main Certification
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
                                                         </h10> 
                                                     </div>
-                                            </div>     
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-4" >
-                                                    <img src="/Images/Dropdown/shild_screen.png" alt="image" class="ml-4 justify-content-center" style="    " >
-                                                </div>
-                                                <div class="col-md-8 mt-1" style="margin-left: -25px;">
-                                                    <h10 style="font-size:14px; font-weight:600;">Main Certification
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
-                                                    </h10> 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                    <div class="col-md-4" >
-                                                        <img src="/Images/Dropdown/screenshot.png" alt="image" class="ml-4" >
+                                        <div class="row mt-2">
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                        <div class="col-md-3" >
+                                                            <img src="/Images/Dropdown/shild_screen.png" alt="image" >
+                                                        </div>
+                                                        <div class="col-md-9" style="margin-left: -25px;">
+                                                            <h10 style="font-size:14px; font-weight:600;">Certifications
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
+                                                            </h10> 
+                                                        </div>
+                                                </div>     
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                    <div class="col-md-3" >
+                                                        <img src="/Images/Dropdown/shild_screen.png" alt="image">
                                                     </div>
-                                                    <div class="col-md-8 mt-1" style="margin-left: -25px;">
-                                                        <h10 style="font-size:14px; font-weight:600;">Certifications
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
+                                                    <div class="col-md-9 " style="margin-left: -25px;">
+                                                        <h10 style="font-size:14px; font-weight:600;">Verify Certification
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
                                                         </h10> 
                                                     </div>
-                                            </div>     
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-4" >
-                                                    <img src="/Images/Dropdown/screenshot.png" alt="image" class="ml-4 justify-content-center" style="    " >
-                                                </div>
-                                                <div class="col-md-8 mt-1" style="margin-left: -25px;">
-                                                    <h10 style="font-size:14px; font-weight:600;">Verify Certification
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
-                                                    </h10> 
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>  
                                     </div>
                                 </div>
                             </li>
@@ -229,110 +231,112 @@
                                     <div id="hide3"> </div>
                                 </button>
                                 <div class="dropdown-menu For_componies" aria-labelledby="learndrop">
-                                    <div class="row mt-3">
-                                        <div class="col-md-6">
-                                            <div class="row">
+                                    <div class="container">
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                        <div class="col-md-3" >
+                                                            <img src="/Images/Dropdown/screenshot.png" alt="image">
+                                                        </div>
+                                                        <div class="col-md-9" style="margin-left: -25px;">
+                                                            <h10 style="font-size:14px; font-weight:600;">On Bording Packages
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
+                                                            </h10> 
+                                                        </div>
+                                                </div>     
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
                                                     <div class="col-md-3" >
-                                                        <img src="/Images/Dropdown/shild_screen.png" alt="image" class="ml-4" >
+                                                        <img src="/Images/Dropdown/screenshot.png" alt="image" class="justify-content-center" >
                                                     </div>
-                                                    <div class="col-md-9">
-                                                        <h10 style="font-size:14px; font-weight:600;">On Bording Packages
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
+                                                    <div class="col" style="margin-left: -30px;">
+                                                        <h10 style="font-size:14px; font-weight:600;">Learn How our Customers are using AAA
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
                                                         </h10> 
                                                     </div>
-                                            </div>     
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-3" >
-                                                    <img src="/Images/Dropdown/shild_screen.png" alt="image" class="justify-content-center" >
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <h10 style="font-size:14px; font-weight:600;">Learn How our Customers are using AAA
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
-                                                    </h10> 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                    <div class="col-md-4" >
-                                                        <img src="/Images/Dropdown/screenshot.png" alt="image" class="ml-4" >
+                                        <div class="row mt-2">
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                        <div class="col-md-3" >
+                                                            <img src="/Images/Dropdown/screenshot.png" alt="image">
+                                                        </div>
+                                                        <div class="col-md-9" style="margin-left: -25px;">
+                                                            <h10 style="font-size:14px; font-weight:600;">Development Support
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
+                                                            </h10> 
+                                                        </div>
+                                                </div>     
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                    <div class="col-md-3" >
+                                                        <img src="/Images/Dropdown/screenshot.png" alt="image" class="justify-content-center">
                                                     </div>
-                                                    <div class="col-md-8" style="margin-left: -25px;">
-                                                        <h10 style="font-size:14px; font-weight:600;">Development Support
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
+                                                    <div class="col" style="margin-left: -35px;">
+                                                        <h10 style="font-size:14px; font-weight:600;">Increase Adoption and productivity 
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
                                                         </h10> 
                                                     </div>
-                                            </div>     
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-4" >
-                                                    <img src="/Images/Dropdown/screenshot.png" alt="image" class="justify-content-center">
-                                                </div>
-                                                <div class="col-md-8" style="margin-left: -25px;">
-                                                    <h10 style="font-size:14px; font-weight:600;">Increase Adoption and productivity 
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
-                                                    </h10> 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                    <div class="col-md-4" >
-                                                        <img src="/Images/Dropdown/screenshot.png" alt="image" class="ml-4" >
+                                        <div class="row mt-2">
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                        <div class="col-md-3" >
+                                                            <img src="/Images/Dropdown/screenshot.png" alt="image">
+                                                        </div>
+                                                        <div class="col-md-9" style="margin-left: -25px;">
+                                                            <h10 style="font-size:14px; font-weight:600;">Resource Out Sourcing
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
+                                                            </h10> 
+                                                        </div>
+                                                </div>     
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row wobble-vertical-on-hover">
+                                                    <div class="col-md-3" >
+                                                        <img src="/Images/Dropdown/screenshot.png" alt="image" class="justify-content-center">
                                                     </div>
-                                                    <div class="col-md-8" style="margin-left: -25px;">
-                                                        <h10 style="font-size:14px; font-weight:600;">Resource Out Sourcing
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
+                                                    <div class="col" style="margin-left: -35px;">
+                                                        <h10 style="font-size:14px; font-weight:600;">Motivate & Track Employee Learning
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
                                                         </h10> 
                                                     </div>
-                                            </div>     
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-4" >
-                                                    <img src="/Images/Dropdown/screenshot.png" alt="image" class="justify-content-center">
-                                                </div>
-                                                <div class="col-md-8" style="margin-left: -25px;">
-                                                    <h10 style="font-size:14px; font-weight:600;">Motivate & Track Employee Learning
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
-                                                    </h10> 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                    <div class="col-md-4" >
-                                                        <img src="/Images/Dropdown/screenshot.png" alt="image" class="ml-4" >
-                                                    </div>
-                                                    <div class="col-md-8" style="margin-left: -25px;">
-                                                        <h10 style="font-size:14px; font-weight:600;">Create Culture of Learning
-                                                        <p class="text-muted" style="font-size:10px;">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
-                                                        </p>
-                                                        </h10> 
-                                                    </div>
-                                            </div>     
+                                        <div class="row mt-2">
+                                            <div class="col-12">
+                                                <div class="row wobble-vertical-on-hover">
+                                                        <div class="col-md-3" >
+                                                            <img src="/Images/Dropdown/screenshot.png" alt="image">
+                                                        </div>
+                                                        <div class="col-md-9" style="margin-left: -25px;">
+                                                            <h10 style="font-size:14px; font-weight:600;">Create Culture of Learning
+                                                            <p class="text-muted" style="font-size:10px;">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed.
+                                                            </p>
+                                                            </h10> 
+                                                        </div>
+                                                </div>     
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -509,5 +513,5 @@
             </div>
         </div>
     </body>
-    
+    <script src="/example.js"></script>
 </html>
