@@ -2,18 +2,17 @@ function all_validation(event)
 {
     event.preventDefault();
     
-    if(!validName()||!validEmail()||!validPass())
+    if(!validName()||!validEmail()||!validUser()||!validPass())
     {
-        return;
+        return;   
     }
-
-    event.target.submit();
+    if(true){alert("Succesful!");}
 }
 function validName()
 {
     var firstname=document.getElementById("fname").value
     var lastname=document.getElementById("lname").value
-    if(firstname=="" && lastname=="")
+    if(firstname=="" || lastname=="")
     {
         alert("Name Cannot be Empty!")
         return(false);
@@ -31,12 +30,46 @@ function validName()
 function validEmail()
 {
     var email=document.getElementById("email").value
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    if(email=="")
+    {
+        alert("Email cannot be empty!");
+        return false;
+    }
+    else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
     {
         return (true);
     }
     else
     {   alert("You have entered an invalid email address!");
         return (false);
+    }
+}
+function validUser()
+{
+    var user=document.getElementById("uname").value;
+    if(user==""){
+        alert("Empty Username!");
+        return (false);
+    }
+    else{ return (true);}
+}
+
+function validPass()
+{
+    var pass1=document.getElementById("password").value;
+    var pass2=document.getElementById("Repeat_password").value;
+    console.log(pass1,pass2);
+    if(pass1=="" || pass2=="")
+    {
+        alert("Password cannot be Empty!");
+        return (false);
+    }
+    else if(pass1==pass2){
+        console.log("Enterd")
+       return true; 
+    }
+    else{
+        alert("Password Not same!");
+        return false;
     }
 }
