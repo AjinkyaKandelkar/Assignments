@@ -1,14 +1,15 @@
 body
 {
-    background-color: rgb(133,101,224) ;
-    align-items: center;
-    height: 100vh;
+    background-color: rgba(134, 101, 224, 0.836) ;
+    align-items: center;    
+}
+.card1{
+    box-shadow:1px 17px 18px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 17px 18px 1px rgba(0,0,0,0.75);
+    box-shadow: 1px 17px 18px 1px rgba(0,0,0,0.75);
 }
 .font_size{
     font-size: small;
-}
-.breadcrumb-item{
-
 }
 .clr{
     color: rgb(133,101,224) ;
@@ -25,4 +26,60 @@ body
 {
     background-color: rgb(128, 90, 235);
     color: white;
+}
+.breadcrumb
+{
+    color: rgba(128, 128, 128, 0.356);
+}
+.bg-purple{
+    margin-left: -8px;
+    margin-top: 4px;
+    background-color: rebeccapurple;
+}
+.change_colorpurple{
+    background-color: rgb(128, 90, 235);
+    color: white;
+}
+/* .change_colorblack{
+    background-color: none;
+    color: black;
+} */
+.itms1{ 
+    list-style-type: none;}
+.itms1::before{
+    content: "\2022";
+    color: rgb(133,101,224) ;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+.itms2{
+    list-style-type: none;
+}
+#changecolor1{
+    color: rgb(128, 90, 235);
+    font-weight: 600;
+}
+#changecolor2{
+    color: rgb(68, 0, 255);
+}
+.lr{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.purple_color{
+  border-color: rgb(68, 0, 255);;
+}
+.form-check-input:checked
+{
+    background-color:rgb(68, 0, 255);
+}
+
+@media screen and (max-width:500px) {
+    .navcrum{
+        font-size: 11px;
+    }
+    
 }

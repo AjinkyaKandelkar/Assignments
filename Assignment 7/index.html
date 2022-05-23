@@ -10,38 +10,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
     <title>Home</title>
 </head>
 <body class="d-flex justify-content-center">
-    <div class="card m-3 shadow-lg">
-        
-            <nav class="navbar bg-light m-2">
+    <div class="card m-3 border-0 card1">
+        <div class="container fluid p-3 ">
+            <nav class="navbar bg-light p-4">
                 <div class="container-fluid">
-                    <span class="mb-0 h4 clr">SHPPNG</span>
-                    <span class="h5 align-middle">
-                        <ol class="breadcrumb" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                          <li class="breadcrumb-item">Shopping Bag</li>
-                          <li class="breadcrumb-item clr" aria-current="page">Checkout</li>
-                          <li class="breadcrumb-item">Confirmation</li>
-                        </ol>
-                    </span>
-                    <span>
-                        <h3><i class="bi bi-cart3 clr"></i> </h3>
-                    </span>
+                    
+
+                         <span class="mb-0 h4 clr">SHPPNG</span>
+                        
+                            <span class="h6 navcrum" style="margin-top: 20px;">
+                                <ol class="breadcrumb" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                                <li class="breadcrumb-item">Shopping Bag</li>
+                                <li class="breadcrumb-item clr" aria-current="page">Checkout</li>
+                                <li class="breadcrumb-item">Confirmation</li>
+                                </ol>
+                            </span>
+                        
+                        
+                            <h3><i class="bi bi-cart3 clr position-relative">
+                            
+                            </i> <span class="position-absolute bg-purple badge rounded-circle " style="font-size:5px;">1</span> </h3>  
+                        
+                    
                 </div>
             </nav>
             <div class="row p-3">
-                <div class="col-6">
-                    <div class="card">
-                      
-                            <div class="card">
-                                <h5 class="card-header text-center">
+                <div class="col-lg-6 col-sm-6 col-12 mb-4">  
+                    <div class="card p-3 border-0">
+                                <h5 class="card-header text-center border-0">
                                     Personal Information
                                 </h5>
                                 <div class="card-body">
                                     <div class="card-text">
-                                        <div class="form text-muted font_size">
-                                            <div class="row mb-3">
+                                        <div class="form  text-muted font_size">
+                                            <div class="row mb-2">
                                                 <div class="col-6">
                                                     <label for="firstName" class="form-label">First Name</label>
                                                     <input type="text" class="form-control" aria-labelledby="firstName" value="Adrien">
@@ -52,10 +58,10 @@
                                                 </div>
                                             </div>
                                             <label for="Email" class="form-label">Email Address</label>
-                                            <input type="email" class="form-control mb-3" aria-labelledby="Email" value="adrien.gervaix@gmail.com">
+                                            <input type="email" class="form-control mb-2" aria-labelledby="Email" value="adrien.gervaix@gmail.com">
                                             <label for="street" class="form-label">Street</label>
                                             <input type="text" class="form-control mb-3" aria-labelledby="street"  value="284,Place de la bourse">
-                                            <div class="row mb-3">
+                                            <div class="row mb-2">
                                                 <div class="col-6">
                                                     <label for="city" class="form-label">City</label>
                                                     <input type="text" class="form-control" aria-labelledby="city" value="Lille">
@@ -71,63 +77,88 @@
                                                 </div>
                                             </div>
                                             <label for="PhoneNumber" class="form-label">Phone Number</label>
-                                            <div class="input-group mb-3" aria-labelledby="PhoneNumber">
-                                                <span class="input-group-text" id="basic-addon1">+33</span>
-                                                <input type="number" class="form-control font-monospace " placeholder="" aria-label="PhoneNumber" aria-describedby="basic-addon1" value="">
+                                            <div class="input-group mb-2 " aria-labelledby="PhoneNumber">
+                                                <span class="input-group-text purple_color" id="basic-addon1">+33</span>
+                                                <input type="number" class="form-control purple_color" placeholder="" aria-label="PhoneNumber" aria-describedby="basic-addon1" value="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        
                     </div>
+                            
                 </div>
-                <div class="col-6">
-                    <div class="card">
+    
+                <div class="col-lg-6 col-sm-6 col-12">
                         
-                            <div class="card">
-                                <h5 class="card-header text-center">
-                                    Delivery
-                                </h5>
-                                <div class="card m-4">
-                                    <div class="card-text">
-                                        <div class="form">
-                                            <div class="row">
-                                                <label for="deliveryfees" class="form-label  text-muted">Delivery fees</label>
-                                                <div class="col-6 text-center">
-                                                    <div class="card m-4" id="change-color1">
-                                                        <p class="fs-1">0<sup>$</sup></p> 
-                                                        <h6>3-4 Weeks</h6>
+                    <div class="card border-0">
+                                    <h5 class="card-header border-0 text-center">
+                                        Delivery
+                                    </h5>
+                                    <div class="card border-0 m-2">
+                                        <div class="card-text">
+                                            <div class="form">
+                                                <div class="row m-1">
+                                                    <label for="deliveryfees" class="form-label  text-muted" style="margin-bottom: -10px; margin-top:13px;">
+                                                        <small>Delivery fees</small> 
+                                                    </label>
+                                                    <div class="col-6 text-center p-3">
+                                                        <div class="card "  onclick="fun1()">
+                                                            <p class="fs-1" id="changecolor1">0<sup>$</sup></p> 
+                                                            <h6>3-4 Weeks</h6>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-6 text-center">
-                                                    <div class="card m-4" id="change-color2">
-                                                        <p class="fs-1">5<sup>$</sup></p> 
-                                                        <h6>2-5 days</h6>
+                                                    <div class="col-6 text-center p-3">
+                                                        <div class="card change_colorpurple" onclick="fun2()">
+                                                            <p class="fs-1"><b> 5 </b><sup>$</sup></p> 
+                                                            <h6 id="changecolor2">2-5 days</h6>
+                                                        </div>
                                                     </div>
+                                                    <small class=" text-muted">
+                                                        Estimated delivery date <b> August 14. </b><br>
+                                                        Every Package has a tracking number. 
+                                                    </small>
                                                 </div>
-                                                <p class=" text-muted">
-                                                    Estimated delivery date August 14. <br>
-                                                    Every Package has a tracking number. 
-                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <p class="text-muted"> 
-                                    <small>
-                                        Subscribe to our newsletter.
-                                    </small>  <br>
-                                    <small>
-                                        create an account
-                                    </small> 
-                                </p>
-                                <button class="btn btn-clr" type="submit"> confirm my order</button>
-                            </div>
+                                    <div class="mb-5 text-muted">
+                                        <div class="form-check ">
+                                            <small>
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                  Default radio
+                                                </label>
+                                            </small>
+                                          </div>
+                                          <div class="form-check">
+                                              <small>
+                                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                                                  <label class="form-check-label" for="flexRadioDefault2">
+                                                    create an account
+                                                  </label>
+                                              </small>
+                                          </div>
+                                    </div>
+                                    <!-- <p class="text-muted"> 
+                                        <ul class="">
+                                            <li class="itms1">
+                                                <small>
+                                                    Subscribe to our newsletter.
+                                                </small>
+                                            </li>
+                                            <li class="itms2">
+                                                <small>
+                                                    create an account
+                                                </small> 
+                                            </li>
+                                        </ul>
+                                    </p> -->
+                                    <button class="btn btn-clr" type="submit"> confirm my order</button>
                     </div>
+                        
                 </div>
             </div>
-     
+        </div>
     </div>
 </body>
 </html>
