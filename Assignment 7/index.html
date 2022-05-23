@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Home</title>
+</head>
+<body class="d-flex justify-content-center">
+    <div class="card m-3 shadow-lg">
+        
+            <nav class="navbar bg-light m-2">
+                <div class="container-fluid">
+                    <span class="mb-0 h4 clr">SHPPNG</span>
+                    <span class="h5 align-middle">
+                        <ol class="breadcrumb" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                          <li class="breadcrumb-item">Shopping Bag</li>
+                          <li class="breadcrumb-item clr" aria-current="page">Checkout</li>
+                          <li class="breadcrumb-item">Confirmation</li>
+                        </ol>
+                    </span>
+                    <span>
+                        <h3><i class="bi bi-cart3 clr"></i> </h3>
+                    </span>
+                </div>
+            </nav>
+            <div class="row p-3">
+                <div class="col-6">
+                    <div class="card">
+                      
+                            <div class="card">
+                                <h5 class="card-header text-center">
+                                    Personal Information
+                                </h5>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <div class="form text-muted font_size">
+                                            <div class="row mb-3">
+                                                <div class="col-6">
+                                                    <label for="firstName" class="form-label">First Name</label>
+                                                    <input type="text" class="form-control" aria-labelledby="firstName" value="Adrien">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="lastName" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" aria-labelledby="lastName" value="Gervaix">
+                                                </div>
+                                            </div>
+                                            <label for="Email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control mb-3" aria-labelledby="Email" value="adrien.gervaix@gmail.com">
+                                            <label for="street" class="form-label">Street</label>
+                                            <input type="text" class="form-control mb-3" aria-labelledby="street"  value="284,Place de la bourse">
+                                            <div class="row mb-3">
+                                                <div class="col-6">
+                                                    <label for="city" class="form-label">City</label>
+                                                    <input type="text" class="form-control" aria-labelledby="city" value="Lille">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="country" class="form-label">Country</label>
+                                                    <select class="form-select" aria-label="country">
+                                                        <option selected>France</option>
+                                                        <option value="1">India</option>
+                                                        <option value="2">UK</option>
+                                                        <option value="3">United States</option>
+                                                      </select>
+                                                </div>
+                                            </div>
+                                            <label for="PhoneNumber" class="form-label">Phone Number</label>
+                                            <div class="input-group mb-3" aria-labelledby="PhoneNumber">
+                                                <span class="input-group-text" id="basic-addon1">+33</span>
+                                                <input type="number" class="form-control font-monospace " placeholder="" aria-label="PhoneNumber" aria-describedby="basic-addon1" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        
+                            <div class="card">
+                                <h5 class="card-header text-center">
+                                    Delivery
+                                </h5>
+                                <div class="card m-4">
+                                    <div class="card-text">
+                                        <div class="form">
+                                            <div class="row">
+                                                <label for="deliveryfees" class="form-label  text-muted">Delivery fees</label>
+                                                <div class="col-6 text-center">
+                                                    <div class="card m-4" id="change-color1">
+                                                        <p class="fs-1">0<sup>$</sup></p> 
+                                                        <h6>3-4 Weeks</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <div class="card m-4" id="change-color2">
+                                                        <p class="fs-1">5<sup>$</sup></p> 
+                                                        <h6>2-5 days</h6>
+                                                    </div>
+                                                </div>
+                                                <p class=" text-muted">
+                                                    Estimated delivery date August 14. <br>
+                                                    Every Package has a tracking number. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-muted"> 
+                                    <small>
+                                        Subscribe to our newsletter.
+                                    </small>  <br>
+                                    <small>
+                                        create an account
+                                    </small> 
+                                </p>
+                                <button class="btn btn-clr" type="submit"> confirm my order</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+     
+    </div>
+</body>
+</html>

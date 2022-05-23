@@ -1,0 +1,28 @@
+body
+{
+    background-color: rgb(133,101,224) ;
+    align-items: center;
+    height: 100vh;
+}
+.font_size{
+    font-size: small;
+}
+.breadcrumb-item{
+
+}
+.clr{
+    color: rgb(133,101,224) ;
+}
+.btn-clr
+{
+    background-color: rgb(133,101,224);
+    color: white;
+    border-radius: 0;
+    padding: 4%;
+    font-weight:600;
+}
+.btn-clr:hover
+{
+    background-color: rgb(128, 90, 235);
+    color: white;
+}
