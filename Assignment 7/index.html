@@ -14,8 +14,8 @@
     <title>Home</title>
 </head>
 <body class="d-flex justify-content-center">
-    <div class="card m-3 border-0 card1">
-        <div class="container fluid p-3 ">
+    <div class="card border-0 card1 m-4 col-lg-8 col-md-8 col-sm-6">
+        <div class="container mt-3">
             <nav class="navbar bg-light p-4">
                 <div class="container-fluid">
                     
@@ -77,10 +77,8 @@
                                                 </div>
                                             </div>
                                             <label for="PhoneNumber" class="form-label">Phone Number</label>
-                                            <div class="input-group mb-2 " aria-labelledby="PhoneNumber">
-                                                <span class="input-group-text purple_color" id="basic-addon1">+33</span>
-                                                <input type="number" class="form-control purple_color" placeholder="" aria-label="PhoneNumber" aria-describedby="basic-addon1" value="">
-                                            </div>
+                                                <span class="input-group-text" id="" style="margin: 1px; font-size: 15px;">+33</span>
+                                                <input type="number" class="form-control purple_color" placeholder="" aria-label="PhoneNumber" aria-describedby="basic-addon1" value="12111">
                                         </div>
                                     </div>
                                 </div>
@@ -88,32 +86,31 @@
                             
                 </div>
     
-                <div class="col-lg-6 col-sm-6 col-12">
-                        
-                    <div class="card border-0">
+                <div class="col-lg-6 col-sm-6 col-12 ">  
+                    <div class="card border-0 p-3">
                                     <h5 class="card-header border-0 text-center">
                                         Delivery
                                     </h5>
-                                    <div class="card border-0 m-2">
+                                    <div class="card border-0 m-2 mb-4">
                                         <div class="card-text">
                                             <div class="form">
                                                 <div class="row m-1">
-                                                    <label for="deliveryfees" class="form-label  text-muted" style="margin-bottom: -10px; margin-top:13px;">
+                                                    <label for="deliveryfees" class="form-label  text-muted">
                                                         <small>Delivery fees</small> 
                                                     </label>
-                                                    <div class="col-6 text-center p-3">
+                                                    <div class="col-lg-6 col-md-6 text-center ">
                                                         <div class="card "  onclick="fun1()">
                                                             <p class="fs-1" id="changecolor1">0<sup>$</sup></p> 
                                                             <h6>3-4 Weeks</h6>
                                                         </div>
                                                     </div>
-                                                    <div class="col-6 text-center p-3">
+                                                    <div class="col-lg-6 col-md-6 text-center">
                                                         <div class="card change_colorpurple" onclick="fun2()">
                                                             <p class="fs-1"><b> 5 </b><sup>$</sup></p> 
                                                             <h6 id="changecolor2">2-5 days</h6>
                                                         </div>
                                                     </div>
-                                                    <small class=" text-muted">
+                                                    <small class=" text-muted mt-4 mb-2">
                                                         Estimated delivery date <b> August 14. </b><br>
                                                         Every Package has a tracking number. 
                                                     </small>
@@ -121,16 +118,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-5 text-muted">
+                                    <div class="mb-4 text-muted">
                                         <div class="form-check ">
                                             <small>
                                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                                                 <label class="form-check-label" for="flexRadioDefault1">
-                                                  Default radio
+                                                  Subcribe to our newsletter
                                                 </label>
                                             </small>
                                           </div>
-                                          <div class="form-check">
+                                          <div class="form-check form-check-sm">
                                               <small>
                                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
                                                   <label class="form-check-label" for="flexRadioDefault2">
@@ -139,23 +136,8 @@
                                               </small>
                                           </div>
                                     </div>
-                                    <!-- <p class="text-muted"> 
-                                        <ul class="">
-                                            <li class="itms1">
-                                                <small>
-                                                    Subscribe to our newsletter.
-                                                </small>
-                                            </li>
-                                            <li class="itms2">
-                                                <small>
-                                                    create an account
-                                                </small> 
-                                            </li>
-                                        </ul>
-                                    </p> -->
-                                    <button class="btn btn-clr" type="submit"> confirm my order</button>
-                    </div>
-                        
+                                <button class="btn btn-clr mt-4" type="submit"> confirm my order</button>
+                    </div>                 
                 </div>
             </div>
         </div>

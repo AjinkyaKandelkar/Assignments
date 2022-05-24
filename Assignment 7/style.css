@@ -1,7 +1,9 @@
 body
 {
     background-color: rgba(134, 101, 224, 0.836) ;
-    align-items: center;    
+    align-items: center;   
+    /* margin-top: 3%; */
+    height: 100vh;
 }
 .card1{
     box-shadow:1px 17px 18px 1px rgba(0,0,0,0.75);
@@ -69,17 +71,46 @@ body
     padding-right: 50px;
 }
 
-.purple_color{
-  border-color: rgb(68, 0, 255);;
+.purple_color:focus{
+  border-color: rgb(68, 0, 255);
+  box-shadow: none;  
+  color: purple;
 }
 .form-check-input:checked
 {
     background-color:rgb(68, 0, 255);
+    border-color: purple;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:540px) {
     .navcrum{
-        font-size: 11px;
+        font-size: 10px;
+    }
+    body{
+        height: 155vh;
     }
     
+}
+@media screen and (max-width:400px) {
+    
+    body{
+        height: 175vh;
+    }
+    
+}
+@media screen and (min-width:541px) and (max-width:765px) {
+    
+    body{
+        height: 130vh;
+    }
+    
+}
+
+input .purple_color
+{
+    position: relative;
+}
+.input-group-text{
+    position: absolute;
+    z-index: 1;
 }
