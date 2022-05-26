@@ -2,7 +2,7 @@
 
 :root {
     --header-height: 3rem;
-    --nav-width: 68px;
+    --nav-width: 6%;
     --first-color: #4723D9;
     --first-color-light: rgb(47,204,113);
     --second-color-grey:rgba(128, 128, 128, 0.774);
@@ -15,15 +15,53 @@
 }
 body
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     background: url("/BACK.png");
     background-repeat: no-repeat;
     background-size: cover;
+
 }
-.nav
+.box{
+    background-color: teal;
+    padding: 15px;
+}
+a, .icn
 {
-    justify-content: space-around;
+    color: var(--second-color-grey);
+}
+a:hover{
+color: var(--first-color-light);
+}
+
+@media screen and (min-width:670px) {
+    .col-1{
+        width: 3.3333%;
+    }
+    .nav-item .active::before{
+        left: 40px;
+    }
+}
+@media screen and (max-width:669px) {
+    .col-1{
+        width: 8.3333%;
+    }
+    .nav-item .active::before{
+        left: 35px;
+    }
+}
+
+.active {
+    color: var(--first-color-light)
+
+}
+.active::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    left:35px;
+    background-color: aqua;
+}
+.tran
+{
+    transition: .5s;
 }
