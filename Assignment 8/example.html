@@ -8,26 +8,24 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/example.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="/exscript.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid bg-dark">
+  <div class="container-fluid mt-5 mb-5"> 
     <div class="card">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-1">
+          <div class="col-1 border">
             <div class="row tran">
-                <div class="nav-item text-center mt-3 mb-5">
-                  <a href="">
-                    <i class="bi bi-person"> </i>
+                <div class="nav-item text-center mt-4 mb-5">
+                  <a href="" class="">
+                    <i class="fa-solid fa-street-view navbrand_icon" style="font-size:1.5em ;"> </i>
                   </a>
                 </div>
                 <div class="nav-item text-center mb-4">
@@ -59,13 +57,13 @@
 
           </div>
           <div class="col-11">
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg bg-light border-bottom">
               <div class="container-fluid">
-                <a class="navbar-brand" href="#" style="width:10px ;">
+                <a class="navbar-brand" href="#" style="width:10px ; margin-right: 5%;">
                   <i class="bi bi-arrow-right icn"></i>
                 </a>
                 <a class="navbar-brand" href="#">
-                  <input type="text" class="form-control" style="font-size:small ;">
+                  <input type="text" class="form-control" placeholder="Type in to search" style="font-size:small ;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -74,42 +72,105 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
-
+                  
                   </ul>
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                  <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item p-2">
                       <a href="#" class="nav-link">
                         <i class="bi bi-gear"></i>
                       </a>
-                    </li>  
+                    </li>
+                    <li class="nav-item p-2 " >
+                      <a href="#" class="nav-link">
+                        <i class="bi bi-bell text"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class=" nav-link dropdown ">
+                        
+                          <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/pic2.png" alt=""> George Kennedy
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul> 
+                        </a>
+                    </li>
                   </ul>
-                  <form class="d-flex" role="search">
-                    <div>
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                  </form>
                 </div>
               </div>
             </nav>
-            <div>
-              <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+           
+              <div>
+                <div class="d-flex justify-content-between m-3">
+                  <nav class="" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb"> 
+                        <li class="breadcrumb-item m"><a href="#">My Profile</a></li>
+                        <li class="breadcrumb-item l" aria-current="page">Edit Profile</li>
+                    </ol>
+                  </nav>
+                  <button type="text" class="btn btn-sm btn-green rounded-pill d-inline">
+                    <span style="margin-right: 10px;">Save</span> 
+                    <i class="bi bi-arrow-right " ></i> 
+                  </button>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                <div class="card container-fluid mb-5">
+                  
+                    <div class="row">
+                      <div class="col-6">
+                          <div class="card">
+                            <img src="/pic.PNG"  class="card-img-top rounded mx-auto d-block mt-3" alt="..." style="max-width: 20%;">
+                            <div class="card-body">
+                              <form action="#" class="row g-2">
+                                
+                                  <div class="col-lg-6 col-sm-6 col-12">
+                                    <label for="firstname"  class="form-label">First Name</label>
+                                      <input type="text" class="form-control  " value="" aria-labelledby="firstname">
+                                  </div>
+                                  <div class="col-lg-6 col-sm-6 col-12">
+                                    <label for="lastname"  class="form-label">Last Name</label>
+                                      <input type="text" class="form-control " value="" aria-labelledby="lastname">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="pass"  class="form-label">Password</label>
+                                    <div class="buttonIn">
+                                      <input type="password" id="enter" class="form-control">
+                                      <button id="clear" class="btn border-0 p_button text-uppercase">change pasword</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="emailadd" class="form-label">Email</label>
+                                    <input type="text" class="form-control" aria-labelledby="emailadd">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="Phone" class="form-label">Phone</label>
+                                    <input type="email" class="form-control" aria-labelledby="Phone">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="Address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" aria-labelledby="Address">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="Nation" class="form-label">Nation</label>
+                                    <input type="text" class="form-control" aria-labelledby="Nation">
+                                  </div>
+                              </form>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="card">
+                            
+                        </div>
+                      </div>
+                    </div>
+                 
                 </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
+              </div>
+            
+        
           </div>
         </div>
       </div>

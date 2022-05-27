@@ -3,8 +3,8 @@
 :root {
     --header-height: 3rem;
     --nav-width: 6%;
-    --first-color: #4723D9;
     --first-color-light: rgb(47,204,113);
+    --first-color-dark: rgb(68, 182, 115);
     --second-color-grey:rgba(128, 128, 128, 0.774);
     --white-color: #F7F6FB;
     --black-color:black;
@@ -24,7 +24,7 @@ body
     background-color: teal;
     padding: 15px;
 }
-a, .icn
+.nav-item a, .icn
 {
     color: var(--second-color-grey);
 }
@@ -32,22 +32,6 @@ a:hover{
 color: var(--first-color-light);
 }
 
-@media screen and (min-width:670px) {
-    .col-1{
-        width: 3.3333%;
-    }
-    .nav-item .active::before{
-        left: 40px;
-    }
-}
-@media screen and (max-width:669px) {
-    .col-1{
-        width: 8.3333%;
-    }
-    .nav-item .active::before{
-        left: 35px;
-    }
-}
 
 .active {
     color: var(--first-color-light)
@@ -64,4 +48,96 @@ color: var(--first-color-light);
 .tran
 {
     transition: .5s;
+}
+.navbrand_icon
+{
+    color: var(--first-color-light);
+}
+.l{
+    color: var(--black-color);
+}
+.m a{
+    text-decoration: none;
+    color: var(--black-color-light);
+}
+.btn-green{
+    background-color: var(--first-color-light);
+    color: var(--white-color);
+    padding: 0 2rem 0 2rem;
+    font-weight: 600;
+    border-color: var(--first-color-light);
+    box-shadow: 1px 3px 12px  #888888;
+}
+.btn-green:hover
+{
+    background-color:var(--first-color-dark) ;
+    border-color: var(--first-color-dark);
+    color: var(--white-color);
+}
+.btn-green:active{
+     background-color:var(--first-color-dark) ;
+    border-color: var(--first-color-dark);
+    color: var(--white-color);
+}
+.breadcrumb{
+    font-size: larger;
+    font-weight: 600;
+}
+
+.buttonIn {
+    position: relative;
+}
+ 
+
+ 
+.p_button,.p_button:hover{
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 3px;
+    z-index: 1;
+    font-size: small;
+    transform: translateX(2px);
+    color: var(--first-color-light);
+}
+
+
+
+
+
+
+
+@media screen and (max-width:490px) {
+   .breadcrumb{
+       font-size: small;
+   }
+   .btn-green{
+       margin-top: -10px;   
+       padding: 0.1rem 1rem;
+   }
+   .p_button{
+       font-size: xx-small;
+       width: 66px; 
+   }
+   .nav_icon,.navbrand_icon{
+       font-size: small;
+       margin-left: -6px;
+   }
+}
+@media screen and (min-width:670px) {
+    .col-1{
+        width: 3.3333%;
+    }
+    .nav-item .active::before{
+        left: 40px;
+    }
+}
+@media screen and (max-width:669px) {
+    .col-1{
+        width: 8.3333%;
+    }
+    
+    .nav-item .active::before{
+        left: 35px;
+    }
 }
