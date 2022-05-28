@@ -74,23 +74,23 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 
                 </ul>
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item p-2">
+                <ul class="navbar-nav mb-2 mb-lg-0 ">
+                  <li class="nav-item p-2 border-start">
                     <a href="#" class="nav-link">
                       <i class="bi bi-gear"></i>
                     </a>
                   </li>
-                  <li class="nav-item p-2 " >
+                  <li class="nav-item p-2 border-start" >
                     <a href="#" class="nav-link">
                       <i class="bi bi-bell position-relative">
                         <span class="position-absolute top-30 start-10 translate-middle badge border border-light rounded-circle bg-green p-1"><span class="visually-hidden">unread messages</span></span>
                       </i>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item border-start">
                     <a href="#" class=" nav-link dropdown ">
                       <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/pic2.png" alt=""> <span class="" style="font-weight: 600;">George Kennedy </span> 
+                        <img src="/pic2.png" alt=""> <span class="text-muted" style="font-weight: 600;">George Kennedy </span> 
                       </button>
                     </a>
                   </li>
@@ -99,61 +99,61 @@
             </div>
           </nav>
        
-          <!-- main div -->
-          <div class="main_div d-flex justify-content-between mt-2 mb-2">
-            <nav class="" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-              <ol class="breadcrumb"> 
+          <!-- main body div -->
+          <div class="main_div d-flex justify-content-between mt-2 mb-2 ">
+            <nav class=" " style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+              <ol class="breadcrumb "> 
                   <li class="breadcrumb-item m"><a href="#">My Profile</a></li>
                   <li class="breadcrumb-item l" aria-current="page">Edit Profile</li>
               </ol>
             </nav>
-            <button type="text" class="btn btn-sm btn-green rounded-pill d-inline">
+            <button type="text" class="btn btn-sm btn-green rounded-pill d-inline" style="margin-right:8px ;">
               <span style="margin-right: 10px;">Save</span> 
               <i class="bi bi-arrow-right " ></i> 
             </button>
           </div>
           <!-- End of main div -->
           <!-- body card  -->
-          <div class="card container-fluid border-0 mb-1">
+          <div class="card container-fluid mb-1">
                     
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-12 ">
                 <!-- card1 -->
-                  <div class="card m-2">
+                  <div class="card m-2 border-0">
                     <img src="/pic.PNG"  class="card-img-top rounded mx-auto d-block mt-3" alt="..." style="max-width: 20%;">
                     <div class="card-body">
                       <form action="#" class="row g-2" style="font-size: 14px;">
                         
                           <div class="col-lg-6 col-sm-6 col-12">
                             <label for="firstname"  class="form-label">First Name</label>
-                              <input type="text" class="form-control  " value="" aria-labelledby="firstname">
+                              <input type="text" class="form-control  " value="Arthur" aria-labelledby="firstname">
                           </div>
                           <div class="col-lg-6 col-sm-6 col-12">
                             <label for="lastname"  class="form-label">Last Name</label>
-                              <input type="text" class="form-control " value="" aria-labelledby="lastname">
+                              <input type="text" class="form-control " value="Nancy" aria-labelledby="lastname">
                           </div>
                           <div class="col-12">
                             <label for="pass"  class="form-label">Password</label>
                             <div class="buttonIn">
-                              <input type="password" id="enter" class="form-control">
+                              <input type="password" id="enter" value="ajinkya@" class="form-control">
                               <button id="clear" class="btn border-0 p_button text-uppercase">change pasword</button>
                             </div>
                           </div>
                           <div class="col-12">
                             <label for="emailadd" class="form-label">Email</label>
-                            <input type="text" class="form-control" aria-labelledby="emailadd">
+                            <input type="text" class="form-control" value="bradley.ortiz@gmail.com" aria-labelledby="emailadd">
                           </div>
                           <div class="col-12">
                             <label for="Phone" class="form-label">Phone</label>
-                            <input type="email" class="form-control" aria-labelledby="Phone">
+                            <input type="number" class="form-control" value="4770461827" aria-labelledby="Phone">
                           </div>
                           <div class="col-12">
                             <label for="Address" class="form-label">Address</label>
-                            <input type="text" class="form-control" aria-labelledby="Address">
+                            <input type="text" class="form-control" value="116 Jasklski Starvenue Suit 883" aria-labelledby="Address">
                           </div>
                           <div class="col-12">
                             <label for="Nation" class="form-label">Nation</label>
-                            <input type="text" class="form-control" aria-labelledby="Nation">
+                            <input type="text" class="form-control" value="colombia" aria-labelledby="Nation">
                           </div>
                       </form>
                     </div>
@@ -162,7 +162,7 @@
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <!-- start card 2 -->
-                <div class="card m-2">
+                <div class="card m-2 border-0">
                   <div class="card-body">
                     <form action="#" class="row g-2" style="font-size:14px ;">
                         
@@ -181,7 +181,7 @@
                           <i class="bi bi-x" style="font-size:.7rem ;"></i>
                         </label>
                         <select class="form-select " aria-label="Default select example">
-                          <option selected value="1">Englsh</option>
+                          <option selected value="1">English</option>
                           <option value="2">German</option>
                           <option value="3">Frech</option>
                         </select>
@@ -223,39 +223,45 @@
                         <div class="col-lg-6 col-sm-6 col-12">
                           <label for="Twitter"  class="form-label">Twitter</label>
                           
-                            <input type="text" class="form-control " value="" aria-labelledby="Twitter">
+                            <input type="text" class="form-control " value="twitter.com/envato" aria-labelledby="Twitter">
                         </div>
                         <div class="col-lg-6 col-sm-6 col-12">
                           <label for="Linkedin"  class="form-label">Linked In</label>
-                            <input type="text" class="form-control " value="" aria-labelledby="Linkedin">
+                            <input type="text" class="form-control " value="Linkedin/envato" aria-labelledby="Linkedin">
                         </div>
                  
                           <div class="col-lg-6 col-sm-6 col-12">
                             <label for="Facebook"  class="form-label">Facebook</label>
-                              <input type="text" class="form-control " value="" aria-labelledby="Facebook">
+                              <input type="text" class="form-control " value="facebook/envato" aria-labelledby="Facebook">
                           </div>
                           <div class="col-lg-6 col-sm-6 col-12">
                             <label for="Google"  class="form-label">Google</label>
-                              <input type="text" class="form-control " value="" aria-labelledby="Google">
+                              <input type="text" class="form-control " value="zachary Ruiz" aria-labelledby="Google">
                           </div>
                           <div class="col-12">
                             <label for="Slogan"  class="form-label">Slogan</label>
-                            <input type="text" class="form-control " value="Land acquisition Specalist" aria-labelledby="Slogan">
+                            <input type="text" class="form-control " value="Land acquisition Specialist" aria-labelledby="Slogan">
                           </div>
-                          <div class="col-12 mt-4">
+                          <div class="col-12 mt-3">
                             <div class="card">
-                              <div class="row">
+                        
                                 <div class="card-header border-0"> Payment method</div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
-                                  <img src="/visa card.PNG" alt="" class="img-fluid">
+                                <div class="card-body">
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-lg-6 col-md-6 col-sm-12 col-12 border">
+                                        <img src="/visa card.PNG" alt="" class="img-fluid">
+                                      </div>
+                                      <div class="col-lg-6 col-md-6 col-sm-12 col-12 border">
+                                        <img src="/master card.PNG" alt="" class="img-fluid">
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
-                                  <img src="/master card.PNG" alt="" class="img-fluid">
-                                </div>
-                              </div>
+                            
                             </div>
                           </div>
-                          <button class="btn mt-3 text-start border-0">
+                          <button class="btn mt-1 text-start border-0">
                             <i class="bi bi-calendar cal_icon position-relative" style="font-size: .9rem; margin-right: 5px;">
                               <i class="bi bi-plus-circle  cal_icon position-absolute top-50 border border-light rounded-circle" style="font-size: .7rem; margin-left: -10px;"></i>
                             </i> 
