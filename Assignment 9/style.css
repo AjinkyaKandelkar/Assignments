@@ -1,0 +1,36 @@
+:root
+{
+    --bs-white:var(--bs-white);
+    --nav-blue:#41AAE1;
+    --nav-blue-light:#4da6d6; 
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Nabar Started */
+.nav_bar{
+    background-color: var(--nav-blue);
+}
+.nav-link{
+    color: white;
+  
+}
+
+.nav_icon{
+    color: white;
+}
+
+.navbar{
+        font-size: medium;
+    --bs-navbar-hover-color:white;
+    --bs-navbar-nav-link-padding-x: 2rem;
+    
+}
+.btn-white{
+    --bs-btn-bg: white;
+    --bs-btn-color:var(--nav-blue-light);
+    --bs-btn-padding-x:1.75rem;
+
+}
