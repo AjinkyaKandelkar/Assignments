@@ -10,267 +10,270 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
- 
+  <link rel="stylesheet" href="/ex2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="/exscript.js"></script>
   
-  <style>
-    .box{
-    background-color: teal;
-    padding: 15px;
-}
-  </style>
 </head>
 <body>
-  <div class="card container">
-    <div class="row">
-      <div class="col-1">
-        <div class="row">
-          
-            <div class="col-12 nav-item text-center mt-4 mb-5">
-              <a href="" class="">
-                <i class="fa-solid fa-street-view navbrand_icon" style="font-size:1.5em ;"> </i>
-              </a>
-            </div>
-            <div class="col-12 nav-item text-center mb-4">
-              <a href="#" id="click0" class="" onclick="magic(click0)">
-                <i class="bi bi-ui-checks-grid nav_icon"> </i>
-              </a>
-            </div>
-            <div class="col-12 nav-item  text-center mb-4">
-              <a href="#" id="click1" class="" onclick="magic(click1)">
-                <i class="bi bi-person nav_icon "> </i>
-              </a>
-            </div>
-            <div class="col-12 nav-item text-center mb-4">
-              <a href="#" id="click2" class="" onclick="magic(click2)">
-                <i class="bi bi-chat-right nav_icon "> </i> 
-              </a>
-            </div>
-            <div class="col-12 nav-item text-center mb-4">
-              <a href="#" id="click3" class="" onclick="magic(click3)">
-                <i class="bi bi-chat-right-text nav_icon "> </i>
-              </a>
-            </div>
-            <div class="col-12 nav-item text-center mb-4">
-              <a href="#" id="click4" class="" onclick="magic(click4)">
-                <i class="bi bi-star nav_icon"> </i>
-              </a>
-            </div>
-
-        </div>
-      </div>
-      <div class="col-11">
-        <nav class="navbar navbar-expand-lg  border-bottom">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="width:10px ; margin-right: 5%;">
-              <i class="bi bi-arrow-right icn"></i>
-            </a>
-            <a class="navbar-brand" href="#">
-              <input type="text" class="form-control" placeholder="Type in to search" style="font-size:small ;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              
-              </ul>
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item p-2">
-                  <a href="#" class="nav-link">
-                    <i class="bi bi-gear"></i>
-                  </a>
-                </li>
-                <li class="nav-item p-2 " >
-                  <a href="#" class="nav-link">
-                    <i class="bi bi-bell text"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class=" nav-link dropdown ">
-                    
-                      <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/pic2.png" alt=""> George Kennedy
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdown2">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul> 
-                    </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <!-- main div -->
-        <div class="d-flex justify-content-between mt-3 mb-3 bg-light">
-          <nav class="" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-            <ol class="breadcrumb fs-4"> 
-                <li class="breadcrumb-item m"><a href="#">My Profile</a></li>
-                <li class="breadcrumb-item l" aria-current="page">Edit Profile</li>
-            </ol>
-          </nav>
-          <button type="text" class="btn btn-sm btn-green rounded-pill d-inline">
-            <span style="margin-right: 10px;">Save</span> 
-            <i class="bi bi-arrow-right " ></i> 
-          </button>
-        </div>
-        <!-- End of main div -->
-        <!-- body card  -->
-        <div class="card container-fluid mb-5">
-                  
+  <div class="container">
+    <div class="card container mb-3 mt-3 shadow-lg">
+      <div class="row">
+        <div class="col-1 border">
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 p-2">
-              <!-- card1 -->
-                <div class="card">
-                  <img src="/pic.PNG"  class="card-img-top rounded mx-auto d-block mt-3" alt="..." style="max-width: 20%;">
+            
+              <div class="col-12 nav-item text-center mt-4 mb-5">
+                <a href="" class="">
+                  <i class="fa-solid fa-street-view navbrand_icon"> </i>
+                </a>
+              </div>
+              <div class="col-12 nav-item text-center mb-5">
+                <a href="#" id="click0" class="" onclick="magic(click0)">
+                  <i class="bi bi-ui-checks-grid nav_icon"> </i>
+                </a>
+              </div>
+              <div class="col-12 nav-item  text-center mb-5">
+                <a href="#" id="click1" class="" onclick="magic(click1)">
+                  <i class="bi bi-person nav_icon "> </i>
+                </a>
+              </div>
+              <div class="col-12 nav-item text-center mb-5">
+                <a href="#" id="click2" class="" onclick="magic(click2)">
+                  <i class="bi bi-chat-right nav_icon "> </i> 
+                </a>
+              </div>
+              <div class="col-12 nav-item text-center mb-5">
+                <a href="#" id="click3" class="" onclick="magic(click3)">
+                  <i class="bi bi-chat-right-text nav_icon "> </i>
+                </a>
+              </div>
+              <div class="col-12 nav-item text-center mb-4">
+                <a href="#" id="click4" class="" onclick="magic(click4)">
+                  <i class="bi bi-star nav_icon"> </i>
+                </a>
+              </div>
+  
+          </div>
+        </div>
+        <div class="col-11">
+          <nav class="navbar navbar-expand-lg border-bottom navbar_custom">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="width:10px ; margin-right: 5%;">
+                <i class="bi bi-arrow-right icn"></i>
+              </a>
+              <a class="navbar-brand" href="#">
+                <input type="text" class="form-control position-relative" placeholder="     Type in to search" style="font-size:small ;">
+                <i class="bi bi-search position-absolute" style="margin-top:-30px; margin-left: 5px; font-size: 1rem; color: grey;"></i>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item p-2">
+                    <a href="#" class="nav-link">
+                      <i class="bi bi-gear"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item p-2 " >
+                    <a href="#" class="nav-link">
+                      <i class="bi bi-bell position-relative">
+                        <span class="position-absolute top-30 start-10 translate-middle badge border border-light rounded-circle bg-green p-1"><span class="visually-hidden">unread messages</span></span>
+                      </i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class=" nav-link dropdown ">
+                      <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/pic2.png" alt=""> <span class="" style="font-weight: 600;">George Kennedy </span> 
+                      </button>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+       
+          <!-- main div -->
+          <div class="main_div d-flex justify-content-between mt-2 mb-2">
+            <nav class="" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+              <ol class="breadcrumb"> 
+                  <li class="breadcrumb-item m"><a href="#">My Profile</a></li>
+                  <li class="breadcrumb-item l" aria-current="page">Edit Profile</li>
+              </ol>
+            </nav>
+            <button type="text" class="btn btn-sm btn-green rounded-pill d-inline">
+              <span style="margin-right: 10px;">Save</span> 
+              <i class="bi bi-arrow-right " ></i> 
+            </button>
+          </div>
+          <!-- End of main div -->
+          <!-- body card  -->
+          <div class="card container-fluid border-0 mb-1">
+                    
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 ">
+                <!-- card1 -->
+                  <div class="card m-2">
+                    <img src="/pic.PNG"  class="card-img-top rounded mx-auto d-block mt-3" alt="..." style="max-width: 20%;">
+                    <div class="card-body">
+                      <form action="#" class="row g-2" style="font-size: 14px;">
+                        
+                          <div class="col-lg-6 col-sm-6 col-12">
+                            <label for="firstname"  class="form-label">First Name</label>
+                              <input type="text" class="form-control  " value="" aria-labelledby="firstname">
+                          </div>
+                          <div class="col-lg-6 col-sm-6 col-12">
+                            <label for="lastname"  class="form-label">Last Name</label>
+                              <input type="text" class="form-control " value="" aria-labelledby="lastname">
+                          </div>
+                          <div class="col-12">
+                            <label for="pass"  class="form-label">Password</label>
+                            <div class="buttonIn">
+                              <input type="password" id="enter" class="form-control">
+                              <button id="clear" class="btn border-0 p_button text-uppercase">change pasword</button>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <label for="emailadd" class="form-label">Email</label>
+                            <input type="text" class="form-control" aria-labelledby="emailadd">
+                          </div>
+                          <div class="col-12">
+                            <label for="Phone" class="form-label">Phone</label>
+                            <input type="email" class="form-control" aria-labelledby="Phone">
+                          </div>
+                          <div class="col-12">
+                            <label for="Address" class="form-label">Address</label>
+                            <input type="text" class="form-control" aria-labelledby="Address">
+                          </div>
+                          <div class="col-12">
+                            <label for="Nation" class="form-label">Nation</label>
+                            <input type="text" class="form-control" aria-labelledby="Nation">
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+                <!--card 1 end  -->
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <!-- start card 2 -->
+                <div class="card m-2">
                   <div class="card-body">
-                    <form action="#" class="row g-2">
-                      
-                        <div class="col-lg-6 col-sm-6 col-12">
-                          <label for="firstname"  class="form-label">First Name</label>
-                            <input type="text" class="form-control  " value="" aria-labelledby="firstname">
-                        </div>
-                        <div class="col-lg-6 col-sm-6 col-12">
-                          <label for="lastname"  class="form-label">Last Name</label>
-                            <input type="text" class="form-control " value="" aria-labelledby="lastname">
-                        </div>
-                        <div class="col-12">
-                          <label for="pass"  class="form-label">Password</label>
-                          <div class="buttonIn">
-                            <input type="password" id="enter" class="form-control">
-                            <button id="clear" class="btn border-0 p_button text-uppercase">change pasword</button>
+                    <form action="#" class="row g-2" style="font-size:14px ;">
+                        
+                      <div class="col-lg-6 col-sm-6 col-12">
+                        <label for="Gender"  class="form-label">Gender</label>
+                        <select class="form-select " aria-label="Default select example">
+                          <option selected value="1">Male</option>
+                          <option value="2">Female</option>
+                          <option value="3">Other</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-6 col-12">
+                        <label for="Language"  class="form-label position-relative">Language</label>
+                        <label class="form-label position-absolute z-1" style="margin-left:130px ; font-size:.8rem ; color: gray;" >
+                          Cancel
+                          <i class="bi bi-x" style="font-size:.7rem ;"></i>
+                        </label>
+                        <select class="form-select " aria-label="Default select example">
+                          <option selected value="1">Englsh</option>
+                          <option value="2">German</option>
+                          <option value="3">Frech</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="date-field"  class="form-label">Date</label>
+                        <div class="row">
+                          <div class="col-8">
+                            <div class="row g-2">
+                              <div class="col-lg-5 col-sm-12 col-12 mb-2 ">
+                                <select class="form-select  form-select-sm " aria-label="Default select example">
+                                  <option selected>september</option>
+                                  <option value="1">Augest</option>
+                                  <option value="2">July</option>
+                                  <option value="3">June</option>
+                                </select>
+                              </div>
+                              <div class="col-lg-3 col-sm-6 col-6 ">
+                                <select class="form-select form-select-sm " aria-label="Default select example">
+                                  <option selected>31</option>
+                                  <option value="1">30</option>
+                                  <option value="2">29</option>
+                                  <option value="3">28</option>
+                                </select>
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-6">
+                                <select class="form-select form-select-sm " aria-label="Default select example">
+                                  <option selected>1990</option>
+                                  <option value="1">1989</option>
+                                  <option value="2">1988</option>
+                                  <option value="3">1987</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-12">
-                          <label for="emailadd" class="form-label">Email</label>
-                          <input type="text" class="form-control" aria-labelledby="emailadd">
+                      </div>
+                     
+                        <div class="col-lg-6 col-sm-6 col-12">
+                          <label for="Twitter"  class="form-label">Twitter</label>
+                          
+                            <input type="text" class="form-control " value="" aria-labelledby="Twitter">
                         </div>
-                        <div class="col-12">
-                          <label for="Phone" class="form-label">Phone</label>
-                          <input type="email" class="form-control" aria-labelledby="Phone">
+                        <div class="col-lg-6 col-sm-6 col-12">
+                          <label for="Linkedin"  class="form-label">Linked In</label>
+                            <input type="text" class="form-control " value="" aria-labelledby="Linkedin">
                         </div>
-                        <div class="col-12">
-                          <label for="Address" class="form-label">Address</label>
-                          <input type="text" class="form-control" aria-labelledby="Address">
-                        </div>
-                        <div class="col-12">
-                          <label for="Nation" class="form-label">Nation</label>
-                          <input type="text" class="form-control" aria-labelledby="Nation">
-                        </div>
+                 
+                          <div class="col-lg-6 col-sm-6 col-12">
+                            <label for="Facebook"  class="form-label">Facebook</label>
+                              <input type="text" class="form-control " value="" aria-labelledby="Facebook">
+                          </div>
+                          <div class="col-lg-6 col-sm-6 col-12">
+                            <label for="Google"  class="form-label">Google</label>
+                              <input type="text" class="form-control " value="" aria-labelledby="Google">
+                          </div>
+                          <div class="col-12">
+                            <label for="Slogan"  class="form-label">Slogan</label>
+                            <input type="text" class="form-control " value="Land acquisition Specalist" aria-labelledby="Slogan">
+                          </div>
+                          <div class="col-12 mt-4">
+                            <div class="card">
+                              <div class="row">
+                                <div class="card-header border-0"> Payment method</div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+                                  <img src="/visa card.PNG" alt="" class="img-fluid">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+                                  <img src="/master card.PNG" alt="" class="img-fluid">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn mt-3 text-start border-0">
+                            <i class="bi bi-calendar cal_icon position-relative" style="font-size: .9rem; margin-right: 5px;">
+                              <i class="bi bi-plus-circle  cal_icon position-absolute top-50 border border-light rounded-circle" style="font-size: .7rem; margin-left: -10px;"></i>
+                            </i> 
+                            <span class="payment_method text-uppercase">
+                              Add Payment Method
+                            </span> 
+                          </button>
                     </form>
                   </div>
+                  
                 </div>
-              <!--card 1 end  -->
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 p-2">
-              <!-- start card 2 -->
-              <div class="card">
-                <div class="card-body">
-                  <form action="#" class="row g-2">
-                      
-                    <div class="col-lg-6 col-sm-6 col-12">
-                      <label for="Gender"  class="form-label">Gender</label>
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Other</option>
-                      </select>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 col-12">
-                      <label for="Language"  class="form-label">Gender</label>
-                      <select class="form-select " aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">Englsh</option>
-                        <option value="2">German</option>
-                        <option value="3">Frech</option>
-                      </select>
-                    </div>
-                    <div class="col-12">
-                      <label for="date-field"  class="form-label">Date</label>
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="row">
-                            <div class="col-6">
-                              <select class="form-select " aria-label="Default select example">
-                                <option selected>september</option>
-                                <option value="1">Englsh</option>
-                                <option value="2">German</option>
-                                <option value="3">Frech</option>
-                              </select>
-                            </div>
-                            <div class="col-3">
-                              <select class="form-select " aria-label="Default select example">
-                                <option selected>31</option>
-                                <option value="1">Englsh</option>
-                                <option value="2">German</option>
-                                <option value="3">Frech</option>
-                              </select>
-                            </div>
-                            <div class="col-3">
-                              <select class="form-select " aria-label="Default select example">
-                                <option selected>1990</option>
-                                <option value="1">Englsh</option>
-                                <option value="2">German</option>
-                                <option value="3">Frech</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                   
-                      <div class="col-lg-6 col-sm-6 col-12">
-                        <label for="Twitter"  class="form-label">Twitter</label>
-                          <input type="text" class="form-control " value="" aria-labelledby="Twitter">
-                      </div>
-                      <div class="col-lg-6 col-sm-6 col-12">
-                        <label for="Linkedin"  class="form-label">Linked In</label>
-                          <input type="text" class="form-control " value="" aria-labelledby="Linkedin">
-                      </div>
-               
-                        <div class="col-lg-6 col-sm-6 col-12">
-                          <label for="Facebook"  class="form-label">Facebook</label>
-                            <input type="text" class="form-control " value="" aria-labelledby="Facebook">
-                        </div>
-                        <div class="col-lg-6 col-sm-6 col-12">
-                          <label for="Google"  class="form-label">Google</label>
-                            <input type="text" class="form-control " value="" aria-labelledby="Google">
-                        </div>
-                        <div class="col-12">
-                          <label for="Slogan"  class="form-label">Slogan</label>
-                          <input type="text" class="form-control " value="Land acquisition Specalist" aria-labelledby="Slogan">
-                        </div>
-                        <div class="col-12 mt-5">
-                          <div class="card">
-                            <div class="row">
-                              <div class="card-header border-0"> Payment method</div>
-                              <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
-                                <img src="/visa card.PNG" alt="" class="img-fluid">
-                              </div>
-                              <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
-                                <img src="/master card.PNG" alt="" class="img-fluid">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="btn mt-4 mb-1 text-start border-0">
-                          <i class="bi bi-calendar nav_icon"></i> Payment Method
-                        </button>
-                  </form>
-                </div>
-                
+                <!-- end of card 2 -->
               </div>
-              <!-- end of card 2 -->
             </div>
+         
           </div>
-       
-      </div>
-        <!-- end of it -->
+          <!-- end of it -->
+        </div>
       </div>
     </div>
   </div>

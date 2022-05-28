@@ -1,0 +1,165 @@
+
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 6%;
+    --first-color-light: rgb(47,204,113);
+    --first-color-dark: rgb(68, 182, 115);
+    --second-color-grey:rgba(128, 128, 128, 0.774);
+    --white-color: #F7F6FB;
+    --black-color:black;
+    --black-color-light:rgb(128, 128, 128);
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+
+body{
+    background-image: url(/BACK.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-green{
+    background-color: var(--first-color-light);
+}
+
+/* Sidebar Icons */
+.navbrand_icon{
+    font-size:1.5em;
+}
+.nav-item a, .icn
+{
+    color: var(--second-color-grey);
+}
+a:hover{
+color: var(--first-color-light);
+}
+
+
+.active {
+    color: var(--first-color-light);
+    position: relative;
+}
+.active::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    left:35px;
+    background-color: var(--first-color-light);
+}
+.tran
+{
+    transition: .5s;
+}
+
+.navbrand_icon
+{
+    color: var(--first-color-light);
+}
+
+/* End Of Side Bar Icon */
+
+/* BreadCrumb */
+
+.breadcrumb{
+    font-size: larger;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.l{
+    color: var(--black-color);
+}
+.m a{
+    text-decoration: none;
+    color: var(--black-color-light);
+}
+/* End of Breadcrumb */
+
+/* Start of SAve button */
+.btn-green{
+    background-color: var(--first-color-light);
+    color: var(--white-color);
+    padding: 0 2rem 0 2rem;
+    font-weight: 600;
+    border-color: var(--first-color-light);
+    box-shadow: 1px 3px 12px  #888888;
+}
+.btn-green:hover
+{
+    background-color:var(--first-color-dark) ;
+    border-color: var(--first-color-dark);
+    color: var(--white-color);
+}
+.btn-green:active{
+     background-color:var(--first-color-dark) ;
+    border-color: var(--first-color-dark);
+    color: var(--white-color);
+}
+/* End of Save button */
+
+/* Start of Change password button */
+.buttonIn {
+    position: relative;
+}
+ 
+.p_button,.p_button:hover{
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 3px;
+    z-index: 1;
+    font-size: small;
+    transform: translateX(2px);
+    color: var(--first-color-light);
+}
+/* End of Change password button */
+
+.payment_method
+{color: var(--first-color-light); font-weight: 600; }
+.cal_icon{color: var(--black-color-light);}
+
+
+/* Media Queries  */
+@media screen and (min-width:1000px) and (max-width:1690px) {
+    .col-1{
+        width: 5.333333%;
+    }
+    .col-11{
+        margin-left: 20px;
+    }
+    
+}
+
+@media screen and (max-width:757px) {
+    .active::before{
+        left: 25px;
+    }
+}
+
+@media screen and (max-width:572px) {
+    
+  .nav_icon{
+      font-size: smaller;
+      margin-left: -3px;
+  }
+  .navbrand_icon{
+      font-size: medium;
+      margin-left: -5px;
+  }
+  .breadcrumb{
+      font-size: medium;
+  }
+  .btn-green{
+    padding: 0 1rem 0 1rem;
+    margin: 2px 2px 2px 2px;
+    font-weight: 600;
+    }
+    .active::before{
+        left:21px;      
+    }
+}
+
+
+/* End of Media Queries */

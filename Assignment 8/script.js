@@ -37,16 +37,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
      // Your code to run since DOM is loaded and ready
     });
 
-
-    // <!-- <i class="bi bi-gear nav_logo-icon"></i>
-    // <i class="bi bi-bell nav_logo-icon"></i>
-    // <span class="dropdown-center">
-    //     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
-    //       Centered dropdown
-    //     </button>
-    //     <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
-    //       <li><a class="dropdown-item" href="#">Action</a></li>
-    //       <li><a class="dropdown-item" href="#">Action two</a></li>
-    //       <li><a class="dropdown-item" href="#">Action three</a></li>
-    //     </ul>
-    // </span> -->
