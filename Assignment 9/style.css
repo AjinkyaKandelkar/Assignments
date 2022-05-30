@@ -1,6 +1,6 @@
 :root
 {
-    --bs-white:var(--bs-white);
+   
     --nav-blue:#41AAE1;
     --nav-blue-light:#4da6d6; 
 }
@@ -23,14 +23,55 @@ body{
 }
 
 .navbar{
-        font-size: medium;
+        font-size: small;
     --bs-navbar-hover-color:white;
     --bs-navbar-nav-link-padding-x: 2rem;
     
 }
-.btn-white{
-    --bs-btn-bg: white;
-    --bs-btn-color:var(--nav-blue-light);
-    --bs-btn-padding-x:1.75rem;
+.btn-blue{
+    --bs-btn-border-radius:0;
+    --bs-btn-font-size:small;
+    --bs-btn-border-color:none;
+    --bs-btn-color:var(--bs-white);
 
 }
+
+.btn-white{
+    --bs-btn-font-size: .8rem;
+    --bs-btn-bg: white;
+    --bs-btn-font-weight:600;
+    --bs-btn-color:var(--nav-blue-light);
+    --bs-btn-padding-x:2rem;
+    --bs-btn-border-radius:0px;
+
+}
+.bi-chevron-down{
+    font-size: smaller;  
+
+}
+.form-control{
+    width: 45%;
+}
+#hide{display: none;}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: var(--bs-white);
+    position: relative;
+
+}
+.navbar-nav .nav-link.active::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    left:31px;
+    top: 30px;
+    background-color: var(--bs-white);
+}
+
+
+@media screen and (max-width:990px) {
+    .navbar-nav .nav-link.active::before{
+        left:0;
+    }
+}
+/* End of Navbar */
