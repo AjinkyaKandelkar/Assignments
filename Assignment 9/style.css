@@ -3,6 +3,7 @@
    
     --nav-blue:#41AAE1;
     --nav-blue-light:#4da6d6; 
+    --nav-blue-lighter:#62bee5;
     --discover-green:#B5DE00;
     --discover-mustured:#FFCA2A;
 }
@@ -306,12 +307,49 @@ body{
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     filter: drop-shadow(8px 8px 8px white); 
+
 }
+
+    /* **************************************
+        Start of Choose Ride
+    ***************************************** */
+    .rides{
+        color: var(--bs-white);
+    }
+    .choose_rides{
+        font-weight: 600;
+    }
+    .choosediv{
+        background-color: var(--nav-blue-lighter);
+    }
+
+    .form-check-input{
+        width: 2rem;
+        height: 2rem;
+        margin-top: -2%;
+        margin-right: 5%;
+        
+    }
+    .form-check-input[type=checkbox] {
+        border-radius: 0;
+    }
+
+
+    /* **************************************
+        End of Choose Ride
+    ***************************************** */
+
 /* **************************************
     End of Discovery Section
 ***************************************** */
 
+/* *********************************
+        Footer Section
+************************************* */
 
+.footer{
+    margin-top: 10%;
+}
 
 
 
