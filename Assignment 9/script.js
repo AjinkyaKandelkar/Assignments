@@ -3,19 +3,28 @@ function magic(){
     document.getElementById("hide").style.display="block";
 }
 
-function clrchange(yes,card_id,col_id,clr='white'){
+function clrchange(yes,card_id,col_id,img_div,clr='white'){
     if(yes=="hi"){
         col_id.style.backgroundColor=clr;
         card_id.style.borderRadius="10px";
         col_id.style.borderTopLeftRadius="10px";
         col_id.style.borderBottomLeftRadius="10px";
         col_id.style.transition="0.4s";
-        document.getElementById("image1").style.display="block";
+        image_hide(yes,img_div);
     }
     else if(yes=='bye'){
         col_id.style.backgroundColor=clr;
         card_id.style.borderRadius="0px";
-        document.getElementById("image1").style.display="none";
+        image_hide(yes,img_div);
     }
         
+}
+
+function image_hide(yes,img_div){
+    if(yes=="hi"){
+       img_div.style.display="block";
+    }
+    else if(yes=='bye'){
+        img_div.style.display="none";
+    }
 }

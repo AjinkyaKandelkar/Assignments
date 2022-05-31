@@ -3,6 +3,8 @@
    
     --nav-blue:#41AAE1;
     --nav-blue-light:#4da6d6; 
+    --discover-green:#B5DE00;
+    --discover-mustured:#FFCA2A;
 }
 
 body{
@@ -130,11 +132,310 @@ body{
 .card{
     border-radius: 0;
 }
-
+#firstcard{
+    -webkit-box-shadow: -7px -23px 31px -8px rgba(0,0,0,0.56);
+    -moz-box-shadow: -7px -23px 31px -8px rgba(0,0,0,0.56);
+    box-shadow: -7px -23px 31px -8px rgba(0,0,0,0.56);
+}
+#rabbit_image{display: none;}
+#tiger_image{display: none;}
+#elephant_image{display: none;}
+#first_image_div{
+    height: 5rem;
+}
+#second_image_div{
+    height: 5rem;
+}
+#third_image_div{
+    height: 5rem;
+}
 /* **************************************
     End of Academy Section
 ***************************************** */
-#image1{
-    display: none;
-    position: absolute;
+
+/* **************************************
+    Start of Discovery Section
+***************************************** */
+.discover_section{
+    background-color: var(--nav-blue);
+}
+.green_hr{
+    width: 2rem;
+    height: 6px;
+    left:0px;
+    top: 0px;
+    background-color: var(--discover-green);
+    border-radius: 4px;
+    opacity: 1;
+    color: var(--discover-green);
+}
+.muster_hr{
+    width: 1rem;
+    height: 6px;
+    left:100px;
+    top: 0px;
+    background-color: var(--discover-mustured);
+    border-radius: 4px;
+    opacity: 1;
+    color: var(--discover-mustured);
+    
+}
+.red2_hr{
+    width: 4rem;
+    height: 6px;
+    left:100px;
+    top: 0px;
+    background-color: var(--bs-danger);
+    border-radius: 4px;
+    opacity: .9;
+    color: var(--bs-danger);
+}
+.discover{
+    font-weight:600;
+    color: var(--bs-white);
+}
+/* Images  */
+.main_grass{
+    width:90%;
+    display: block;
+}
+.tower{
+    margin-top: -112%;
+    width: 28%;
+    transition: transform .3s;
+}
+.tower:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);
+    
+}
+.skywheel{
+    margin-top: -139%;
+    margin-left: -5%;
+    width: 18%;
+    transition: transform .3s;
+}
+.skywheel:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);
+}
+.rolar-coste{
+    margin-top: -145%;
+    width: 25%;
+    transition: transform .3s;
+}
+.rolar-coste:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);   
+}
+.tent{
+    margin-top: -120%;
+    margin-left: -11%;
+    width: 20%;
+    transition: transform .3s;
+}
+.tent:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);
+}
+.car{
+    margin-top: -89%;
+    margin-left: 8%;
+    width: 24%;
+    transition: transform .3s;
+}
+.car:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);
+}
+.train{
+    margin-top: -108%;
+    margin-left: -1%;
+    width: 23%;
+    transition: transform .3s;
+}
+.train:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);
+}
+.rabittent{
+    margin-top: -70%;
+    margin-left: -24%;
+    width: 15%;
+    transition: transform .3s;
+}
+.rabittent:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);
+}
+.pond_img{
+    margin-top: -53%;
+    margin-left: -27%;
+    width: 37%;
+    transition: transform .3s;
+}
+.pond_img:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white);
+}
+.roundroad{
+    margin-top: -92%;
+    margin-left: -8%;
+    width: 35%;
+    transition: transform .3s;
+}
+.roundroad:hover
+{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: drop-shadow(8px 8px 8px white); 
+}
+/* **************************************
+    End of Discovery Section
+***************************************** */
+
+
+
+
+
+
+/* *****************************************
+            Media Quiries
+******************************************** */
+@media screen and (min-width:992px) and (max-width:1190px) {
+    .car{
+        margin-left: 8%;
+        margin-top: -94%;
+    }
+    .train{
+        margin-top: -114%;
+    }
+    .tent{
+        margin-top: -125%;
+    }
+    .rabittent{
+        margin-top: -75%;
+    }
+    .pond_img{
+        margin-top: -58%;
+        margin-left: -30%;
+    }
+    .roundroad{
+        margin-top: -97%;
+        margin-left: -8%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    .car{
+        margin-left: 5%;
+        margin-top: -97%;
+    }
+    .train{
+        margin-top: -114%;
+    }
+    .tent{
+        margin-top: -125%;
+    }
+    .rabittent{
+        margin-top: -79%;
+    }
+    .pond_img{
+        margin-top: -62%;
+        margin-left: -25%;
+    }
+    .roundroad{
+        margin-top: -99%;
+        margin-left: -10%;
+    }
+}
+@media screen and (min-width:511px) and (max-width:767px) {
+    .car{
+        margin-left: 8%;
+        margin-top: -90%;
+    }
+    .train{
+        margin-top: -110%;
+    }
+    .tent{
+        margin-top: -125%;
+    }
+    .rabittent{
+        margin-top: -72%;
+    }
+    .pond_img{
+        margin-top: -55%;
+        margin-left: -30%;
+    }
+    .roundroad{
+        margin-top: -92%;
+        margin-left: -8%;
+    }
+}
+@media screen and (min-width:465px) and (max-width:510px) {
+    .car{
+        margin-left: 9%;
+        margin-top: -93%;
+    }
+    .train{
+        margin-top: -110%;
+        margin-left: -7%;
+    }
+    .tent{
+        margin-top: -125%;
+    }
+    .rabittent{
+        margin-top: -72%;
+        margin-left: -20%;
+    }
+    .pond_img{
+        margin-top: -58%;
+        margin-left: -29%;
+    }
+    .roundroad{
+        margin-top: -92%;
+        margin-left: -8%;
+    }
+}
+
+@media screen and (min-width:370px) and (max-width:465px) {
+    .car{
+        margin-left: 8%;
+        margin-top: -98%;
+    }
+    .train{
+        margin-top: -117%;
+        margin-left: -6%;
+    }
+    .tent{
+        margin-top: -125%;
+    }
+    .rabittent{
+        margin-top: -78%;
+        margin-left: -23%;
+    }
+    .pond_img{
+        margin-top: -63%;
+        margin-left: -25%;
+    }
+    .roundroad{
+        margin-top: -106%;
+        margin-left: -10%;
+    }
 }
