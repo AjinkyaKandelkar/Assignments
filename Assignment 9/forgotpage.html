@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+    <title>Forgot password</title>
+     
+    <style>
+         body{
+             background: url("/Images/ReviewerLoginpage/behind.png") no-repeat center center fixed;
+             -webkit-background-size:cover;  
+             -moz--background-size:cover;
+             -o-background-size:cover;
+             background-size: cover;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 60vh;
+         }
+         .arrow_button{
+            --bs-btn-border-radius: 4.375rem;
+            --bs-btn-padding-x: 0.55rem;
+            --bs-btn-padding-y: 0.25rem;
+            border: 0;
+        }
+        .card{
+            width: 23rem;
+        }
+        .btn_blue{
+            --bs-btn-bg: #41AAE1;
+            font-weight: 500;
+            --bs-btn-border-radius: 0;
+            --bs-btn-color: white;
+            --bs-btn-line-height: .9rem;
+            font-size: small;
+            --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+        }
+        a{
+            text-decoration: none;
+            color: #41AAE1;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .endhr{
+            width: 5rem;
+            height: 3px;
+            background-color:#303030;
+            border-radius: 4px;
+            opacity: 1;
+            color: #303030;
+            margin-bottom: 0;
+        }
+        b{
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="card m-4">
+        <div class="card-header border-0">
+           
+                <div class="row">
+                    <div class="col-3">
+                        <button class="btn arrow_button">
+                            <i class="bi bi-arrow-left-short fw-bold fs-4"></i> 
+                        </button>
+                    </div>
+                    <div class="col-9 d-flex align-items-center">
+                        <span class="fs-5 fw-bold">
+                            Forgot Password
+                        </span> 
+                    </div>
+                </div>
+         
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <span class="text-muted" style="font-size:12px ;">
+                            A password reset link will sent to your email. If you didn't receive any mail within a few minutes, please retry.
+                        </span> 
+                    </div>
+                    <div class="col-12 mt-3">
+                        <label for="username" class="mt-2" style="font-size: smaller; font-weight: 600;">Email <b>*</b></label>
+                        <input type="email" class="form-control" id="username">
+                    </div>
+                    <div class="col-12 mt-4 d-flex justify-content-end">
+                        <a href="" class="m-2">Log in</a>
+                        <button class="btn btn_blue m-2"> Send Link</button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <hr class="endhr">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

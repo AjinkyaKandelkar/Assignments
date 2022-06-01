@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="/validation.js"></script>
-    <title>Login Page</title>
-    
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <script src="/validation.js"></script>
+    <title>Signup Page</title>
+
     <style>
         body{
             background: url("/Images/ReviewerLoginpage/behind.png") no-repeat center center fixed;
@@ -54,8 +54,7 @@
         }
         .arrow_button{
             --bs-btn-border-radius: 4.375rem;
-            --bs-btn-padding-x: 0.55rem;
-            --bs-btn-padding-y: 0.25rem;
+         
             border: 0;
         }
         .endhr{
@@ -67,7 +66,11 @@
             color: #303030;
             margin-bottom: 0;
         }
+        label{
+            font-weight: 600;
+        }
     </style>
+
 </head>
 <body>
     <div class="card m-4">
@@ -81,7 +84,7 @@
                     </div>
                     <div class="col-8 ">
                         <span class="fs-5 fw-bold " style="margin-left:20px ;">
-                            Log in
+                            Sign Up
                         </span> 
                     </div>
                 </div>
@@ -90,22 +93,30 @@
         <div class="card-body p-4">
             <form action="#">
                 <div class="form d-grid gap-3">
-                    <label for="username" class="d-flex float-left" style="margin-bottom:-11px; font-size: small;" >Email</label>
-                    <input type="text" class="form-control" id="email">
-                    <label for="Password" class="d-flex float-left" style="margin-bottom:-11px ; font-size: small;" >Password</label>
-                    <input type="password"class="form-control" id="password">
-                    <a class="text-end"  href="/forgotpage.html" style="font-size: x-small; margin-top: -10px;" >forgot your password? </a>
-                    <div class="form-check" style="margin-top: -30px;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          <label for="" class="d-flex float-left">
-                              <small> Remember Me  </small>
-                          </label> 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="firstname" style="font-size: small;">First Name<b>*</b></label>
+                            <input type="text" class="form-control" id="fname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastname" class="" style="font-size: small;">Last Name<b>*</b></label>
+                            <input type="text" class="form-control" id="lname">
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn_blue" onclick="onlylogin_valid(event)">Log in</button>
+                    <label for="email" style="margin-bottom:-11px; font-size: small;">Email<b>*</b></label>
+                    <input type="text" class="form-control" id="email">
+                    <label for="Password" style="margin-bottom:-11px ; font-size: small;">Password</label>
+                    <input type="password"class="form-control" id="password">
+                    
+                    <div class="d-flex justify-content-between">
+                        <a class="text-start"  href="/login_page.html" style="font-size:12px;" >Already have an account? </a>
+                        <button class="btn btn_blue" onclick="all_validation(event)">Sign up</button>
                     </div>
                 </div>   
             </form>
+            <div class="d-flex justify-content-center mt-4">
+                <small style="font-size:12px;"> Or sign up with</small>
+            </div>
             <div class="d-flex justify-content-evenly mt-4">
                 <div class="d-flex justify-content-center ">
                     <img src="/Images/ReviewerLoginpage/google.svg"  alt="Google">
@@ -125,9 +136,6 @@
                     <span>Microsoft</span>
                     <span>linkedin</span>
                 </div>
-            <div class="footer text-center mt-4">
-                Dont have an account?<a href="/signuppage.html"> Sign up </a> 
-            </div>
             <div class="d-flex justify-content-center">
                 <hr class="endhr mt-4">
             </div>

@@ -1,13 +1,26 @@
-function all_validation(event)
+function onlylogin_valid(event)
 {
     event.preventDefault();
-    
-    if(!validName()||!validEmail()||!validUser()||!validPass())
+    if(!validEmail()||!validPass())
     {
         return;   
     }
     if(true){alert("Succesful!");}
 }
+
+
+function all_validation(event)
+{
+    event.preventDefault();
+    
+    if(!validName()||!validEmail()||!validPass())
+    {
+        return;   
+    }
+    if(true){alert("Succesful!");}
+}
+
+
 
 function validName()
 {
@@ -59,14 +72,14 @@ function validUser()
 function validPass()
 {
     var pass1=document.getElementById("password").value;
-    console.log(pass1,pass2);
+  
     if(pass1=="")
     {
         alert("Password cannot be Empty!");
         return (false);
     }
+
     else{
-       
         return true;
     }
 }
