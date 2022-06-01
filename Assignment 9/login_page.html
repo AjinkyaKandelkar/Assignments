@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Login Page</title>
+    
+    <style>
+        body{
+            background: url("/Images/ReviewerLoginpage/behind.png") no-repeat center center fixed;
+            -webkit-background-size:cover;  
+            -moz--background-size:cover;
+            -o-background-size:cover;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card{
+            width: 23rem;
+        }
+        .btn_blue{
+            --bs-btn-bg: #41AAE1;
+            --bs-btn-padding-x: 1.5rem;
+            --bs-btn-border-radius: 0;
+            --bs-btn-color: white;
+            --bs-btn-line-height: .8rem;
+            font-size: small;
+            --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+        }
+        img{
+            width: 70%;
+        }
+        .Image_text{
+            color: gray;
+        }
+        .footer{
+            font-size: 12px ;
+        }
+        a{
+            text-decoration: none;
+            color: #41AAE1      ;
+        }
+        .arrow_button{
+            --bs-btn-border-radius: 4.375rem;
+            --bs-btn-padding-x: 0.55rem;
+            --bs-btn-padding-y: 0.25rem;
+            border: 0;
+        }
+        .endhr{
+            width: 5rem;
+            height: 3px;
+            background-color:#303030;
+            border-radius: 4px;
+            opacity: 1;
+            color: #303030;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card m-4">
+        <div class="card-header border-0">
+           
+                <div class="row">
+                    <div class="col-4">
+                        <button class="btn arrow_button">
+                            <i class="bi bi-arrow-left-short fw-bold fs-4"></i> 
+                        </button>
+                    </div>
+                    <div class="col-8 ">
+                        <span class="fs-5 fw-bold " style="margin-left:20px ;">
+                            Log in
+                        </span> 
+                    </div>
+                </div>
+         
+        </div>
+        <div class="card-body p-4">
+            <form action="#">
+                <div class="form d-grid gap-3">
+                    <label for="username" class="d-flex float-left" style="margin-bottom:-11px; font-size: small;">Email</label>
+                    <input type="email" class="form-control" id="username">
+                    <label for="Password" class="d-flex float-left" style="margin-bottom:-11px ; font-size: small;">Password</label>
+                    <input type="password"class="form-control">
+                    <a class="text-end"  href="/forgotpage.html" style="font-size: x-small; margin-top: -10px;" >forgot your password? </a>
+                    <div class="form-check" style="margin-top: -30px;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label for="" class="d-flex float-left">
+                              <small> Remember Me  </small>
+                          </label> 
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn_blue">Log in</button>
+                    </div>
+                </div>   
+            </form>
+            <div class="d-flex justify-content-evenly mt-4">
+                <div class="d-flex justify-content-center ">
+                    <img src="/Images/ReviewerLoginpage/google.svg"  alt="Google">
+                    
+                </div>
+                <div class="d-flex justify-content-center ">
+                    <img src="/Images/ReviewerLoginpage/microsoft.svg" alt="Microsoft">
+                 
+                </div>
+                <div class="d-flex justify-content-center ">
+                    <img src="/Images/ReviewerLoginpage/linkedin.svg" alt="Linked in">
+            
+                </div>
+            </div>
+                <div class="Image_text d-flex justify-content-evenly mt-1" style="font-size:12px ;">
+                    <span>Google</span>
+                    <span>Microsoft</span>
+                    <span>linkedin</span>
+                </div>
+            <div class="footer text-center mt-4">
+                Dont have an account?<a href=""> Sign up </a> 
+            </div>
+            <div class="d-flex justify-content-center">
+                <hr class="endhr mt-4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

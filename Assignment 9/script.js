@@ -28,3 +28,25 @@ function image_hide(yes,img_div){
         img_div.style.display="none";
     }
 }
+var y=true;
+function buttonchange()
+{
+    
+    if(y==true)
+    {  
+        
+        document.getElementById("first-logo").setAttribute("class","bi bi-chevron-up");
+        y=false;
+    }
+     else
+    {
+        document.getElementById("first-logo").setAttribute("class","bi bi-chevron-down");
+        y=true;
+    }
+    
+}
+
+function sitechange(){
+    window.location.replace("login_page.html");
+
+}

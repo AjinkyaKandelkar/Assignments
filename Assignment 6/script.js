@@ -15,10 +15,9 @@ function unhidefun(yes,change_clr)
         x=true;
     }
 }
-
 function buttonchange()
 {
-    
+    console.log(y);
     if(y==true)
     {  
         

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="42" viewBox="0 0 128 42">
+  <g id="Group_36945" data-name="Group 36945" transform="translate(-0.325 -0.455)">
+    <rect id="Rectangle_2416" data-name="Rectangle 2416" width="128" height="42" transform="translate(0.325 0.455)" fill="#303030"/>
+    <g id="playstore" transform="translate(8.369 9.29)">
+      <g id="Group_36943" data-name="Group 36943" transform="translate(0 0.001)">
+        <path id="Path_49280" data-name="Path 49280" d="M63.235,8.032C60.518,6.513,56.158,4.073,49.4.287A1.63,1.63,0,0,0,47.962.1l11.6,11.6Z" transform="translate(-46.847 -0.012)" fill="#32bbff"/>
+        <path id="Path_49281" data-name="Path 49281" d="M24.664,1.93a1.667,1.667,0,0,0-.247.105,1.632,1.632,0,0,0-.868,1.451V23.579a1.631,1.631,0,0,0,.868,1.451,1.688,1.688,0,0,0,.246.106l11.6-11.6Z" transform="translate(-23.549 -1.842)" fill="#32bbff"/>
+        <path id="Path_49282" data-name="Path 49282" d="M59.559,255.98l-11.6,11.6a1.614,1.614,0,0,0,1.434-.187c6.558-3.672,10.869-6.083,13.617-7.615l.226-.127Z" transform="translate(-46.841 -244.29)" fill="#32bbff"/>
+      </g>
+      <path id="Path_49283" data-name="Path 49283" d="M23.549,255.98v10.047a1.631,1.631,0,0,0,.868,1.451,1.693,1.693,0,0,0,.246.106l11.6-11.6Z" transform="translate(-23.549 -244.289)" fill="#2c9fd9"/>
+      <path id="Path_49284" data-name="Path 49284" d="M44.241.275a1.636,1.636,0,0,0-1.68-.082L54.234,11.867,58.08,8.021C55.364,6.5,51,4.062,44.241.275Z" transform="translate(-41.693 0)" fill="#29cc5e"/>
+      <path id="Path_49285" data-name="Path 49285" d="M54.234,252.126,42.561,263.8a1.625,1.625,0,0,0,1.68-.082c6.558-3.672,10.869-6.083,13.617-7.615l.226-.127Z" transform="translate(-41.693 -240.611)" fill="#d93f21"/>
+      <path id="Path_49286" data-name="Path 49286" d="M303.17,176.653a1.627,1.627,0,0,0-.838-1.43s-1.041-.581-4.233-2.366l-3.8,3.8,3.8,3.8c3.157-1.772,4.229-2.37,4.229-2.37A1.627,1.627,0,0,0,303.17,176.653Z" transform="translate(-281.937 -164.962)" fill="#ffd500"/>
+      <path id="Path_49287" data-name="Path 49287" d="M302.332,257.41a1.627,1.627,0,0,0,.838-1.43H294.3l3.8,3.8C301.26,258.008,302.332,257.41,302.332,257.41Z" transform="translate(-281.937 -244.289)" fill="#fa0"/>
+    </g>
+    <g id="Group_36944" data-name="Group 36944" transform="translate(37.936 5.773)">
+      <text id="Get_it_on" data-name="Get it on" transform="translate(0.39 7.682)" fill="#fff" font-size="8" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Get it on</tspan></text>
+      <text id="Playstore-2" data-name="Playstore" transform="translate(0.39 25.682)" fill="#fff" font-size="14" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Playstore</tspan></text>
+    </g>
+  </g>
+</svg>

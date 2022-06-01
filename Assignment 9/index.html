@@ -64,9 +64,9 @@
             </ul>
             <form class="d-flex me-2" role="search">
               <input type="text" class="form-control  me-2" placeholder="search" id="hide">
-              <button class="btn btn-blue me-2" type="submit" id="unhide" onclick="magic()"><i class="bi bi-search fs-5"></i></button>  
-              <button class="btn btn-blue me-3" type="submit">Log in</button>
-              <button class="btn btn-white" type="submit">Signup</button>
+              <button class="btn btn-blue me-2" type="button" id="unhide" onclick="magic()"><i class="bi bi-search fs-5"></i></button>  
+              <button class="btn btn-blue me-3" type="button" id="loginbtn" onclick="sitechange()">Log in</button>
+              <button class="btn btn-white" type="button">Signup</button>
             </form>
           </div>
         </div>
@@ -193,34 +193,50 @@
                 <img src="/Images/Reviewer- Landing page/pool-small.png" alt="#" class="pond_img img-fluid">
                 <img src="/Images/Reviewer- Landing page/round-road.png" alt="#" class="roundroad img-fluid"> 
             </div>
-            <div class="col-md-6  d-flex justify-content-center">
-              <div class="rides">
+            <div class="chooseRideDiv col-md-6 d-flex justify-content-center ">
+              <div class="rides mt-5">
                 <h3 class="choose_rides"> Choose a Ride </h3>
                 <h6 class="mt-4"> IT Security </h6>
+
                 <div class="mt-3 p-4 choosediv">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                    <label class="form-check-label small" for="flexCheckDefault1">
-                      Cyber Security: Hacker Exposed!
-                    </label>
+                  <div class=" row">
+                    <div class="col-2">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                    </div>
+                    <div class="col-10">
+                      <label class="form-check-label small" for="flexCheckDefault1">
+                        Cyber Security: Hacker Exposed!
+                      </label>
+                    </div>
                   </div>
                 </div>
+
                 <div class="mt-3 p-4 choosediv">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                    <label class="form-check-label small" for="flexCheckDefault2">
-                      The Ultimate Dark Web And its Purpose
-                    </label>
+                  <div class="row">
+                    <div class="col-2">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                    </div>
+                    <div class="col-10">
+                      <label class="form-check-label" for="flexCheckDefault2" style="font-size: 13px;">
+                        The Ultimate Dark Web And its Purpose
+                      </label>
+                    </div>
                   </div>
                 </div>
+
                 <div class="mt-3 p-4 choosediv">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
-                    <label class="form-check-label small" for="flexCheckDefault3">
-                      Cyber Security: Anonymous Browsing!
-                    </label>
+                  <div class="row">
+                    <div class="col-2">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                    </div>
+                    <div class="col-10">
+                      <label class="form-check-label" for="flexCheckDefault3" style="font-size: 13px;">
+                        Cyber Security: Anonymous Browsing!
+                      </label>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -228,48 +244,96 @@
       </div>
       <div class="footer">
         <div class="container table-responsive mt-4 ">
-          <table class="table table-sm table-borderless">
-              <thead>
-                <tr>
-                  <th scope="col">Learn</th>
-                  <th scope="col">Credentials</th>
-                  <th scope="col">Extras</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                  <tr class="text-muted small">
-                      <td>Trails</td>
-                      <td>superbadges</td>
-                      <td>MyTrailHead</td>
-                  </tr>
-                  <tr class="text-muted small">
-                      <td>Trailmixes</td>
-                      <td>Certifications</td>
-                      <td>Customer Stories</td>
-                  </tr>
-                  <tr class="text-muted small">
-                      <td>Modules</td>
-                      <td>Main Certfications</td>
-                      <td>Trail Tracker</td>
-                  </tr>
-                  <tr class="text-muted small">
-                      <td>Projets</td>
-                      <td>verify Certifications</td>
-                      <td>Sample Gallery</td>
-                  </tr>
-                  <tr class="text-muted small">
-                      <td>Trail Academy</td>
-                      <td>Take Free Certification prep</td>
-                      <td>TrailHead Store</td>
-                  </tr>
-                  <tr class="text-muted small">
-                      <td>Career Paths Trails</td>
-                  </tr>
-              </tbody>
-          </table>
+          <div class="row">
+            <div class="col-lg-10 col-sm-10 col-12">
+              <table class="table table-sm table-borderless">
+                  <thead>
+                    <tr>
+                      <th scope="col">Learn</th>
+                      <th scope="col">Credentials</th>
+                      <th scope="col">Extras</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="text-muted small">
+                          <td>Trails</td>
+                          <td>superbadges</td>
+                          <td>MyTrailHead</td>
+                      </tr>
+                      <tr class="text-muted small">
+                          <td>Trailmixes</td>
+                          <td>Certifications</td>
+                          <td>Customer Stories</td>
+                      </tr>
+                      <tr class="text-muted small">
+                          <td>Modules</td>
+                          <td>Main Certfications</td>
+                          <td>Trail Tracker</td>
+                      </tr>
+                      <tr class="text-muted small">
+                          <td>Projets</td>
+                          <td>verify Certifications</td>
+                          <td>Sample Gallery</td>
+                      </tr>
+                      <tr class="text-muted small">
+                          <td>Trail Academy</td>
+                          <td>Take Free Certification prep</td>
+                          <td>TrailHead Store</td>
+                      </tr>
+                      <tr class="text-muted small">
+                          <td>Career Paths Trails</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            <div class="col-lg-2 col-sm-2 col-12">
+              <div class="row">
+                <div class="col-12">
+                  <img src="/Images/Reviewer- Landing page/facebook.svg"  alt="facebook"  style="width: 15%;" class="m-1 mb-3">
+                  <img src="/Images/Reviewer- Landing page/twitter.svg"   alt="twitter"   style="width: 15%;" class="m-1 mb-3">
+                </div>
+                <div class="col-12">
+                  <img src="/Images/Reviewer- Landing page/appstore.svg"  alt="appstore"  class="mb-3">
+                </div>
+                <div class="col-12">
+                  <img src="/Images/Reviewer- Landing page/playstore.svg" alt="playstore" class="mb-2">
+                </div> 
+              </div>
+            </div>
+          </div>
+
         </div> 
       </div>
+      <div class="container mt-3 ">
+        <div class="row">
+            <ul class="nav footer_link" style="text-align:center; font-size: x-small;">
+                <li class="nav-item"><a href="#" class="img-fluid"><img src="/Images/Reviewer- Landing page/main_icon.svg" alt="" style="width: 40px; margin-left: 2px;"></a></li>
+                <li class="nav-item"><a href="#" class="nav-link disabled">&#169; 2021 salesforce.com, inc. All rights reserved.</a> </li>
+                <li class="nav-item"><a href="#" class="nav-link">privacy statement</a> </li>
+                <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a> </li>
+                <li class="nav-item"><a href="#" class="nav-link active">Use of Cookies</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Trust</a> </li>
+                <li class="nav-item"><a href="#" class="nav-link"> Accessibility</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"> Help</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"> Cookies Preferences</a></li>
+    
+                <div class="dropup-center dropdown dropup d-inline">
+                    <button type="button" class="btn btn-sm" id="last-drop" data-bs-toggle="dropdown"  aria-expanded="false" onclick="buttonchange()">
+                      United Kingdom &nbsp;&nbsp;&nbsp;&nbsp;
+                      <i class="bi bi-chevron-down" id="first-logo" style="font-size:small"></i>
+                    </button>   
+                    <ul class="dropdown-menu" aria-labelledby="last-drop">
+                        <li><button class="btn dropdown-item" style="font-size:small;"> United Arab Emirates </button></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><button class="btn dropdown-item"> Western India </button></li>
+                        <li><button class="btn dropdown-item"> Zambia </button></li>
+                        <li><button class="btn dropdown-item"> Singapore </button></li>
+                    </ul>
+                </div>
+            </ul>
+              
+        </div>
+    </div>
     </section>
 </body>
 </html>
