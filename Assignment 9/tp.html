@@ -1,56 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
-<body >
-    
-    <!-- Facebook playstore row -->
-    <div class="container mt-2">
-        <div class="row">
-            <div class="col-9">
-                <img src="/Images/Play.png" alt="" style="width: 100%; max-width:fit-content;">
-            </div> 
-            <div class="col-3 footer-images">
-                <img src="/Images/Facebook.png" alt="" class="footer-image2">
-                <img src="/Images/Twitter.png" alt=""  class="footer-image1">
-            </div>
-        </div>
-    </div> 
-    <!-- Bottom Line and dropdown -->
-    <div class="container mt-3 ">
-        <div class="row">
-            <ul class="nav footer-links" style="text-align:center;">
-                <li class="nav-item"><a href="#" class="img-fluid"><img src="/Images/Acadmy-logo.png" alt="" style="width: 40px;"></a></li>
-                <li class="nav-item"><a href="#" class="nav-link disabled">&#169; 2021 salesforce.com, inc. All rights reserved.</a> </li>
-                <li class="nav-item"><a href="#" class="nav-link">privacy statement</a> </li>
-                <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a> </li>
-                <li class="nav-item"><a href="#" class="nav-link active">Use of Cookies</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Trust</a> </li>
-                <li class="nav-item"><a href="#" class="nav-link"> Accessibility</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"> Help</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"> Cookies Preferences</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"> </a></li>
-    
-                <div class="dropup-center btn-group dropup d-inline">
-                    <button type="button" class="btn btn-sm" id="last-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="buttonchange()">
-                      United Kingdom &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="bi bi-chevron-down" id="first-logo"></i>
-                    </button>   
-                    <ul class="dropdown-menu" aria-labelledby="last-drop" >
-                        <li><button class="btn dropdown-item"> United Arab Emirates </button></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><button class="btn dropdown-item"> Western India </button></li>
-                        <li><button class="btn dropdown-item"> Zambia </button></li>
-                        <li><button class="btn dropdown-item"> Singapore </button></li>
-                    </ul>
-                </div>
-            </ul>
-              
-        </div>
-    </div>
+<body>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+        <label class="form-check-label" for="flexCheckChecked">
+          Checked checkbox
+        </label>
+      </div>
 </body>
 </html>

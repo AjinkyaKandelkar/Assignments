@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home Page</title>
+    <style>
+
+        .navbar {
+            --bs-navbar-nav-link-padding-x: 1rem;
+        }
+
+        .bg-alert {
+            background-color: #4EFF95;
+        }
+
+        .dropdown-menu {
+            height: 100vh;
+        }
+
+        body {
+            background-color: #F9F8F8;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active {
+            background-color: var(--nav-blue-light);
+        }
+
+        .accordion:hover {
+            background-color: var(--nav-blue-light);
+        }
+
+        .accordion:after {
+            content: '\002B';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .box {
+            background-color: teal;
+            padding: 15px;
+        }
+        .form-check-input{
+        width: .8rem;
+        height: .8rem;
+        margin-top: 5%;
+        margin-right: 5%;
+        
+        }
+        .form-check-input[type=checkbox] {
+            border-radius: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md nav_bar ">
+        <div class="container-fluid">
+            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-list nav_icon p-2 fs-4"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: -5%;">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            <a class="navbar-brand" href="#">
+                <img src="/Images/Reviewer- Landing page/main_icon.svg" alt="logo" width="" height="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex" role="search">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link mt-1" aria-current="page" href="#">
+                                <i class="bi bi-search fs-5"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style=" margin-right: -30px;">
+                                <span class="" style="margin-right:5px ;">Reviewer</span>
+                                <img src="/Images/page5/Avatar.png" alt="" class="rounded-circle" style="width: 30%;">
+                            </a>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-bell fs-5 position-relative">
+                                    <span
+                                        class="position-absolute top-0 start-50  badge border border-light rounded-circle bg-alert p-1"><span
+                                            class="visually-hidden">unread messages</span></span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-gear fs-5"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section class="main">
+        <div class="container">
+            <div class="row p-4 fw-semibold" style="background-color: #F9F8F8;">
+                Dashboard
+            </div>
+            <div class="row ">
+                <div class="Dashboard col-2" style="background-color:white">
+                    <div class="col-12">
+                        <i class="bi bi-funnel" style="font-size:small;"></i>
+                        <small>Filter your results</small>
+                        <hr>
+                    </div>
+                    <div class="col-12 mb-2">
+                        <button class="accordion" style="font-size:small;">Posts</button>
+                        <div class="panel">
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Approved
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                   Submitted For Review
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Published
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Draft
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Reassigned
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-2">
+                        <button class="accordion" style="font-size:small;">
+                            Category
+                        </button>
+                        <div class="panel">
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Play by play series
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    What is new
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Code snippet    
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Case studies
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    How to?
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-2">
+                        <button class="accordion" style="font-size:small;">
+                            Level
+                        </button>
+                        <div class="panel">
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Beginner
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Intermediate
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                    Advance 
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Submission col-10">
+                    <span class="fw-semibold"> Your Submission</span>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-4">
+                                    
+                                </div>
+                                <div class="col-4">
+
+                                </div>
+                                <div class="col-4">
+
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

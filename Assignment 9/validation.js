@@ -5,9 +5,16 @@ function onlylogin_valid(event)
     {
         return;   
     }
-    if(true){alert("Succesful!");}
+    if(true){
+        alert("Succesful!");
+        setTimeout(page_direct(),3000);
+    }
 }
 
+function page_direct()
+{
+    window.location.href="HomePage.html";   
+}
 
 function all_validation(event)
 {
