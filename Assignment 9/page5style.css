@@ -156,3 +156,14 @@ margin-right: 5%;
     font-size: x-small;
     margin-left: -6%;
 }
+
+.card{
+    border-radius: 5%;
+}
+.dropdown-item{
+    color: #444;
+}
+.dropdown-item:hover{
+    color: white;
+    background-color: #41AAE1;
+}
