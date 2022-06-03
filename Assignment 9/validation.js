@@ -13,7 +13,7 @@ function onlylogin_valid(event)
 
 function page_direct()
 {
-    window.location.href="tp.html";   
+    window.location.href="HomePage.html";   
 }
 
 function all_validation(event)
