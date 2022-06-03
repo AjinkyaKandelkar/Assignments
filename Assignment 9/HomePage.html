@@ -16,87 +16,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page5style.css">
 
     <title>Home Page</title>
     <style>
 
-        .navbar {
-            --bs-navbar-nav-link-padding-x: 1rem;
-        }
-
-        .bg-alert {
-            background-color: #4EFF95;
-        }
-
-        .dropdown-menu {
-            height: 100vh;
-        }
-
-        body {
-            background-color: #F9F8F8;
-        }
-
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-        }
-
-        .active {
-            background-color: var(--nav-blue-light);
-        }
-
-        .accordion:hover {
-            background-color: var(--nav-blue-light);
-        }
-
-        .accordion:after {
-            content: '\002B';
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-        }
-
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-
-        .box {
-            background-color: teal;
-            padding: 15px;
-        }
-        .form-check-input{
-        width: .8rem;
-        height: .8rem;
-        margin-top: 5%;
-        margin-right: 5%;
-        
-        }
-        .form-check-input[type=checkbox] {
-            border-radius: 0;
-        }
 
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md nav_bar ">
+    <nav class="navbar navbar-expand-md nav_bar" style="z-index: 1; top:0%; position:sticky;">
         <div class="container-fluid">
             <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -152,141 +82,280 @@
     </nav>
     <section class="main">
         <div class="container">
-            <div class="row p-4 fw-semibold" style="background-color: #F9F8F8;">
+            <div class="row p-4 fw-semibold " style="background-color: red; position:sticky; top: 9%; z-index: 1;">
                 Dashboard
             </div>
             <div class="row ">
-                <div class="Dashboard col-2" style="background-color:white">
-                    <div class="col-12">
-                        <i class="bi bi-funnel" style="font-size:small;"></i>
-                        <small>Filter your results</small>
-                        <hr>
-                    </div>
-                    <div class="col-12 mb-2">
-                        <button class="accordion" style="font-size:small;">Posts</button>
-                        <div class="panel">
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Approved
-                                </label>
+                <div class="Dashboard col-2" style="background-color:white ">
+                    <div class="card border-0 " style="position: fixed; ">
+                        <div class="row">
+                            <div class="col-md-12 mb-md-2 col-sm-6 col-6">
+                                <i class="bi bi-funnel" style="font-size:small;"></i>
+                                <small>Filter your results</small>
+                                <hr>
                             </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                   Submitted For Review
-                                </label>
+                            <div class="col-md-12 mb-md-2 col-sm-6 col-6">
+                                <button class="accordion" style="font-size:small;">Posts</button>
+                                <div class="panel">
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Approved
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                           Submitted For Review
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Published
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Draft
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Reassigned
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Published
-                                </label>
+                            <div class="col-md-12 mb-md-2 col-sm-6 col-6">
+                                <button class="accordion" style="font-size:small;">
+                                    Category
+                                </button>
+                                <div class="panel">
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Play by play series
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            What is new
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Code snippet    
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Case studies
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            How to?
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Draft
-                                </label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Reassigned
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mb-2">
-                        <button class="accordion" style="font-size:small;">
-                            Category
-                        </button>
-                        <div class="panel">
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Play by play series
-                                </label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    What is new
-                                </label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Code snippet    
-                                </label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Case studies
-                                </label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    How to?
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mb-2">
-                        <button class="accordion" style="font-size:small;">
-                            Level
-                        </button>
-                        <div class="panel">
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Beginner
-                                </label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Intermediate
-                                </label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
-                                    Advance 
-                                </label>
+                            <div class="col-md-12 mb-md-2 col-sm-6 col-6">
+                                <button class="accordion" style="font-size:small;">
+                                    Level
+                                </button>
+                                <div class="panel">
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Beginner
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Intermediate
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                                        <label class="form-check-label" for="flexCheckDefault" style="font-size: 11px;">
+                                            Advance 
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="Submission col-10">
                     <span class="fw-semibold"> Your Submission</span>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    
+                    <div id="carouselExampleControls1 " class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <div class="row">
+                          <div class="carousel-item active p-4">
+                            <div class="row ps-3 pe-3">
                                 <div class="col-4">
-                                    
+                                    <div class="card">
+                                        <img src="/Images/first_card_image.PNG" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="text-muted" style="font-size:small;"> Microsoft AZ-900 (GLP - Title) </span>
+                                          <h6 class="card-title fw-semibold" style="font-size:19px ; margin-top: 2%;">Microsoft Azure - <br> Beginner's Guide
+                                            <div class="smalltext">
+                                                <span class="me-2" >Intermediate </span> 
+                                                <span class="me-2"> ~5 min</span> 
+                                                <span class="me-2">2500 points </span>
+                                            </div>
+                                            </h6>
+                                          <p class="card-text" style="font-size: small;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <div class="card-footer">
+                                            <button class="btn btn-sm btn-orange float-start">
+                                                Submitted for Review
+                                            </button>
+                                          </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-4">
-
+                                    <div class="card" >
+                                        <img src="/Images/Second_card_image.PNG" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="text-muted" style="font-size:small;"> Microsoft AZ-900 (GLP - Title) </span>
+                                          <h6 class="card-title fw-semibold" style="font-size:19px ; margin-top: 2%;">Microsoft Azure - <br> Beginner's Guide
+                                            <div class="smalltext">
+                                                <span class="me-2" >Intermediate </span> 
+                                                <span class="me-2"> ~5 min</span> 
+                                                <span class="me-2">2500 points </span>
+                                            </div>
+                                            </h6>
+                                          <p class="card-text" style="font-size: small;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <div class="card-footer">
+                                            <button class="btn btn-sm btn-light-blue float-start">
+                                                Published
+                                            </button>
+                                          </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-4">
-
+                                    <div class="card">
+                                        <img src="/Images/Third_card_image.PNG" class="card-img-top third_Image" alt="">
+                                        <div class="card-body">
+                                            <span class="text-muted" style="font-size:small;"> Microsoft AZ-900 (GLP - Title) </span>
+                                          <h6 class="card-title fw-semibold" style="font-size:19px ; margin-top: 2%;">Microsoft Azure - <br> Beginner's Guide
+                                            <div class="smalltext">
+                                                <span class="me-2" >Intermediate </span> 
+                                                <span class="me-2"> ~5 min</span> 
+                                                <span class="me-2">2500 points </span>
+                                            </div>
+                                            </h6>
+                                          <p class="card-text" style="font-size: small;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <div class="card-footer">
+                                            <button class="btn btn-sm btn-light-blue float-start">
+                                                Published
+                                            </button>
+                                          </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                           </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
                           <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="carousel-control-next-icon rounded-circle" aria-hidden="true"></span>
                           <span class="visually-hidden">Next</span>
                         </button>
-                      </div>
+                    </div>
+                    <div id="carouselExampleControls2 " class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active p-4">
+                            <div class="row ps-3 pe-3">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="/Images/first_card_image.PNG" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="text-muted" style="font-size:small;"> Microsoft AZ-900 (GLP - Title) </span>
+                                          <h6 class="card-title fw-semibold" style="font-size:19px ; margin-top: 2%;">Microsoft Azure - <br> Beginner's Guide
+                                            <div class="smalltext">
+                                                <span class="me-2" >Intermediate </span> 
+                                                <span class="me-2"> ~5 min</span> 
+                                                <span class="me-2">2500 points </span>
+                                            </div>
+                                            </h6>
+                                          <p class="card-text" style="font-size: small;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <div class="card-footer">
+                                            <button class="btn btn-sm btn-orange float-start">
+                                                Submitted for Review
+                                            </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card" >
+                                        <img src="/Images/Second_card_image.PNG" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <span class="text-muted" style="font-size:small;"> Microsoft AZ-900 (GLP - Title) </span>
+                                          <h6 class="card-title fw-semibold" style="font-size:19px ; margin-top: 2%;">Microsoft Azure - <br> Beginner's Guide
+                                            <div class="smalltext">
+                                                <span class="me-2" >Intermediate </span> 
+                                                <span class="me-2"> ~5 min</span> 
+                                                <span class="me-2">2500 points </span>
+                                            </div>
+                                            </h6>
+                                          <p class="card-text" style="font-size: small;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <div class="card-footer">
+                                            <button class="btn btn-sm btn-light-blue float-start">
+                                                Published
+                                            </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="/Images/Third_card_image.PNG" class="card-img-top third_Image" alt="">
+                                        <div class="card-body">
+                                            <span class="text-muted" style="font-size:small;"> Microsoft AZ-900 (GLP - Title) </span>
+                                          <h6 class="card-title fw-semibold" style="font-size:19px ; margin-top: 2%;">Microsoft Azure - <br> Beginner's Guide
+                                            <div class="smalltext">
+                                                <span class="me-2" >Intermediate </span> 
+                                                <span class="me-2"> ~5 min</span> 
+                                                <span class="me-2">2500 points </span>
+                                            </div>
+                                            </h6>
+                                          <p class="card-text" style="font-size: small;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <div class="card-footer">
+                                            <button class="btn btn-sm btn-light-blue float-start">
+                                                Published
+                                            </button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon rounded-circle" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>

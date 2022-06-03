@@ -1,0 +1,158 @@
+:root
+{
+   
+    --nav-blue:#41AAE1;
+    --nav-blue-light:#4da6d6; 
+    --nav-blue-lighter:#62bee5;
+    --discover-green:#B5DE00;
+    --discover-mustured:#FFCA2A;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Nabar Started */
+.nav_bar{
+    background-color: var(--nav-blue);
+}
+.nav-link{
+    color: white;
+  
+}
+
+.nav_icon{
+    color: white;
+}
+
+.navbar{
+        font-size: small;
+    --bs-navbar-hover-color:white;
+    --bs-navbar-nav-link-padding-x: 2rem;
+    
+}
+.btn-blue{
+    --bs-btn-border-radius:0;
+    --bs-btn-font-size:small;
+    --bs-btn-border-color:none;
+    --bs-btn-color:var(--bs-white);
+
+}
+
+.btn-white{
+    --bs-btn-font-size: .8rem;
+    --bs-btn-bg: white;
+    --bs-btn-font-weight:600;
+    --bs-btn-color:var(--nav-blue-light);
+    --bs-btn-padding-x:2rem;
+    --bs-btn-border-radius:0px;
+
+}
+.bi-chevron-down{
+    font-size: smaller;  
+}
+.navbar-nav .nav-link.active::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    left:31px;
+    top: 30px;
+    background-color: var(--bs-white);
+    transition: 2s;
+}
+.navbar {
+    --bs-navbar-nav-link-padding-x: 1rem;
+}
+
+.bg-alert {
+    background-color: #4EFF95;
+}
+
+.dropdown-menu {
+    height: 100vh;
+}
+
+body {
+    background-color: #F9F8F8;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.Dashboard.active {
+    background-color: var(--nav-blue-light);
+}
+
+.accordion:hover {
+    background-color: var(--nav-blue-light);
+}
+
+.accordion:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.box {
+    background-color: teal;
+    padding: 15px;
+}
+.form-check-input{
+width: .8rem;
+height: .8rem;
+margin-top: 5%;
+margin-right: 5%;
+
+}
+.form-check-input[type=checkbox] {
+    border-radius: 0;
+}
+
+
+
+
+.third_Image{
+    padding: 10px;
+    width: 92%;
+}
+.smalltext{
+    margin-top: 2%;
+    font-size: x-small;
+    color: #41AAE1;
+}
+.btn-orange{
+    background-color: #f15c1257;
+    color: #FA270D;
+    font-size: x-small;
+    margin-left: -6%;
+}
+.btn-light-blue{
+    background-color: #99daf09d;
+    color: #41AAE1;
+    font-size: x-small;
+    margin-left: -6%;
+}
