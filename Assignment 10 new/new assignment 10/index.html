@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+     -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>New assignment10</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color:white;">
+    <div class="container-fluid">
+      <img src="images/Intimepro.svg" class="intimepro" alt="">
+      <span class="dashboard"> Dashboard</span>
+
+
+      <form class="d-flex">
+
+        <label class="search me-3 text-muted mt-2 ">
+          <svg xmlns=http://www.w3.org/2000/svg width="16" height="16" fill="currentColor" class="bi bi-search me-2 "
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></label>
+        <label class="bell me-3 mt-2">
+          <svg xmlns=http://www.w3.org/2000/svg width="20" height="20" fill="currentColor" class="bi bi-bell"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663
+2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481
+.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+            <path style="color: #e81010" d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          </svg></label>
+
+        <label class="download me-3 text-muted mt-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
+            viewBox="0 0 16 16">
+            <path
+              d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+            <path
+              d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+          </svg>
+        </label>
+        <label class="gear me-3 text-muted mt-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+            <path
+              d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+          </svg>
+        </label>
+        <label><img src="images/navbar-1.JPG" class="navbarimage me-3" alt="" srcset=""></label>
+        <label class="text text-muted john mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg> John Deo</label>
+
+
+      </form>
+
+    </div>
+  </nav>
+
+
+  <!-- sidebar -->
+
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-2">
+        <nav class="navbar navbar-expand-lg navbar-light" >
+
+
+         
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="list-unstyled nav-item">
+
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" style="color: #0095DA;" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                      </svg> </li>
+              <li class=" mt-2">
+                <a href="#" class="nav-link holy  " aria-current="page" style="background-color: #0095DA; color: white;">
+                  <img src="images/one.JPG" alt="" style="margin-left:-3%;" srcset="">
+                  <label style="margin-left:4% ;">Dashboard</label>
+                </a>
+              </li>
+
+              <li class="mt-2">
+                <img src="images/two.JPG" alt="" srcset="">
+                <label class="ms-3">Clients</label>
+              </li>
+              <li class="mt-2">
+                <img src="images/three.JPG" alt="" srcset="">
+                <label class="ms-3">Projects</label>
+              </li>
+              <li class="mt-2 ">
+                <img src="images/four.JPG" alt="" srcset="">
+                <label class="ms-3">Invoice</label>
+              </li>
+              <li class="mt-2 ">
+                <img src="images/five.JPG" alt="" srcset="">
+                <label class="ms-3">Time Tracking</label>
+              </li>
+              <li class="mt-2">
+                <img src="images/activities.JPG" alt="" srcset="">
+                <label class="ms-3">Activities
+                  <svg xmlns=http://www.w3.org/2000/svg width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                  </svg></label>
+              </li>
+              <li class="mt-2">
+                <img src="images/six.JPG" alt="" srcset="">
+                <label class="ms-3">Estimates</label>
+              </li>
+              <li class="mt-2 ">
+                <img src="images/seven.JPG" alt="" srcset="">
+                <label class="ms-3">Tasks</label>
+              </li>
+              <li class="mt-2">
+                <img src="images/nine.JPG" alt="" style="margin-left:-2%;" srcset="">
+                <label class="ms-3">Timesheet</label>
+              </li>
+              <li class="mt-2">
+                <img src="images/eight.JPG" alt="" srcset="">
+                <label class="ms-3">People</label>
+              </li>
+              <li class="mt-2">
+                <img src="images/ten.JPG" alt="" srcset="">
+                <label class="ms-3">Reports </label>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+
+      </div>
+      <div class="col-md-10">
+        <div class="firsttext">
+          <h4> Welcome Joe!</h4>
+          <p> THURSDAY NOVEMBER 12,2020 |<img src="images/santa.svg" class="img-fluid" alt="">SANTA CLARA</p>
+        </div>
+        <!-- my view -->
+      <!-- My view -->
+      <div class="row mt-1">
+        <div class="col-md-2 col-6">                 
+            <a href="index.html" class="pol" style="font-size: 18px;">MY VIEW </a>                                           
+        </div>
+        <div class="col-md-2 col-6 kuy">
+           <a href="team.html" class="kook" style="font-size: 18px;">
+            TEAM MEMBERS</a>
+            
+        </div>
+        <div class="col-md-5"></div>
+        
+        <div class="col-md-2 col-6 noku" data-toggle="tooltip" data-placement="bottom" title="Select Date">
+          <div class="export">Today: Oct 14
+          <!-- <div class="dropdown"> -->
+              <button class="btn btn-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false"><svg xmlns=http://www.w3.org/2000/svg width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+               
+              </button>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="width: 34rem; height: 23rem;">
+                <div class="row">
+                  <div class="col-md-3">
+            
+                    <div class="card" style="margin-top: -8%; width: 8rem;">
+            
+                      <ul class="data" style="list-style:none;width: 7rem;
+                      height: 19rem;">
+            
+                        <li class="bg-light text-info mt-2 fw-bold" style="font-size: 14px;margin-left: -19%;">Today</li>
+            
+                        <li class="mt-3" style="font-size: 14px; margin-left: -19%;">Yesterday</li>
+                        <li class="mt-3" style="font-size: 14px; margin-left: -19%;">Last 7 days</li>
+                        <li class="mt-3" style="font-size: 14px; margin-left: -19%;">Last 30 days</li>
+                        <li class="mt-3" style="font-size: 14px; margin-left: -19%;">This Month</li>
+                        <li class="mt-3" style="font-size: 14px; margin-left: -19%;">Last Month</li>
+                        <li class="mt-3" style="font-size: 14px; margin-left: -19%;">Custome Range</li>
+                      </ul>
+                    </div>
+                  </div>
+               
+            
+                <div class="col-md-9">
+                  <div class="card" style="border: none;">
+                    <div class="row">
+                      <div class="col">
+                        <span class="input-text text-muted" style="font-size: 14px;">From</span>
+                        <div class="input-group mb-3" style="width: 9rem;">
+                          
+                          <input type="text" class="form-control"  style="font-size: 14px;" placeholder="14 may 2020"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          
+                        </div>
+                      </div>
+                      <div class="col">
+                        <span class="input-text text-muted" style="font-size: 14px;">To</span>
+                        <div class="input-group mb-3" style="width: 9rem;">
+                          
+                          <input type="text" class="form-control" style="font-size: 14px;" placeholder="7 June 2020 "
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <img src="images/calendar.png" style="margin-left:-2%;" alt="">
+                    </div>
+                    <div class="row mt-2">
+                      <div class="col-3"></div>
+                      <div class="col-3">
+                        <button type="button" class="btn btn-outline-danger" style="width:7rem;">Cancel</button>
+                      </div>
+                      <div class="col-4" style="margin-left:4% ;">
+                        <button type="button" class="btn btn-info" style="width:8rem;">Save</button>
+                      </div>
+                      <div class="col-1"></div>
+                      
+                    </div>
+                    
+                  </div>     
+                </div>    
+                </div>     
+              </ul>
+            <!-- </div> -->
+      </div>
+          
+      </div>
+        <div class="col-md-1 col-1 noku">
+            <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="bottom" title="Export">
+                <div class="export"> <img src="images/export.svg" alt=""></div>
+              </button>
+
+        </div>
+        
+
+    </div>
+
+
+
+
+
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    THRUSDAY
+                  </div>
+                  <div class="col">
+                    Arrival Time
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+
+                    Nov,12,2020
+                  </div>
+                  <div class="col">
+                    09 : 30 : 56
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col" style="color: #00A0E3; font-size: 23px;">
+                    <b>08 : 18 :25</b>
+                  </div>
+                  <div class="col">
+                    Total Work Time
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    Left Time
+                  </div>
+                  <div class="col">
+                    00 : 00 : 00
+                  </div>
+                </div>
+                <div class=" mt-5">
+                  <a href="#" class="btn btn-lg" style="background-color:#D9EEF9; color:#00A0E3">Checkout</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-8">
+
+            <div class="card">
+
+
+              <img src="images/graph.JPG" alt="" class="img-fluid ">
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Arrival time -->
+        <div class="row mt-3">
+
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/arrivaltime.svg" class="card-img-top" style="width:45px" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">09:30hr</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="ms-2" style="font-size: 17px;">Arrival Time</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/arrivaltime.svg" class="card-img-top  ms-2 " style="width:45px" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">07:00hr</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p class="ms-2 text-muted" style="font-size: 17px;">Left time</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/productivetime.svg" class="card-img-top ms-2 mt-2" style="width:45px" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">07:30hr</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p class="ms-2" style="font-size: 17px;">Productive Time</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/productivetime.svg" class="card-img-top ms-2 mt-2 " style="width:45px" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">08:00hr</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p class="ms-2" style="font-size: 17px;">Intime pros Time</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Time at work -->
+        <div class="row mt-3">
+
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/timeatwork.svg" class="card-img-top ms-2 mt-2 " style="width: 38px;" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">09:30hr</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="ms-2" style="font-size: 17px;">Time At Work</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/placedin.svg" class="card-img-top ms-2 mt-2 " style="width:40px" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">3rd27th</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p class="ms-2 text-muted" style="font-size: 17px;">Placed In</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/effectiveness.svg" class="card-img-top ms-2 mt-2" style="width:30px" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">80:00%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p class="ms-2" style="font-size: 17px;">Effectiveness</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="col-md-3 col-6">
+            <div class="card">
+              <div class="row">
+                <div class="col">
+                  <img src="images/productivity.svg" class="card-img-top ms-2" style="width:40px" alt="...">
+                </div>
+                <div class="col">
+                  <div class="col mt-3 fw-bold ">
+                    <span class="" style=" font-size:20px; color:#474658;">80:00%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p class="ms-2" style="font-size: 17px;">Productivity</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row mt-3">
+          <!-- graph billable -nonbillable -->
+
+
+          <div class="col-md-3">
+            <div class="card">
+              <div class="row mt-3">
+                <span class="ms-2" style="font-size:15px; color: #414C59;">Billable / Non-Billable Employees</span>
+              </div>
+              <div class="row mt-3">
+                <div class="col-2">
+                  <input class=" ms-2 form-check-input" type="checkbox" style="background-color:#5FE3A1 ;">
+                </div>
+                <div class="col-4">
+                  <span style="font-size:16px; color: #414C59;"> Billable</span>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3">
+                  <span style="font-size:16px; color: #414C59;">32</span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-2">
+                  <input class=" ms-2 form-check-input" type="checkbox" style="background-color:#A4A1FB;">
+                </div>
+                <div class="col-6">
+                  <span style="font-size:16px; color: #414C59;">Non-Billable</span>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <span style="font-size:16px; color: #414C59;">12</span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6">
+
+                  <span class="piechart ms-2"><button type="button" class="btn btn-light" data-bs-toggle="tooltip"
+                      data-bs-placement="top" title="Tooltip on top">
+                      Non billable
+                    </button></span>
+                </div>
+
+                <div class="col-6 mt-5">
+                  <span class="">Info</span>
+                  <div class="row mt-3">
+                    <div class="col-2">
+                      <input class=" form-check-input" type="checkbox" style="background-color:#5FE3A1;">
+                    </div>
+                    <div class="col-10">
+                      <span style="font-size:12px; color: #414C59;">Billable &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        38</span>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-2">
+                      <input class=" form-check-input" type="checkbox" style="background-color:#A4A1FB;">
+                    </div>
+                    <div class="col-10">
+                      <span style="font-size:12px; color: #414C59;">Non-Billable 12</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <!-- New arrival -->
+          <div class="col-md-3">
+            <div class="card mb-5">
+              <div class="row ">
+                <span class="card-title ml-4 mt-2">New Arrival</span>
+              </div>
+
+
+              <div class="card-body">
+                <div class="row  ">
+                  <div class="col-2">
+                    <img src="/images/edwardsmith.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                  </div>
+                  <div class="col-8">
+                    <label class="ms-4">Edward smith</label>
+                    <label class="ms-4" style="font-size: 10px;">Sr. UI/UX Designer/Designer <br>91-7854848576</label>
+
+                  </div>
+                  <div class="col-4"></div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <img src="images/john deo.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                  </div>
+                  <div class="col-8 ">
+                    <label class="ms-4">John Deo</label><br>
+                    <label class="ms-4" style="font-size: 10px;">Project Manager<br>91-7854848576</label>
+
+                  </div>
+                  <div class="col-4"></div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <img src="images/alexturner.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                  </div>
+                  <div class="col-8 ">
+                    <label class="ms-4">Alex Turner</label>
+                    <label class="ms-4" style="font-size: 10px;">Program Manager<br>91-7854848576</label>
+
+                  </div>
+                  <div class="col-4"></div>
+                </div>
+
+
+              </div>
+
+
+
+
+            </div>
+          </div>
+          <!-- Birthdays -->
+
+          <div class="col-md-3">
+            <div class="card">
+              <div class="row mt-3">
+
+                <span class="ms-2">Birthdays</span>
+              </div>
+
+              <div class="row mt-3">
+
+
+
+                <div class="col-md-6">
+                  <div id="wave">
+                    <div class="vertical"></div>
+                    <label class="ms-4" style="color:#0095DA">October Birthdays</label>
+                    <div class="col-4"></div>
+                    <div class="col-md-2">
+                      <img src="images/cake.png" class="cake" alt="" srcset="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <img src="images/edwardsmith.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                  </div>
+                  <div class="col-8">
+                    <label class="ms-4">Edward smith</label>
+                    <label class="ms-4" style="font-size: 10px;">Sr. UI/UX Designer/Designer<br>91-7854848576</label>
+
+                  </div>
+                  <div class="col-4"></div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-2">
+                    <img src="images/alexturner.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                  </div>
+                  <div class="col-8 ">
+                    <label class="ms-4">Emly Johnson</label>
+                    <label class="ms-4" style="font-size: 10px;">Program Manager<br>91-7854848576</label>
+
+                  </div>
+                  <div class="col-4"></div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Department members -->
+          <div class="col-md-3">
+            <div class="card">
+              <div class="row">
+                <span class="ms-2 mt-3">Department Members</span>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-2">
+                  <img src="images/edwardsmith.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                </div>
+                <div class="col-8">
+                  <label class="ms-4">Edward smith</label>
+                  <label class="ms-4" style="font-size: 10px;">Sr. UI/UX Designer/Designer<br>91-7854848576</label>
+
+                </div>
+                <div class="col-4"></div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-2">
+                  <img src="images/john deo.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                </div>
+                <div class="col-8 ">
+                  <label class="ms-4">John Deo</label><br>
+                  <label class="ms-4" style="font-size: 10px;">Project Manager<br>91-7854848576</label>
+
+                </div>
+                <div class="col-4"></div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-2">
+                  <img src="images/alexturner.svg" alt="" class="ms-2" style="width: 60px;" srcset="">
+                </div>
+                <div class="col-8 ">
+                  <label class="ms-4">Alex Turner</label><br>
+                  <label class="ms-4" style="font-size: 10px;">Program Manager<br>91-7854848576</label>
+
+                </div>
+                <div class="col-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- table -->
+        <div class="row">
+
+          <!-- Mytimesheet table -->
+          <div class="col-md-8 ">
+            <div class="card pb-2">
+              <label class=" mytimesheet ms-2">My Timesheet</label>
+              <div class="table-responsive-md">
+                <table class="table">
+                  <thead style="font-size:13px;">
+                    <tr>
+                      <th scope="col">Timesheet Name</th>
+                      <th scope="col">Project Name</th>
+                      <th scope="col">Submited Hours</th>
+                      <th scope="col">Approved Hours</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody style="font-size:11px; background-color: white;">
+                    <tr>
+                      <th class="text-muted">Timesheet (11 Nov, 2020)</th>
+                      <td>IN TIME</td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#F3EDFF;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#D1F4F2;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill" style="height: 30px; width: 90px; border: 1px solid #1BC5BD; color: black;
+                  padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor"
+                            class="bi bi-circle-fill " style="color: #1BC5BD;" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                          </svg> Approved </span></td>
+
+
+                    </tr>
+                    <tr>
+                      <th class="text-muted">Timesheet (11 Nov, 2020)</th>
+                      <td>IN TIME</td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#F3EDFF;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#D1F4F2;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill" style="height: 30px; width: 90px; border: 1px solid #FFA800; color: black;
+                  padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor"
+                            class="bi bi-circle-fill " style="color:#FFA800;" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                          </svg> pending</span></td>
+
+
+                    </tr>
+                    <tr>
+                      <th class="text-muted">Timesheet (11 Nov, 2020)</th>
+                      <td>IN TIME</td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#F3EDFF;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#D1F4F2;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill" style="height: 30px; width: 90px; border: 1px solid #1BC5BD; color: black;
+              padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor"
+                            class="bi bi-circle-fill " style="color: #1BC5BD;" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                          </svg> Approved </span></td>
+
+
+                    </tr>
+
+                    <tr>
+                      <th class="text-muted">Timesheet (11 Nov, 2020)</th>
+                      <td>IN TIME</td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#F3EDFF;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill text-muted" style=" background-color:#D1F4F2;width: 72px; color: black;
+                  height: 22px ; padding: 7px;">08:00 hrs</span></td>
+                      <td><span class="badge rounded-pill" style="height: 30px; width: 90px; border: 1px solid #1BC5BD; color: black;
+                  padding: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor"
+                            class="bi bi-circle-fill " style="color: #1BC5BD;" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                          </svg> Approved </span></td>
+
+                    </tr>
+
+                    <tr>
+                      <th scope="row" style="font-size:14px; color:#00A0E3">View All(6)</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                  </tbody>
+
+
+                </table>
+              </div>
+
+            </div>
+          </div>
+          <!-- Graph -->
+          <div class="col-md-4">
+            <div class="card">
+              <!-- <div class="card-body"> -->
+              <h5 class="card-title ms-3">Leave Report</h5>
+              <div class="d-flex justify-content-center mt-5">
+                <canvas id="html" height="150" width="150"></canvas>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6">
+                  <Span class="ms-2 mt-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-circle-fill" style="color:#F64E60;" viewBox="0 0 16 16">
+                      <circle cx="6" cy="6" r="6" />
+                    </svg>Paid Leaves</Span>
+                  <p class="text-muted ms-3"> Available 1 Days(s)</p>
+                </div>
+
+                <div class="col-6">
+                  <Span class="mt-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-circle-fill" style="color:#FCC9CE;" viewBox="0 0 16 16">
+                      <circle cx="6" cy="6" r="6" />
+                    </svg>Unpaid Leaves</Span>
+                  <p class="text-muted"> Available 2.5Days(s)</p>
+                </div>
+                <!-- </div> -->
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="row mt-4">
+          <!-- Projects -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <h5 class="card-title">Projects</h5>
+                </div>
+                <div class="row">
+                  <h6 class=" bg-light text-muted pt-2" style="height:45px;">Projects Name</h6>
+
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <p class="card-text"><img src="images/ATP.JPG" style="width:65%" alt=""></p>
+                  </div>
+                  <div class="col-9">
+                    <div class="row">
+                      <p class="card-text">ATP Jobs</p>
+                    </div>
+                    <div class="row">
+                      <p class="card-text text-muted" style="font-size:10px;">Lorem ipsum dolor sit
+                        amet,consectetuer
+                        adipiscing</p>
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                  <div class="col-3">
+                    <p class="card-text"><img src="images/M-2.JPG" style="width:65%" alt=""></p>
+                  </div>
+                  <div class="col-9">
+                    <div class="row">
+                      <p class="card-text">Mazars</p>
+                    </div>
+                    <div class="row">
+                      <p class="card-text text-muted" style="font-size:10px;">Lorem ipsum dolor sit
+                        amet,consectetuer
+                        adipiscing</p>
+                    </div>
+
+
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                  <div class="col-3">
+                    <p class="card-text"><img src="images/GL-3.JPG" style="width:65%" alt=""></p>
+                  </div>
+                  <div class="col-9">
+                    <div class="row">
+                      <p class="card-text">Green Light</p>
+                    </div>
+                    <div class="row">
+                      <p class="card-text text-muted" style="font-size:10px;">Lorem ipsum dolor sit
+                        amet,consectetuer
+                        adipiscing</p>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                  <div class="col-3">
+                    <p class="card-text"><img src="images/D-4.JPG" style="width:65%" alt=""></p>
+                  </div>
+                  <div class="col-9">
+                    <div class="row">
+                      <p class="card-text">Dekra</p>
+                    </div>
+                    <div class="row">
+                      <p class="card-text text-muted" style="font-size:10px;">Lorem ipsum dolor sit
+                        amet,consectetuer
+                        adipiscing</p>
+                    </div>
+
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="row">
+                  <h5 class="card-title">Tasks</h5>
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr class="bg-light">
+                        <th scope="col">Name</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End date</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="pt-4">
+                          <div class="row">
+                            <div class="col-md-6 text-muted" style="font-size :12px">
+                              New project Loader
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-end text-muted">
+                              70%
+                            </div>
+                            <div class="col-md-12">
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70%"
+                                  aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="text-muted pt-4">12 Nov,2020</td>
+                        <td class="text-muted pt-4 ">12 Nov, 2020</td>
+                        <td class="text-muted pt-4">In Process</td>
+                      </tr>
+                      <tr>
+                        <td class="pt-4">
+                          <div class="row ">
+                            <div class="col-md-6 text-muted" style="font-size :12px">
+                              Client details page
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-end text-muted">
+                              65%
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="progress">
+                                  <div class="progress-bar" style="width:70%"></div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                </div>
+                </td>
+                <td class="text-muted pt-4">12 Nov, 2020</td>
+                <td class="text-muted pt-4">12 Nov, 2020</td>
+                <td class="text-muted pt-4">Completed</td>
+                </tr>
+                <tr>
+                  <td class="pt-4">
+                    <div class="row">
+                      <div class="col-md-6 text-muted" style="font-size :11px">
+                        Role wise dashboard
+                      </div>
+                      <div class="col-md-6 d-flex justify-content-end text-muted">
+                        60%
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="75"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-muted pt-4">12 Nov, 2020</td>
+                  <td class="text-muted pt-4">12 Nov, 2020</td>
+                  <td class="text-muted pt-4">Pending</td>
+                </tr>
+                <tr>
+                  <td class="pt-4">
+                    <div class="row">
+                      <div class="col-md-6 text-muted" style="font-size :12px">
+                        Help section screen
+                      </div>
+                      <div class="col-md-6 d-flex justify-content-end text-muted">
+                        25%
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="75"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-muted pt-4">12 Nov, 2020</td>
+                  <td class="text-muted pt-4">12 Nov, 2020</td>
+                  <td class="text-muted pt-4">In process</td>
+                </tr>
+                </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row mt-4">
+        <!-- card-1 -->
+        <div class="col-md-4">
+          <div class="card h-100 apps">
+
+            <div class="row">
+              <span class="ms-2 mt-3 offhead">
+                Most Productive Apps</span>
+            </div>
+
+            <div class="row mt-3 ">
+
+              <div class="col-2">
+                <img src="images/teams.png" alt="" class="ms-2 tems" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">Teams</label>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #555AAC; border-radius: 6px;">
+                <label class="pt-2 ms-3">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+
+            </div>
+
+
+
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/1200px-Adobe_XD_CC_icon.svg.png" alt="" class="ms-2 tems" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">Adobe Xd</label>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #FA5EF1; border-radius: 6px;">
+                <label class="pt-2 ms-3">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+
+
+
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/outlook.png" alt="" class="ms-2 tems" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">Outlook</label>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #1D6FB5; border-radius: 6px;">
+                <label class="pt-2 ms-3">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/zoho.png" alt="" class="ms-2 tems" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">Zoho</label>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #FF0000; border-radius: 6px;">
+                <label class="pt-2 ms-3">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-5">
+              <span class="ms-4 view1">View all(123)</span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- card-2 -->
+
+        <div class="col-md-4">
+          <div class="card h-100  apps">
+
+            <div class="row">
+              <span class="ms-2 mt-3 offhead">
+                Unroductive Apps</span>
+            </div>
+
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/utube.JPG" alt="" class="ms-2 pt-1 tems" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">Youtube</label><br>
+                <span class="num">36m 6s</span>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #ED1F24; border-radius: 6px;">
+                <label class="pt-2 ms-3">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/instagram.JPG" alt="" class="ms-2 pt-2 tems" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">Instagram</label><br>
+                <span class="num">10m 5s</span>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #F77900; border-radius: 6px;">
+                <label class="pt-2 ms-3">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/hubspot.png" alt="" class="ms-2 tems" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">Hubspot</label><br>
+                <span class="num">6m 24s</span>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #334557; border-radius: 6px;">
+                <label class="pt-2 ms-3">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div class="col-md-4">
+          <div class="card apps3">
+
+            <div class="row">
+              <span class="ms-2 mt-3 offhead">
+                Neutral Apps</span>
+            </div>
+
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/icon.svg " alt="" class=" prac" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">practicemock.com</label><br>
+                <span class="num">1h 82m 52s</span>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #FF7D8B; border-radius: 6px;">
+                <label class="pt-2 ms-3 dok">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-3">
+
+              <div class="col-2">
+                <img src="images/icon.svg" alt="" class=" prac" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">pdfmake.org</label><br>
+                <span class="num">50m 5s</span>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #FF7D8B; border-radius: 6px;">
+                <label class="pt-2 ms-3 dok">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-2">
+                <img src="images/icon.svg" alt="" class=" prac" srcset="">
+              </div>
+              <div class="col-6 backc">
+                <label class="pt-2">azurewebsite.in</label><br>
+                <span class="num">36m 5s</span>
+              </div>
+              <div class="col-3 backc" style="border-right: 8px solid #FF7D8B; border-radius: 6px;">
+                <label class="pt-2 ms-3 dok">00:30h</label>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-2">
+                <img src="images/icon.svg" alt="" class=" prac" srcset="">
+              </div>
+              <div class="col-7 backc">
+                <label class="pt-2">prograssive.azuresites.net</label><br>
+                <span class="num">24m 45s</span>
+              </div>
+              <div class="col-2 backc" style="border-right: 8px solid #FF7D8B; border-radius: 6px;">
+                <label class="pt-2" style="margin-left:-12px;">00:30h</label>
+              </div>
+
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-3">
+              <span class="ms-4 view1">View all(169)</span>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- footer -->
+      <div class="row mt-3">
+
+        <div class="col-md-12 d-flex justify-content-center">
+          <img src="images/appstore.img.png" class="fimage1" alt="">
+          <img src="images/playstore2.img.png" class="fimage2" alt="">
+          <img src="images/windows3.img.png" class="fimage3" alt="">
+        </div>
+
+      </div>
+
+      <div class="row mt-3">
+
+        <div class="col-md-12 d-flex justify-content-center">
+          <img src="images/Intimepro.svg" alt="">
+
+        </div>
+
+      </div>
+
+      <div class="row mt-3 mb-5">
+
+        <div class="col-md-12 d-flex justify-content-center">
+          <span class="end" style="font-size:small;"> Copyright 2020 WAi Technologies All Rights Reserved | Privacy
+            Policy | Terms Of Service
+          </span>
+        </div>
+
+
+      </div>
+
+
+      <!-- col-div -->
+    </div>
+    <!-- container- div -->
+  </div>
+
+
+  <!-- row-div -->
+  </div>
+
+
+</body>
+
+<script>
+  var htmlDoughnut = document.getElementById("html").getContext("2d");
+
+
+  var htmlData = [
+    {
+      value: 45,
+      color: "#F64E60"
+    },
+    {
+      value: 60,
+      color: "#FCC9CE"
+    }
+  ];
+
+  var myHTMLdoughnut = new Chart(htmlDoughnut).Doughnut(htmlData, {
+    percentageInnerCutout: 80
+  });
+</script>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</html>

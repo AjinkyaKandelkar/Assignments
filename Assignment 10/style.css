@@ -1,0 +1,94 @@
+.box{
+    padding: 15px;
+    background-color: teal;
+}
+.left_scroll_icon{
+    color: #414C59;
+    padding:.5rem;
+}
+/* .bi, .fa, .fa-solid{
+    color: #9EA4AC
+} */
+body{
+    background-color:#DDDDDD ;
+}
+.navbar {
+    --bs-navbar-nav-link-padding-x: 1rem;
+}
+.hr_blue1{
+    
+    width: 75%;
+    height: 2px;
+    color: #0095DA;
+    background-color: #0095DA;
+    margin-top: 0%;
+}
+.hr_blue2{
+    
+    width: 22%;
+    height: 2px;
+    color: #0095DA;
+    background-color: #0095DA;
+    margin-top: 0%;
+}
+.view1
+{
+    color: #707070;
+}
+.view1, .view1:hover{
+    cursor: pointer;
+}
+.active {
+    color: #0095DA;
+    position: relative;
+}
+.active::before{
+    content: '';
+    position: absolute;
+    width: 4rem;
+    height: 3px;
+    top:1.5rem;
+    background-color:#0095DA;
+}
+.btn-blue{
+    border-radius: 4px; 
+    --bs-btn-padding-x: 1rem;
+    background-color: #D1F4F2;
+    color: #00A0E3;
+}
+.btn-blue:hover{
+    background-color: #00A0E3;
+    color: white;
+}
+.card{
+    border-radius: 0;
+}
+.w3-bar-item{
+color: #9a9ea3;
+margin-top: 10px;
+}
+.w3-bar-item:hover{
+    background-color: #00A0E3!important;
+    color: white!important;
+}
+.navbar-brand{
+    --bs-navbar-brand-font-size: 1rem;
+}
+h7{
+    font-size: 13px;
+}
+h8{
+    font-size: 14px;
+    text-decoration: dotted;
+}
+
+h8:hover{
+    cursor: pointer;
+    color: #0095DA!important;
+    text-decoration: underline 2px;
+    text-underline-offset: 0.5rem;
+}
+h8::after{
+    text-decoration: underline;
+    color: red;
+}
