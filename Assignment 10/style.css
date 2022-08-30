@@ -15,22 +15,7 @@ body{
 .navbar {
     --bs-navbar-nav-link-padding-x: 1rem;
 }
-.hr_blue1{
-    
-    width: 75%;
-    height: 2px;
-    color: #0095DA;
-    background-color: #0095DA;
-    margin-top: 0%;
-}
-.hr_blue2{
-    
-    width: 22%;
-    height: 2px;
-    color: #0095DA;
-    background-color: #0095DA;
-    margin-top: 0%;
-}
+
 .view1
 {
     color: #707070;
@@ -38,18 +23,7 @@ body{
 .view1, .view1:hover{
     cursor: pointer;
 }
-.active {
-    color: #0095DA;
-    position: relative;
-}
-.active::before{
-    content: '';
-    position: absolute;
-    width: 4rem;
-    height: 3px;
-    top:1.5rem;
-    background-color:#0095DA;
-}
+
 .btn-blue{
     border-radius: 4px; 
     --bs-btn-padding-x: 1rem;
@@ -79,16 +53,76 @@ h7{
 }
 h8{
     font-size: 14px;
-    text-decoration: dotted;
+    
 }
-
+.active{
+    color: #0095DA!important;
+    cursor: pointer;
+    text-decoration: underline 2px;
+    text-underline-offset: 0.5rem;
+}
 h8:hover{
     cursor: pointer;
     color: #0095DA!important;
     text-decoration: underline 2px;
     text-underline-offset: 0.5rem;
 }
-h8::after{
-    text-decoration: underline;
-    color: red;
+
+.btn-outline-danger{
+    border-radius: 0;
+}
+.font_text{
+    font-size: small;
+}
+.font_subtext{
+    font-size: 11px;
+}
+.font_subtext2{
+    font-size: 10px;
+}
+.bg-custom{
+    background-color: #D9EEF9;
+}
+
+th,td{
+    font-size:smaller;
+    padding: 15px !important;
+}
+.btn-outline-info { 
+    --bs-btn-disabled-color: black;
+    border-color:#1BC5BD!important ;
+    --bs-btn-disabled-bg: transparent;
+}
+.btn_padding{
+    --bs-btn-padding-y: .15rem;
+    --bs-btn-padding-x: .5rem;
+    --bs-btn-font-size: .75rem;
+}
+.btn-outline-purple{
+    --bs-btn-disabled-color: black;
+    border-color:#8950fc44!important ;
+    --bs-btn-disabled-bg: #8950fc44;
+    --bs-gradient: none;
+}
+.btn-outline-skyblue{
+    --bs-btn-disabled-color: black;
+    --bs-btn-disabled-bg: #c5f8f5;
+    border-color:#D1F4F2!important ;
+}
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: #1BC5BD;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .btn-outline-pending{
+    --bs-btn-disabled-color: black;
+    --bs-btn-padding-x: .7rem;
+    border-color:#FFA800!important ;
+    --bs-btn-disabled-bg: transparent;  
+  }
+.chartbox{
+    
+    height:207px;
 }
