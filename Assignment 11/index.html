@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+    const labels = [
+   '| Jan',
+   '| Feb',
+   '| Mar',
+   '| Apr',
+   '| May',
+   '| Jun',
+   '| Jul',
+   '| Aug',
+   '| Sep',
+   '| Oct',
+   '| Nov',
+   '| Des',
+ ];
+
+ const data = {
+   labels: labels,
+   datasets: [{
+     label: 'Sales',
+     backgroundColor: (context) =>{
+            const chart = context.chart;
+            const {ctx, chartArea, scales} = chart;
+            if(!chartArea){
+                return null;
+            }
+            return bgGradient(ctx, chartArea, scales);
+        },
+     borderColor: ' rgb(134, 59, 255,1) ',
+     data: [11, 14, 14, 11, 10.1, 10.5, 11.7,13.5,12.5 ,9.5,10,15],
+     tension:0.4,
+     pointRadius:0,
+     pointHoverRadius:8,
+     fill:true,
+   },
+   {
+     label: 'Revenue',
+     backgroundColor: (context) =>{
+            const chart = context.chart;
+            const {ctx, chartArea, scales} = chart;
+            if(!chartArea){
+                return null;
+            }
+            return bgGradient1(ctx, chartArea, scales);
+        },
+     borderColor: ' rgb(77, 207, 255) ',
+     data: [15, 12, 10, 9.4, 9.3, 9.7, 11,13,14 ,13.5,10.8,10.5],
+     tension:0.4,
+     pointRadius:0,
+     pointHoverRadius:8,
+     fill:true,
+   }
+   ]
+ };
+
+ const titleTooltip =(toolTipItems)=>{
+    return '14,549'
+ }
+ const labelTooltip =(toolTipItems)=>{
+    return null
+ }
+ const config = {
+   type: 'line',
+   data: data,
+   options: {
+       scales:{
+           y:{
+               beginAtZero: true,
+               ticks:{
+                   stepSize:5,
+                   padding: 8,
+               },
+               grid:{
+                    display:false,
+                },
+                
+           },
+           x:{
+                grid:{
+                    display:false,
+                },
+                ticks:{
+                    align: 'inner',
+                },
+           }
+       },
+       plugins: {
+           legend: {
+               position: 'top',
+               align: 'end',
+               
+               labels: {
+                   usePointStyle:'true',
+                   pointStyle:'circle',
+                   boxWidth: 15,
+                   boxHeight: 10,
+                   
+               }
+           },
+           tooltip:{
+                displayColors: false,
+                callbacks:{
+                    title: titleTooltip,    
+                    label: labelTooltip,   
+                },
+                backgroundColor:'rgb(252, 80, 249)',
+                titleMarginBottom:0,
+           },
+           maintainAspectRatio:false,
+       },
+
+   }
+ };
+ </script>
+<!-- --------------------------------------------------- Second Chart -------------------------------------------------------------- -->
+ <script>
+    const data1 = {
+    labels: [
+        'Total Sales - 60 %',
+        'Revenue - 25 %',
+        'Expenses - 15 %',
+    ],
+    datasets: [{
+        label: 'My First Dataset',
+        data: [60, 25,15],
+        backgroundColor: [
+        '#0085D3',
+        '#BF00BB',
+        '#7E2EEF',
+        ],
+        borderColor:'#161618',
+        hoverOffset: 4
+    }]
+    };
+
+    //  counter Plugins
+    const counter = {
+        id:'counter',
+        beforeDraw(chart, args, options) 
+        {
+            const { ctx, chartArea:{top,right,bottom,left,width,height}}=chart;
+            ctx.save();
+            ctx.font ='25px sans-serif';
+            ctx.fillStyle ='white'
+            ctx.textAlign='center';
+            ctx.fillText('35 K',width/2,(height/2));
+            ctx.fillStyle ='#B4BFCC';
+            ctx.font ='14px sans-serif';
+            ctx.fillText('profit',width/2,20+(height/2));
+        }
+    }; 
+
+    const config1 = {
+    type: 'doughnut',
+    data: data1,
+    options: {
+        maintainAspectRatio: false,
+        responsive:true,
+        cutout:'80%',
+        plugins: {
+            
+            legend: {
+                position:    'right',
+                labels: {
+                    
+                    boxHeight:10,
+                    boxWidth:10,   
+                }
+            }
+        }
+    },
+    plugins:[counter]
+    };
+</script>
+
+<!-- --------------------------------------------------- Third Chart -------------------------------------------------------------- -->
+<script>
+const data3 = {
+    
+    datasets: [{
+        data: [10,90],
+        backgroundColor: [
+        '#161618',
+        '#78F7B8',
+        ],
+        borderColor:
+        ['#161618',],
+        hoverOffset: 4
+    }]
+    };
+
+  
+    //  counter Plugins
+    const img1=new Image();
+    img1.src='https://upload.wikimedia.org/wikipedia/commons/3/32/Font_Awesome_5_solid_headphones-alt.svg';
+
+    const barAvatar = {
+        id:'barAvatar',
+        beforeDraw(chart, args, options) 
+        {
+            const { ctx, chartArea:{top,right,bottom,left,width,height}}=chart;
+            ctx.save();
+            
+            ctx.drawImage(img1,(width/2)-15,(height/2)-8,30,30);
+        }
+    }; 
+
+    const config3 = {
+    type: 'doughnut',
+    data: data3,
+    options: {
+        maintainAspectRatio: false,
+        responsive:true,
+        cutout:'80%',
+        borderRadius:10,
+        
+    },
+    plugins:[barAvatar]
+    };
+</script>
+<!-- --------------------------------------------------- End Third Chart ---------------------------------------------------------- -->
+
+<script>
+    const data4 = {
+        
+        datasets: [{
+            data: [70,20],
+            backgroundColor: [
+            'rgba(247,97,97)',
+            '#161618',
+            ],
+            borderColor:
+            ['#161618',],
+            hoverOffset: 4
+        }]
+        };
+    
+      
+        //  counter Plugins
+        const img4=new Image();
+        img4.src='https://redwizard.consulting/wp-content/uploads/2021/03/icon-people.svg';
+        const barAvatar4 = {
+            id:'barAvatar4',
+            beforeDraw(chart, args, options) 
+            {
+                const { ctx, chartArea:{top,right,bottom,left,width,height}}=chart;
+                ctx.save();
+                
+                ctx.drawImage(img4,(width/2)-12,(height/2)-5,25,25);
+            }
+        }; 
+    
+        const config4 = {
+        type: 'doughnut',
+        data: data4,
+        options: {
+            maintainAspectRatio: false,
+            responsive:true,
+            cutout:'80%',
+            borderRadius:10,
+            
+        },
+        plugins:[barAvatar4]
+        };
+</script>
+
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+<!-- 5th bar chart -->
+
+<script>
+    const labels1 = [
+      '0',
+      '2',
+      '3',
+      '4',
+      '5',
+      '10k',
+      '7',
+      '8',
+      '9',
+      '10',
+      '20k',
+      '12',
+      '13',
+      '14',
+      '15',
+      '30k',
+      '17',
+      '18',
+      '19',
+      '20',
+      '40k',
+    ];
+  
+    const data5 = {
+      labels: labels1,
+      datasets: [{
+        backgroundColor: '#2EAEEF',
+        borderColor: '#0796E3',
+        data: [6, 4.5 , 5.8, 3, 5, 4, 7, 1.5,2.5,4.9,9,4.5,8.7,3,7.8,4,9.2,1.5,2.5,4.7,9.2],
+        borderRadius:10,
+      }]
+    };
+  
+    const config5 = {
+      type: 'bar',
+      data: data5,
+      options: {
+          plugins:{
+              legend:{
+                  display:false
+              }
+          },
+          scales:{
+              y:{
+                  beginAtZero:true,
+                  grid:{ 
+                      color:(context)=>{
+                          if(context.tick.value ==0){
+                              return 'rgba(255,255,255,1)'
+                          } else{
+                              return 'rgba(0,0,0,0.1)'
+                          }
+                      },
+                  },
+                  ticks:{
+                      maxTicksLimit:11,
+                      callback:((context,index)=>{
+                          let response;
+                          if(context==0){
+                              response='';
+                          }
+                          else if(context==1){
+                              response='Day 10 ';
+                          }
+                          else if(context==2){
+                              response='Day 9 ';
+                          }
+                          else if(context==3){
+                              response='Day 8 ';
+                          }
+                          else if(context==4){
+                              response='Day 7 ';
+                          }
+                          else if(context==5){
+                              response='Day 6 ';
+                          }
+                          else if(context==6){
+                              response='Day 5 ';
+                          }
+                          else if(context==7){
+                              response='Day 4 ';
+                          }
+                          else if(context==8){
+                              response='Day 3 ';
+                          }
+                          else if(context==9){
+                              response='Day 2 ';
+                          }
+                          else if(context==10){
+                              response='Day 1 ';
+                          }
+  
+                          
+                              return response;
+                          
+                      })
+                  }
+              },
+              x:{
+                  grid:{ 
+                      color:(context)=>{
+                          if(context.tick.value ==0){
+                              return 'rgba(255,0,0,1)'
+                          } else{
+                              return 'rgba(75,75,25,1)'
+                          }
+                      },
+                  },
+                  ticks:{
+                      maxTicksLimit:5,
+  
+                      align: 'inner',
+                  }
+              }
+          },
+          maintainAspectRatio:false,
+      }
+    };
+  </script>
+
+<!--  -->
+<body id="mainb" class="bg-dark"> 
+    
+    <!----------------------------------------------- Navbar ------------------------------------------------------->
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="position:sticky; top:0; z-index:5;">
+        <div class="container-fluid">
+            <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+          <a class="navbar-brand" href="#">
+                <img src="/Images/Raaghu-logo-mfe-white.png" alt="" style="width: 80%;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-light" aria-current="page" href="#">Dashboard</a>
+                </li>
+            </ul>
+            <ul class=" d-flex  navbar-nav mb-2 mb-lg-0 ">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-weight:300 ;">
+                        <img src="/Images/Flag.png" alt="" style="max-width:20% ;">
+                        EN(UK)
+                        <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" style="width: 220px; ">
+                        <li>
+                            <a class="dropdown-item" href="#" >
+                                
+                                <img src="/Images/icons8-germany-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Deutsch
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-netherlands-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Dutch (Nederlands)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-usa-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    English (Default)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item active" href="#">
+                                
+                                <img src="/Images/icons8-great-britain-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px; ">
+                                    English (UK)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-mexico-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Español (México)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-spain-flag-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Español (Spanish)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-france-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Français (French)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-italy-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Italiano (Italian)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-brazil-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Português (Brasil)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-russian-federation-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Pусский (Russian)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-vietnam-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Tiếng Việt (Vietnamese)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-turkey-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    Türkçe (Turkish)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-saudi-arabia-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    العربية(Arabic)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-thailand-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    ภาษาไทย (Thai)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                
+                                <img src="/Images/icons8-china-48.png" alt="" style="width: 10%;" >
+     
+                                <span class=" ms-2" style="font-size:12px ;">
+                                    简体中文 (Chinese)
+                                </span> 
+                                          
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link ">
+                        <i class="bi fs-5 bi-bell position-relative ">
+                            <span
+                                class="position-absolute top-0 start-50  badge border border-danger bg-danger rounded-circle bg-alert p-1">
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </i>
+                        <span class="border-end ms-4">
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link  ">
+                        <i class="bi fs-5 bi-gear  ms-1">
+                        </i>
+                        <span class="border-end ms-4">
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="container-fluid">
+                            <div class="row ">
+                                <div class="col-2">
+                                    <div>
+                                        <img src="/Images/Usersmall.png" alt="" style="max-width:30px ;" >
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="ms-3">
+                                        <div style="margin-top: -2px;">
+                                            <span style="font-size:13px ;">
+                                                Host Admin 
+                                            </span>
+                                        </div>
+                                        <div style="margin-top: -10px;">
+                                            <span class="" style="font-size: 10px;">
+                                                Keanu Foster
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <div class="mt-1">
+                                        <i class="bi bi-chevron-down" ></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </a>
+
+                </li>
+            </ul>
+            <!-- Modal -->
+                
+        </div>
+    </nav>
+
+    <!-- ---------------------------------------------End of Navbar---------------------------------------------- -->
+
+
+
+    <!--________________________________________________ Modal ____________________________________________________-->
+
+
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" >
+        <div class="modal-dialog" >
+        <div class="modal-content dark_sidebar dark-bar-item ">
+            <div class=" d-flex justify-content-end">
+                <i class="bi bi-x mt-2 " style="cursor:pointer; font-size: 25px;" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <h5 class="modal-title text-center" id="exampleModalLabel">
+                <img src="/Images/ModalUser.png" alt="" style="position: relative;">
+                <img src="/Images/Edit.png" alt="" style="position: absolute; margin-top: 120px; margin-left: -38px;">
+            </h5>
+            
+            <div class="modal-body">
+                <div class="text-center">
+                    Admin
+                </div>  
+                <div class="container mt-5">
+                    <div class="row  mb-3 modal-btn active dropdown btn-group " id="dropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="col-2">
+                            <div class="mt-2">
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="font_text">
+                                Manage linked accounts
+                            </div>
+                            <div class="font_subtext">
+                                Manage accounts linked to your account
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu drpdwn dark-bar-item " aria-labelledby="dropdown1">
+                            <div class="mt-2 ms-4 text-uppercase">
+                                MANAGE LINKED aCCOUNTs
+                            </div>
+                            <hr>
+                            <div class="ms-4 mt-3">
+                                <button class="btn btn-info text-light">
+                                    <i class="bi bi-plus me-2"></i>
+                                    <span class="text-uppercase font_text">
+                                        LINK NEW ACCOUNT
+                                    </span>
+                                </button>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="row mb-3 modal-btn " data-bs-toggle="dropdown" aria-expanded="false" >
+                            
+                                    <div class="col-2">
+                                        <div class="mt-2">
+                                            <i class="bi bi-check2-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="font_text">
+                                            Manage authority delegations
+                                        </div>
+                                        <div class="font_subtext">
+                                            Manage authority accounts
+                                        </div>
+                                    </div>
+                                
+                                <ul class="dropdown-menu drpdwn2 dark-bar-item" >
+                                    <div class="mt-2 ms-4 text-uppercase">
+                                        USER DELEGATES  
+                                    </div>
+                                    <hr>
+                                    <div class="ms-4 mt-3">
+                                        <button class="btn btn-info text-light">
+                                            <i class="bi bi-plus me-2"></i>
+                                            <span class="text-uppercase font_text">
+                                                DELEGATE NEW USER
+                                            </span>
+                                        </button>
+                                    </div>
+                                </ul>
+                        </div>
+
+                    </div>
+                    <div class="dropdown">
+                        <div class="row mb-3 modal-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="col-2">
+                                <div class="mt-2">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <div class="font_text">
+                                    Login attempts
+                                </div>
+                                <div class="font_subtext">
+                                    See recent login attempts for your account
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu drpdwn3 dark-bar-item"  >
+                            <div class="mt-2 ms-4 text-uppercase">
+                                LOGIN ATTEMPTS  
+                            </div>
+                            <hr>
+                            <div class="ms-4 mt-3">
+                                <div class="font_text">
+                                    List and filter login attempts
+                                </div>
+                                <div class="login-Attemp mt-4">
+                                    <div class="container">
+                                        <div class="row mt-2">
+                                            <div class="col-6">
+                                                <div class="font_text mb-2">
+                                                    Date Range Picker
+                                                </div>
+                                                    <select class="form-select form-select-sm " aria-label=".form-select-sm example" style="color:#54586B ; background-color: #2B3047; border:none;">
+                                                        <option  selected> 01/06/2022 - 01/13/2022</option>
+                                                        <option value="1">
+                                                            <img src="/Images/Calender.PNG" alt="">
+                                                        </option>    
+                                                    </select>
+                                            </div>
+                                            <div class="col-6 ">
+                                                <div class="font_text mb-2">
+                                                    Result
+                                                </div>
+                                                <select class="form-select form-select-sm  " aria-label=".form-select-sm example" style="color:#54586B ; background-color: #2B3047; border:none;">
+                                                    <option selected>All</option>
+                                                    <option value="1">Success</option>
+                                                    <option value="2">Invalid Username Or Email Address</option>
+                                                    <option value="3">Invalid Password</option>
+                                                    <option value="4">Invalid Tenancy Name</option>
+                                                    <option value="5">User Is Not Active</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-4">
+                                            <table class="table dark-bar-item">
+                                                <thead>
+                                                    <tr>
+                                                      <th class="font_text" >IP address </th>
+                                                      <th class="font_text" >Client</th>
+                                                      <th class="font_text" >Browser</th>
+                                                      <th class="font_text" >Date & Time</th>
+                                                      <th class="font_text" >Result</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody >
+                                                    <tr class="">
+                                                      <td> 106.214.19.218</td>
+                                                      <td><i class="bi bi-laptop" style="font-size: x-large;"></i></td>
+                                                      <td>
+                                                        <div class="row">
+                                                            <div class="col-2">
+                                                                <div class="img-fluid mt-1">
+                                                                    <img src="/Images/Firefox_logo,_2019.svg" width="25px" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-10">
+                                                                <div style="font-size:10px ;">Firefox</div>
+                                                                <div style="font-size:10px ;">Android Mobile</div>
+                                                            </div>
+                                                        </div>     
+                                                        </td>
+                                                      <td> 
+                                                            <div>
+                                                                12/14/2021,
+                                                            </div> 
+                                                            <div>
+                                                                5:15:24 PM
+                                                            </div>
+                                                        </td>
+                                                      <td class="text-success"> Success</td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>406.274.19.321</td>
+                                                        <td><i class="bi bi-pc" style="font-size: x-large;" ></i></td>
+                                                        <td>
+                                                          <div class="row">
+                                                              <div class="col-2">
+                                                                  <div class="img-fluid mt-1">
+                                                                      <img src="/Images/Firefox_logo,_2019.svg" width="25px" alt="">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-10">
+                                                                  <div style="font-size:10px ;">Firefox</div>
+                                                                  <div style="font-size:10px ;">Android Mobile</div>
+                                                              </div>
+                                                          </div>     
+                                                          </td>
+                                                        <td><div>
+                                                            12/14/2021,
+                                                        </div> 
+                                                        <div>
+                                                            5:15:24 PM
+                                                        </div></td>
+                                                        <td class="text-success"> Success</td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>656.214.19.865</td>
+                                                        <td><i class="bi bi-laptop"  style="font-size: x-large;"></i></td>
+                                                        <td>
+                                                          <div class="row">
+                                                              <div class="col-2">
+                                                                  <div class="img-fluid mt-1">
+                                                                      <img src="/Images/Firefox_logo,_2019.svg" width="25px" alt="">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-10">
+                                                                  <div style="font-size:10px ;">Firefox</div>
+                                                                  <div style="font-size:10px ;">Android Mobile</div>
+                                                              </div>
+                                                          </div>     
+                                                          </td>
+                                                        <td><div>
+                                                            12/14/2021,
+                                                        </div> 
+                                                        <div>
+                                                            5:15:24 PM
+                                                        </div></td>
+                                                        <td class="text-success"> Success</td>
+                                                    </tr>
+                                                    <trclass="">
+                                                        <td>543.754.32.987</td>
+                                                        <td><i class="bi bi-pc" style="font-size: x-large;" ></i></td>
+                                                        <td>
+                                                          <div class="row">
+                                                              <div class="col-2">
+                                                                  <div class="img-fluid mt-1">
+                                                                      <img src="/Images/Firefox_logo,_2019.svg" width="25px" alt="">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-10">
+                                                                  <div style="font-size:10px ;">Firefox</div>
+                                                                  <div style="font-size:10px ;">Android Mobile</div>
+                                                              </div>
+                                                          </div>     
+                                                          </td>
+                                                        <td><div>
+                                                            12/14/2021,
+                                                        </div> 
+                                                        <div>
+                                                            5:15:24 PM
+                                                        </div></td>
+                                                        <td class="text-success"> Success</td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>656.214.19.865</td>
+                                                        <td><i class="bi bi-laptop"  style="font-size: x-large;"></i></td>
+                                                        <td>
+                                                          <div class="row">
+                                                              <div class="col-2">
+                                                                  <div class="img-fluid mt-1">
+                                                                      <img src="/Images/Firefox_logo,_2019.svg" width="25px" alt="">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-10">
+                                                                  <div style="font-size:10px ;">Firefox</div>
+                                                                  <div style="font-size:10px ;">Android Mobile</div>
+                                                              </div>
+                                                          </div>     
+                                                          </td>
+                                                        <td><div>
+                                                            12/14/2021,
+                                                        </div> 
+                                                        <div>
+                                                            5:15:24 PM
+                                                        </div></td>
+                                                        <td class="text-success"> Success</td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>543.754.32.987</td>
+                                                        <td><i class="bi bi-pc" style="font-size: x-large;" ></i></td>
+                                                        <td>
+                                                          <div class="row">
+                                                              <div class="col-2">
+                                                                  <div class="img-fluid mt-1">
+                                                                      <img src="/Images/Firefox_logo,_2019.svg" width="25px" alt="">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-10">
+                                                                  <div style="font-size:10px ;">Firefox</div>
+                                                                  <div style="font-size:10px ;">Android Mobile</div>
+                                                              </div>
+                                                          </div>     
+                                                          </td>
+                                                        <td><div>
+                                                            12/14/2021,
+                                                        </div> 
+                                                        <div>
+                                                            5:15:24 PM
+                                                        </div></td>
+                                                        <td class="text-success"> Success</td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>106.214.19.218</td>
+                                                        <td><i class="bi bi-laptop" style="font-size: x-large;"></i></td>
+                                                        <td>
+                                                          <div class="row">
+                                                              <div class="col-2">
+                                                                  <div class="img-fluid mt-1">
+                                                                      <img src="/Images/Firefox_logo,_2019.svg" width="25px" alt="">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-10">
+                                                                  <div style="font-size:10px ;">Firefox</div>
+                                                                  <div style="font-size:10px ;">Android Mobile</div>
+                                                              </div>
+                                                          </div>     
+                                                          </td>
+                                                        <td>
+                                                            <div>
+                                                                12/14/2021,
+                                                            </div> 
+                                                            <div>
+                                                                5:15:24 PM
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-success"> Success</td>
+                                                    </tr>
+                                                  </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="d-flex justify-content-end ">
+                                            <nav aria-label="Page navigation example ">
+                                                <ul class="pagination pagination-sm ">
+                                                  <li class="page-item ">
+                                                    <a class="page-link">&lt;</a>
+                                                  </li>
+                                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                  <li class="page-item">
+                                                    <a class="page-link" href="#">&gt;</a>
+                                                  </li>
+                                                </ul>
+                                            </nav>
+                                            <select class="form-select form-select-sm text-light ms-1" aria-label=".form-select-sm example" style="width: 10%; font-size:small; background-color: #2B3047; border: none;">
+                                                <option selected>10</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="row mb-3 modal-btn pt-2 pb-2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="col-2 ">
+                                <div class="mt-2">
+                                    <i class="bi bi-gear"></i>
+                                </div>
+                            </div>
+                            <div class="col-10  ">
+                                <div class="font_text">
+                                    My settings 
+                                </div>
+                                <div class="font_subtext">
+                                    Change your account settings
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu drpdwn4 dark-bar-item"  >
+                            <div class="mt-2 ms-4 text-uppercase">
+                                MY SETTINGS 
+                            </div>
+                            <hr>
+                            <div class=" mt-3">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col m-2 ">
+                                            <form action="#">
+                                                <div class="mb-3">
+                                                    <label for="profilename" class="form-label font_text">Profile Name <b>*</b></label>
+                                                    <input type="email" class="form-control form-control-sm inputcolor border-0" id="profilename" placeholder="Wai Technologies">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="E_id" class="form-label font_text">Email Address <b>*</b></label>
+                                                    <input type="email" class="form-control form-control-sm inputcolor border-0" id="E_id" placeholder="contact@waiin.com">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="profilename" class="form-label font_text">Profile Name <b>*</b></label>
+                                                    <input type="email" class="form-control form-control-sm inputcolor border-0" id="profilename" placeholder="Wai Technologies">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="Uname" class="form-label font_text">User Name <b>*</b></label>
+                                                    <input type="email" class="form-control form-control-sm inputcolor border-0" id="Uname" placeholder="admin">
+                                                </div>
+                                                <hr>
+                                                <div class="mb-3">
+                                                    Change password
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="Cpass" class="form-label font_text">Current Password <b>*</b></label>
+                                                    <input type="password" class="form-control form-control-sm inputcolor border-0" id="Cpass" placeholder="********">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="Npass" class="form-label font_text">New Password <b>*</b></label>
+                                                    <input type="password" class="form-control form-control-sm inputcolor border-0" id="Npass" placeholder="********">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="Conpass" class="form-label font_text">Confirm New Password <b>*</b></label>
+                                                    <input type="password" class="form-control form-control-sm inputcolor border-0" id="Conpass" placeholder="********">
+                                                </div>
+                                                <div class="footer" style="margin-top: 6rem;">
+                                                        <button class="btn btn-white">
+                                                            CANCEL
+                                                        </button>
+                                                        <button class="btn btn-info ms-2">
+                                                            SAVE
+                                                        </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="row mb-3 modal-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="col-2">
+                                <div class="mt-2">
+                                    <i class="bi bi-download"></i>
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <div class="font_text">
+                                    Download collected data
+                                </div>
+                                <div class="font_subtext">
+                                    Download data belongs to your account
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu drpdwn5 dark-bar-item"  >
+                            <div class="mt-2 ms-4 text-uppercase">
+                                DOWNLOAD COLLECTED DATA 
+                            </div>
+                            <hr>
+                            <div class="m-2 mt-3">
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span>  to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+    
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span> to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+    
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span> to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+    
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span> to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+    
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span> to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row pb-3">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span> to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row pb-3">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span> to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row pb-3">
+                                        <div class="col-1">
+                                            <div class="mt-1">
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="font_text">
+                                                Your data is prepared, <span style="color:#F58220 ;">Click here</span> to download.
+                                            </div>
+                                            <div class="font_subtext">
+                                                11/19/2021, 3:42:21 
+                                            </div>
+                                            <div style="font-size:xx-small ;">
+                                                18 days ago
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="dot mt-1" style="background-color: #606FA1;">
+                                                <i class="bi bi-box-arrow-down ms-1" style="font-size:large ;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end mt-3 ">
+                                    <nav aria-label="Page navigation example ">
+                                        <ul class="pagination pagination-sm ">
+                                          <li class="page-item ">
+                                            <a class="page-link">&lt;</a>
+                                          </li>
+                                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                          <li class="page-item">
+                                            <a class="page-link" href="#">&gt;</a>
+                                          </li>
+                                        </ul>
+                                    </nav>
+                                    <select class="form-select form-select-sm text-light ms-2" aria-label=".form-select-sm example" style="width: 12%; font-size:small; background-color: #2B3047; border: none;">
+                                        <option selected>10</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center border-0">
+                <button type="button" class="btn btn-white bi bi-power" data-bs-dismiss="modal"><span class="ms-1" style="font-size: x-small;"> LOGOUT </span></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-------------------------------------------------SideBar ------------------------------------------------------>
+
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left " style="width:200px;" id="mySidebar">
+        <div class="dark_sidebar h-100 dark-bar-item" id="mySidebar1">
+            <a href="#" class="w3-bar-item w3-button">
+                <i class="bi bi-chevron-double-left" onclick="w3_close()"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button text-uppercase mb-2">
+                <i class="bi bi-house-door"></i>
+                    <span class="ms-2 size-font">
+                        Dashboard
+                    </span>
+            </a>
+
+            <a href="#" class="w3-bar-item w3-button mb-2 ">
+                    <i class="bi bi-people"></i>
+                    <span class="ms-2 size-font">
+                        TENANTS
+                    </span>
+            </a>
+
+            <a href="#" class="w3-bar-item w3-button mb-2">
+                <i class="bi bi-cash-stack"></i>
+                <span class="ms-2 size-font">
+                    EDITIONS    
+                </span>
+            </a>
+
+            <a href="#" class="w3-bar-item w3-button mb-2">
+                <i class="fa-solid fa-user-gear"></i>
+                <span class="ms-2 size-font">
+                    ADMINISTRATION
+                </span>
+            </a>
+
+            <a href="#" class="w3-bar-item w3-button mb-2">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <span class="ms-2 size-font">
+                    DEMO UI COMPONENTS
+                </span>
+            </a>
+            <a href="#" class="w3-bar-item w3-button mb-2 text-center fs-4 sidebar_grid" style="">
+                <i class="bi bi-grid"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button" >
+                <div class="form-check form-switch ms-2">
+        
+                    <input class="form-check-input border " type="checkbox" role="switch" style="position: relative;" id="flexSwitchCheckChecked" checked onchange="Myfunction()">
+                    <div style="position: absolute; margin-top: 10px; margin-left: 33px; font-size:12px ;">
+                        
+                        <label class="form-check-label text-light bi bi-moon" for="flexSwitchCheckChecked"  > Dark</label>
+                    </div>
+                    <div style="position: absolute; margin-top: 10px; margin-left: -28px; font-size:12px ;">
+                        <label class="form-check-label  bi bi-sun" for="flexSwitchCheckChecked" style="color: #12141F;"> Light</label>
+                    </div>
+                </div> 
+            </a>
+        </div>
+    </div>
+
+    <!-------------------------------------------- End of SideBar --------------------------------------------------->
+
+
+
+    <!-------------------------------------------- Main Section --------------------------------------------------->
+
+    <div class="w3-main" style="margin-left:200px">
+        <div class="dark-bar-item">  
+            <div class="w3-container-fluid " id="main_container">
+                <div class="container-fluid">
+                    <!-- Hello Keanu Foster -->
+                    <div class="row">
+                        <div class="col mb-3">
+                            <div class="d-flex justify-content-between mt-4">
+                                <div>
+                                    Hello, Keanu Foster !
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-primary me-3"> Edit Mode </button>
+                                    <button class="btn btn-sm btn-info text-light me-3" value="hi" style="padding-right:0.5rem;padding-left:0.5rem;"><i class="bi bi-calendar-date"></i> Filter By Date </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 mb-2">
+                            <div class="card dark_sidebar h-100 " id="card1" style="border-radius:10px ;">
+                                <div class="chartbox mt-2" style="position: relative;">
+                                    <span style="position: absolute; margin-left:15px;"> Monthly Summary </span> 
+                                    <canvas class="clm" id="myChart"></canvas>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-2">
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <div class="card dark_sidebar " id="card2" style="border-radius:10px ;">
+                                        <div class="card-header border-0">
+                                            Sales
+                                        </div>
+                                        <div class="card-body border-0 fs-3">
+                                            $32,230.00
+                                        </div>
+                                        <div class="card-footer border-0 mb-2" style="font-size: small; color: #78F7B8;">
+                                            ▲ +$2,203.00
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="row">
+                                <div class="col mb-2">
+                                    <div class="card " id="" style="border-radius:10px ; background-color: #5800D3; color: white;">
+                                        <div class="card-header border-0">
+                                            Revenue
+                                        </div>
+                                        <div class="card-body border-0 fs-3" style="background-color:#5800D3; ;">
+                                            $9,72,900.0
+                                        </div>
+                                        <div class="card-footer border-0 mb-2" style="font-size: small;background-color:none ; color: #FFD97A;">
+                                            ▼ -$39,330.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                        <div class="col-lg-3 col-md-12 mb-2">
+                            <div class="card dark_sidebar dark-bar-item" id="card3" style="border-radius:10px ;">
+                               <div class="card-header">
+                                    <div class="d-flex justify-content-between">
+                                       <div class="div"> Profit Share</div>
+                                       <div class="div"> <i class="bi bi-arrow-clockwise"></i> </div> 
+                                    </div>
+                               </div>  
+                               <div class="card-body">
+                                <span class="fs-3"> $73,960.41 </span> 
+
+                                <div class="">
+                                    <canvas class="pie_chart" id="myChart1" style="position:relative;"></canvas>
+                                </div>
+                               </div>                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+                            <div class="container">
+                                <div class="row mb-2">
+                                    <div class="card dark_sidebar dark-bar-item " id="card4" style="border-radius:10px ;"> 
+                                        <div class="card-header">
+                                            Call Overview
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row mt-2 mb-5">
+                                                <div class="col-4">
+                                                    <div class="" >
+                                                        <canvas id="myChart3" style="position: relative; height: 75px;"></canvas>
+                                                     </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="fs-4 mt-2">
+                                                        97.5%
+                                                    </div>
+                                                    <div style="color: #B1B6D6; font-size: small;">
+                                                        Total Calls Connected
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="" >
+                                                        <canvas id="myChart4" style="position: relative; height: 75px;"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="fs-4 mt-2">
+                                                        34,49,502
+                                                    </div>
+                                                    <div style="color:#B1B6D6 ; font-size: small;">
+                                                        Total Clients Called
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card dark_sidebar dark-bar-item" id="card41" style="border-radius:10px ;">
+                                        <div class="card-header border-0">
+                                            Sales
+                                        </div>
+                                        <div class="card-body border-0 fs-3">
+                                            $32,230.00
+                                        </div>
+                                        <div class="card-footer border-0 mb-2" style="font-size: small; color: #78F7B8;">
+                                            ▲ +$2,203.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+                            <div class="card dark_sidebar h-100  dark-bar-item" id="card5" style="border-radius:10px ;"> 
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between">
+                                       <div class="div"> Daily Sales Growth</div>
+                                       <div class="div"> <i class="bi bi-arrow-clockwise"></i> </div> 
+                                    </div>
+                               </div> 
+                               
+                                <div class="card-body">
+                                    <span class="fs-4"> $3,73,960.403 </span> 
+                                    <div class="mb-1" style="font-size: small;background-color:none ; color: #F76161;">
+                                        ▼ -$5850.75
+                                    </div>
+                                    <div>
+                                        <canvas class="brchart" id="myChart5"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-2">
+                            <div class="card dark_sidebar dark-bar-item " id="card6" style="border-radius:10px ; max-height: 429px !important;overflow-y: scroll; ">
+                                <div class="card-header ">
+                                    <div class="d-flex justify-content-between" >
+                                       <div class="div"> Member Activity</div>
+                                       <div class="div"> <i class="bi bi-arrow-clockwise"></i> </div> 
+                                    </div>
+                               </div> 
+                               <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table dark-bar-item">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col" style="font-size: 12px;"> Member </th>
+                                            <th scope="col" style="font-size: 12px;"> Cases </th>
+                                            <th scope="col" style="font-size: 12px;"> Active </th>
+                                            <th scope="col" style="font-size: 12px;"> Closed </th>
+                                            <th scope="col" style="font-size: 12px;"> Rate </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td> 
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img src="/Images/Brian.png" alt="">
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="font_text">
+                                                            Brian
+                                                        </div>
+                                                        <div class="font_subtext">
+                                                            Software Developer
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="">75</td>
+                                            <td class="">36</td>
+                                            <td class="">36</td>
+                                            <td style="color:#9EFCB0;">92%</td>
+                                          </tr>
+                                          <tr>
+                                            <td> 
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img src="/Images/Jane.png" alt="">
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="font_text">
+                                                            Jane
+                                                        </div>
+                                                        <div class="font_subtext">
+                                                            Senior Manager
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>29</td>
+                                            <td>34</td>
+                                            <td>34</td>
+                                            <td style="color:#FFD97A;">46%</td>
+                                          </tr>
+                                          <tr>
+                                            <td> 
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img src="/Images/Tim.png" alt="">
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="font_text">
+                                                            Tim
+                                                        </div>
+                                                        <div class="font_subtext">
+                                                            Sales Executive
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>38</td>
+                                            <td>104</td>
+                                            <td>104</td>
+                                            <td style="color:#F76161;">16%</td>
+                                          </tr>
+                                          <tr>
+                                            <td> 
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img src="/Images/Kate.png" alt="">
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="font_text">
+                                                            Kate
+                                                        </div>
+                                                        <div class="font_subtext">
+                                                            Manager
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>96</td>
+                                            <td>93</td>
+                                            <td>93</td>
+                                            <td style="color:#EFAD07;">30%</td>
+                                          </tr>
+                                          <tr>
+                                            <td> 
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img src="/Images/Brian.png" alt="">
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="font_text">
+                                                            Brian
+                                                        </div>
+                                                        <div class="font_subtext">
+                                                            Software Developer
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>75</td>
+                                            <td>36</td>
+                                            <td>36</td>
+                                            <td style="color:#9EFCB0;">92%</td>
+                                          </tr>
+                                          <tr>
+                                            <td> 
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img src="/Images/Jane.png" alt="">
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="font_text">
+                                                            Jane
+                                                        </div>
+                                                        <div class="font_subtext">
+                                                            Senior Manager
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>29</td>
+                                            <td>34</td>
+                                            <td>34</td>
+                                            <td style="color:#FFD97A;">46%</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                  </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="font_text mb-2" style="color:#A2AAC9;">
+                                ANZAngular105Demo Standard | API: v10.5.0 | Client: v10.5.0 [20211115]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- End of Main Section----------------------------------------------->
+
+
+  <script>
+    var count=0;
+    function Myfunction(){
+        
+        count++;
+        if(count%2==0){
+            
+            document.getElementById("mainb").setAttribute("class","bg-dark")
+            document.getElementById("mySidebar1").setAttribute("class","dark_sidebar h-100 dark-bar-item");
+            document.getElementById("main_container").setAttribute("class","dark-bar-item");
+            document.getElementById("card1").setAttribute("class","card h-100 dark_sidebar");
+            document.getElementById("card2").setAttribute("class","card dark_sidebar dark-bar-item");
+            document.getElementById("card3").setAttribute("class","dark_sidebar card dark-bar-item");
+            document.getElementById("card4").setAttribute("class","dark_sidebar card dark-bar-item");
+            document.getElementById("card41").setAttribute("class","dark_sidebar card dark-bar-item");
+            document.getElementById("card5").setAttribute("class","card dark_sidebar h-100  dark-bar-item");
+            document.getElementById("card6").setAttribute("class","card dark_sidebar dark-bar-item");
+        }
+        else{
+
+            document.getElementById("mainb").setAttribute("class","bg-light");
+            document.getElementById("mySidebar1").setAttribute("class","light_sidebar h-100 light-bar-item"); 
+            document.getElementById("main_container").setAttribute("class","light-bar-item");
+            document.getElementById("card1").setAttribute("class","card h-100 bg-light border"); 
+            document.getElementById("card2").setAttribute("class","card light_sidebar light-bar-item");
+            document.getElementById("card3").setAttribute("class","card light_sidebar light-bar-item");
+            document.getElementById("card4").setAttribute("class","card light_sidebar light-bar-item");
+            document.getElementById("card41").setAttribute("class","card light_sidebar light-bar-item");
+            document.getElementById("card5").setAttribute("class","card light_sidebar h-100  light-bar-item");
+            document.getElementById("card6").setAttribute("class","card light_sidebar light-bar-item");
+        }
+    }
+    
+    </script>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+        
+        function bgGradient( ctx, chartArea, scales){
+            const {left, right, top, bottom, width, height} = chartArea;
+            const {x , y}= scales;
+            const gradientBackground = ctx.createLinearGradient(0,top,0,bottom);
+            gradientBackground.addColorStop(0,'rgba(63, 28, 255,0.2)');
+            gradientBackground.addColorStop(1,'rgba(22, 22, 24,6)');
+            return gradientBackground;
+        }
+        function bgGradient1( ctx, chartArea, scales){
+            const {left, right, top, bottom, width, height} = chartArea;
+            const {x , y}= scales;
+            const gradientBackground = ctx.createLinearGradient(0,top,0,bottom);
+            gradientBackground.addColorStop(0,'rgba(77, 207, 255,0.1)');
+            gradientBackground.addColorStop(1,'rgba(22, 22, 24,6)');
+            return gradientBackground;
+        }
+    </script>
+
+    <script>
+        const myChart1 = new Chart(
+          document.getElementById('myChart1'),
+          config1
+        );
+    </script>
+    <script>
+        const myChart3 = new Chart(
+          document.getElementById('myChart3'),
+          config3
+        );
+    </script>
+   <script>
+    const myChart4 = new Chart(
+      document.getElementById('myChart4'),
+      config4
+    );
+</script>
+<script>
+    const myChart5 = new Chart(
+      document.getElementById('myChart5'),
+      config5
+    );
+  </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) 
+    {
+        
+    const linkColor = document.querySelectorAll('.modal-btn')
+    linkColor.forEach(l=> l.classList.remove('active'));
+    function colorLink(){
+        if(linkColor){
+            linkColor.forEach(l=> l.classList.remove('active'))
+    this.classList.add('active')
+    }
+    }
+    linkColor.forEach(l=> l.addEventListener('click', colorLink))
+    
+     // Your code to run since DOM is loaded and ready
+    });
+</script>
+    
+
+</body>
+
+</html>
+
+

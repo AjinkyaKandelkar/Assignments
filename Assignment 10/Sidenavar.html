@@ -71,14 +71,16 @@
     data: data1,
     options: {
         maintainAspectRatio: false,
+        responsive:true,
         cutout:'80%',
         plugins: {
+            
             legend: {
                 position:    'bottom',
                 labels: {
                     boxWidth: 15,
                     boxHeight: 15,
-                    usePointStyle:'true',
+                    usePointStyle:'true',   
                 }
             }
         }
@@ -649,7 +651,8 @@
                         </div>
 <!-- End of third row -->
                         <div class="row">
-                            <div class="col-md-8 col-sm-12">
+                            <!-- Table -->
+                            <div class="col-md-8 col-sm-12 mb-sm-2">
                                 <div class="card">
                                     <div class="table-responsive p-4">
                                         <table class="table caption-top table-borderless">
@@ -693,7 +696,8 @@
                                       </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-12">
+                            <!-- Red Pie chart -->
+                            <div class="col-md-4 col-sm-12 mb-sm-2">
                                 <div class="card h-100" >
                                     <div class="card-header fw-semibold font_text">
                                         Leave report
@@ -706,7 +710,408 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 mb-sm-2">
+                                <div class="card">
+                                    <div class=" card-header fw-semibold font_text border-0" style="background-color: white;">
+                                        Projects
+                                    </div>   
+                                    <div class=" card-header fw-semibold font_text mt-3">
+                                        Project Name
+                                    </div>  
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <h5 class="fw-semibold text-center" style="color:#FF980E ;"> ATP </h5>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="row font_text"> ATP Jobs</div>
+                                                    <div class="row font_subtext text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row mb-lg-2 ">
+                                                <div class="col-2">
+                                                    <h5 class="fw-semibold text-center" style="color:#1F2BCC ;"> M </h5>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="row font_text"> Mazars</div>
+                                                    <div class="row font_subtext text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <h5 class="fw-semibold text-center" style="color:#4BD16E ;"> GL </h5>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="row font_text"> Green Light</div>
+                                                    <div class="row font_subtext text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <h5 class="fw-semibold text-center" style="color:#51DCEC ;"> D </h5>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="row font_text"> Dekra</div>
+                                                    <div class="row font_subtext text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-lg-4 ">
+                                                <span class="font_subtext text-info fw-semibold " >view all(6)</span> 
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-12 mb-sm-2">
+                                <div class="card">
+                                    <div class=" card-header fw-semibold font_text border-0" style="background-color: white;">
+                                        Task
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                  <th scope="col">Name</th>
+                                                  <th scope="col">Start Date</th>
+                                                  <th scope="col">End Date</th>
+                                                  <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                  <td scope="row">
+                                                    
+                                                    <div class="d-flex  justify-content-between mb-1">
+                                                        <div>
+                                                            New Project loader
+                                                        </div> 
+                                                        <div>
+                                                            70%
+                                                        </div>
+                                                    </div> 
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                  </td>
+                                                  <td>12 Nov, 2020</td>
+                                                  <td>12 Nov, 2020</td>
+                                                  <td>In Progress</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">
+                                                        <div class="d-flex  justify-content-between mb-1">
+                                                            <div>
+                                                                Client detail page
+                                                            </div> 
+                                                            <div>
+                                                                65%
+                                                            </div>
+                                                        </div> 
+                                                      
+                                                      <div class="progress">
+                                                          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    </td>
+                                                    <td>12 Nov, 2020</td>
+                                                    <td>12 Nov, 2020</td>
+                                                    <td>In Progress</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">
+                                                        <div class="d-flex  justify-content-between mb-1">
+                                                            <div>
+                                                                Role wise dashboard
+                                                            </div> 
+                                                            <div>
+                                                                60%
+                                                            </div>
+                                                        </div> 
+                                                     
+                                                      <div class="progress">
+                                                          <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                    </td>
+                                                    <td>12 Nov, 2020</td>
+                                                    <td>12 Nov, 2020</td>
+                                                    <td>In Progress</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">
+                                                        <div class="d-flex  justify-content-between mb-1">
+                                                            <div>
+                                                                Help section screen
+                                                            </div> 
+                                                            <div>
+                                                                25%
+                                                            </div>
+                                                        </div> 
+                                                      <div class="progress">
+                                                          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                    </td>
+                                                    <td>12 Nov, 2020</td>
+                                                    <td>12 Nov, 2020</td>
+                                                    <td>In Progress</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="border-bottom: none; padding-top: 3px!important;padding-bottom: 0px!important;">
+                                                        <span class="font_subtext text-info fw-semibold">view all(6)</span>
+                                                    </td>
+                                                  </tr>
+                                            </tbody>
+                                        </table>
+                                      </div>
+                            </div>
+                        </div>
+                        </div>
+
+<!-- start of the Last row -->
+                        <div class="row">
+<!-- Productive apps -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-header font_text fw-semibold">
+                                        Most Productive Apps
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #555AAC;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/teams.png" alt="" style="width: 35%;"><span class="ms-2 font_subtext">Teams</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #FA5EF1;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/Adobe_XD_CC_icon.svg.png" alt="" style="width: 34%;"><span class="ms-2 font_subtext">Adobe Xd</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3" >00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #1D6FB5;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/Outlook.png" alt="" style="width: 35%;"><span class="ms-2 font_subtext">Outlook</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #FF0000;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/Zoho.svg" alt="" style="width: 35%;"><span class="ms-2 font_subtext">Zoho</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span class="font_subtext text-info fw-semibold mt-3 " >view all(123)</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- Unproductive cards -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-header font_text fw-semibold">
+                                        Unproductive Apps
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #555AAC;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/icons8-youtube-color/icons8-youtube-48.svg" alt="" style="width: 35%;"><span class="ms-2 font_subtext">Youtube</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #F77900;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/icons8-instagram-96.svg" alt="" style="width: 25%;"><span class="ms-2 font_subtext">Instagram</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3" >00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #1D6FB5;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/Hubspot.svg   " alt="" style="width: 35%;"><span class="ms-2 font_subtext">Hubspot</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <div class="col">
+                                                <div class="card p-1 border-0" >
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                             
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- Neutral App -->
+                            <div class="col-lg-4 col-md-12">
+                                <div class="card">
+                                    <div class="card-header font_text fw-semibold">
+                                        Neautral Apps
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #FF7D8B;">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/earth.svg" alt="" style="width: 20%;"><span class="ms-2 font_subtext">practicemock.com</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #FF7D8B">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/earth.svg" alt="" style="width: 25%;"><span class="ms-2 font_subtext">pdfmake.org</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3" >00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div class="card p-1" style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #FF7D8B">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/earth.svg" alt="" style="width: 25%;"><span class="ms-2 font_subtext">azurewebsite.in</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="card p-1 " style="border-radius: 8px!important; background-color: rgba(0, 0, 0, 0.03); border-right-width: 5px; border-right-color: #FF7D8B">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="m-2">
+                                                            <img src="/Images/earth.svg"  alt="" style="width: 13%;"><span class="ms-2 font_subtext imgtext  ">prograssivedemo.azurewebsites.net</span>  
+                                                        </div>
+                                                        <div class="m-2 font_subtext mt-3 imgtext">00:30 h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span class="font_subtext text-info fw-semibold mt-3 " >view all(176)</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- The Play Store row -->
+                            <div class="row mt-4 ">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card ps-3 pe-3 pt-2 pb-2 m-2 shadow-lg " style="border-radius: 10px;">
+                                        <div class="row ">
+                                            <div class="col-md-4 col-sm-12 ">
+                                                <img src="/Images/Apple logo.svg" style="width: 90%;" alt="">
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 font_subtext text-info desktop-visible">
+                                                <div class="text-center">Download on the</div> 
+                                                <div class="  fw-bold fs-6"> Appstore</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card ps-3 pe-3 pt-2 pb-2 m-2 shadow-lg" style="border-radius: 10px;">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <img src="/Images/google-play icon.svg" style="width: 80%;" alt="">
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 font_subtext text-info desktop-visible">
+                                                <div class="text-center">Download on the</div> 
+                                                <div class=" fw-bold fs-6"> Playstore</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card ps-3 pe-3 pt-2 pb-2 m-2 shadow-lg" style="border-radius: 10px;" >
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <img src="/Images/Windows 10.png" class="text-center" style="width: 80%;" alt="">
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 font_subtext text-info desktop-visible">
+                                                <div class="text-center ">Download on the</div> 
+                                                <div class="  fw-bold fs-6"> Windows </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- In Time Pro Logo -->
+                        <div class="row">
+                            <div class="d-flex justify-content-center mt-5">
+                            
+                                    <img src="/Images/IntimeProLastsmall.png" alt="">
+                                
+                            </div>
+                            <div class="row">
+                                <div class="d-flex justify-content-center mt-3">
+                                    <span class="font_subtext text-muted">
+                                        Copyright 2020 WAi Technologies All Rights Reserved | Privacy Policy | Terms Of Service
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                 </div>
            </div>
         </div>

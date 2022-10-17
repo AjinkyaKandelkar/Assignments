@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<title>Timepass</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const labels1 = [
+    '0',
+    '2',
+    '3',
+    '4',
+    '5',
+    '10k',
+    '7',
+    '8',
+    '9',
+    '10',
+    '20k',
+    '12',
+    '13',
+    '14',
+    '15',
+    '30k',
+    '17',
+    '18',
+    '19',
+    '20',
+    '40k',
+  ];
+
+  const data5 = {
+    labels: labels1,
+    datasets: [{
+      backgroundColor: '#2EAEEF',
+      borderColor: '#0796E3',
+      data: [6, 4.5 , 5.8, 3, 5, 4, 7, 1.5,2.5,4.9,9,4.5,8.7,3,7.8,4,9.2,1.5,2.5,4.7,9.2],
+      borderRadius:10,
+    }]
+  };
+
+  const config5 = {
+    type: 'bar',
+    data: data5,
+    options: {
+        plugins:{
+            legend:{
+                display:false
+            }
+        },
+        scales:{
+            y:{
+                beginAtZero:true,
+                grid:{ 
+                    color:(context)=>{
+                        if(context.tick.value ==0){
+                            return 'rgba(255,255,255,1)'
+                        } else{
+                            return 'rgba(0,0,0,0.1)'
+                        }
+                    },
+                },
+                ticks:{
+                    maxTicksLimit:11,
+                    callback:((context,index)=>{
+                        let response;
+                        if(context==0){
+                            response='';
+                        }
+                        else if(context==1){
+                            response='Day 10 ';
+                        }
+                        else if(context==2){
+                            response='Day 9 ';
+                        }
+                        else if(context==3){
+                            response='Day 8 ';
+                        }
+                        else if(context==4){
+                            response='Day 7 ';
+                        }
+                        else if(context==5){
+                            response='Day 6 ';
+                        }
+                        else if(context==6){
+                            response='Day 5 ';
+                        }
+                        else if(context==7){
+                            response='Day 4 ';
+                        }
+                        else if(context==8){
+                            response='Day 3 ';
+                        }
+                        else if(context==9){
+                            response='Day 2 ';
+                        }
+                        else if(context==10){
+                            response='Day 1 ';
+                        }
+
+                        
+                            return response;
+                        
+                    })
+                }
+            },
+            x:{
+                grid:{ 
+                    color:(context)=>{
+                        if(context.tick.value ==0){
+                            return 'rgba(255,0,0,1)'
+                        } else{
+                            return 'rgba(75,75,25,1)'
+                        }
+                    },
+                },
+                ticks:{
+                    maxTicksLimit:5,
+
+                    align: 'inner',
+                }
+            }
+        }
+    }
+  };
+</script>
+
+<style>
+ 
+</style>
+ 
+<body id="mainb" class="" > 
+    
+    <!----------------------------------------------- Navbar ------------------------------------------------------->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+                <img src="/Images/Raaghu-logo-mfe-white.png" alt="" style="width: 80%;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                </li>
+            </ul>
+            <ul class=" d-flex  navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link ">
+                        <i class="bi fs-5 bi-bell position-relative border-end text-light">
+                            <span
+                                class="position-absolute top-0 start-50  badge border border-danger bg-danger rounded-circle bg-alert p-1">
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi fs-5 bi-gear text-light">
+                        </i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="container-fluid">
+                            <div class="row ">
+                                <div class="col-2">
+                                    <div>
+                                        <img src="/Images/Usersmall.png" alt="" style="max-width:30px ;" >
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="ms-3">
+                                        <div style="margin-top: -2px;">
+                                            <span style="font-size:13px ;">
+                                                Host Admin 
+                                            </span>
+                                        </div>
+                                        <div style="margin-top: -10px;">
+                                            <span class="" style="font-size: 10px;">
+                                                Keanu Foster
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <div class="mt-2">
+                                        <i class="bi bi-chevron-down" ></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </a>
+                    
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <a data-toggle="modal" href="#exampleModal" class="btn btn-primary">Launch modal</a>
+
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+        <div class="modal-dialog" >
+        <div class="modal-content dark_sidebar dark-bar-item ">
+            <div class=" d-flex justify-content-end">
+                <i class="bi bi-x mt-2 " style="cursor:pointer; font-size: 25px;" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <h5 class="modal-title text-center" id="exampleModalLabel">
+                <img src="/Images/ModalUser.png" alt="" style="position: relative;">
+                <img src="/Images/Edit.png" alt="" style="position: absolute; margin-top: 120px; margin-left: -38px;">
+            </h5>
+            
+            <div class="modal-body">
+                <div class="text-center">
+                    Admin
+                </div>  
+                <div class="container mt-5">
+                    <div class="row  mb-3 modal-btn active" id="modalno1" onclick="modalopen()">
+                        <div class="col-2">
+                            <div class="mt-2">
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="font_text">
+                                Manage linked accounts
+                            </div>
+                            <div class="font_subtext">
+                                Manage accounts linked to your account
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 modal-btn" id="num2" onclick="modalopen(num2)">
+                        <div class="col-2">
+                            <div class="mt-2">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="font_text">
+                                Manage authority delegations
+                            </div>
+                            <div class="font_subtext">
+                                Manage authority accounts
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 modal-btn">
+                        <div class="col-2">
+                            <div class="mt-2">
+                                <i class="bi bi-person"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="font_text">
+                                Login attempts
+                            </div>
+                            <div class="font_subtext">
+                                See recent login attempts for your account
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 modal-btn pt-2 pb-2">
+                        <div class="col-2 ">
+                            <div class="mt-2">
+                                <i class="bi bi-gear"></i>
+                            </div>
+                        </div>
+                        <div class="col-10  ">
+                            <div class="font_text">
+                                My settings
+                            </div>
+                            <div class="font_subtext">
+                                Change your account settings
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 modal-btn">
+                        <div class="col-2">
+                            <div class="mt-2">
+                                <i class="bi bi-download"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="font_text">
+                                Download collected data
+                            </div>
+                            <div class="font_subtext">
+                                Download data belongs to your account
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-start">
+                <button type="button" class="btn btn-dark bi bi-power" data-bs-dismiss="modal"><span class="ms-1"> Logout </span></button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2" >
+            <div class="modal-dialog" style="right:20%;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">2nd Modal title</h4>
+                  <div class=" d-flex justify-content-end">
+                    <i class="bi bi-x mt-2 " style="cursor:pointer; font-size: 25px;" onclick="close()">
+                     </i>
+                </div>
+                </div><div class="container"></div>
+                <div class="modal-body">
+                  ..
+                </div>
+                <div class="modal-footer">
+                  <a href="#" data-dismiss="modal" class="btn">Close</a>
+                  <a href="#" class="btn btn-primary">Save changes</a>
+                </div>
+              </div>
+            </div>
+    </div>
+    <div class="modal" id="myModal3" >
+        <div class="modal-dialog" style="right:20%;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">2nd Modal title</h4>
+              <div class=" d-flex justify-content-end">
+                <i class="bi bi-x mt-2 " style="cursor:pointer; font-size: 25px;" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            </div><div class="container"></div>
+            <div class="modal-body">
+              ..
+            </div>
+            <div class="modal-footer">
+              <a href="#" data-dismiss="modal" class="btn">Close</a>
+              <a href="#" class="btn btn-primary">Save changes</a>
+            </div>
+          </div>
+        </div>
+</div>
+        
+        
+   
+    
+    
+  <script>
+    var count=0;
+    function Myfunction(){
+        
+        count++;
+        if(count%2==0){
+            document.getElementById("mainb").setAttribute("class","bg-dark")
+        }
+        else{
+            document.getElementById("mainb").setAttribute("class","bg-light")   
+        }
+    }
+  </script>
+
+<script>
+    function modalopen(num2)
+    {
+        document.getElementById("myModal2").style.display="block";
+        if(num2=="num2")
+        {
+            document.getElementById("myModal3").style.display="block";
+        }
+    }
+    function close()
+    {
+
+        document.getElementById("myModal2").style.display="none";
+        document.getElementById("myModal3").style.display="none";
+    }
+</script>
+   
+</body>
+
+</html>
+
+

@@ -1,0 +1,220 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+::-webkit-scrollbar{
+
+    display: none;
+  
+  }
+/************ Dark Light Button ***********/
+
+.form-switch .form-check-input {
+    width:9rem;
+    height: 2rem;
+}
+.form-check-input:checked {
+    background-color: #12141F;
+    border-color: #12141F;
+}
+.form-switch .form-check-input {
+background-position: right center;
+background-image:none!important;}
+
+
+/* *********************************** */
+/* Dropdown */
+.dropdown-item
+{
+    color: #7D8EC6;
+}
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #34384F;
+}
+
+.dropdown-menu-dark {
+    --bs-dropdown-color: #dee2e6;
+    --bs-dropdown-bg: #444E73;
+}
+
+
+/* ************** Sidebar change color ******************* */
+.dark_sidebar {
+    background-color: #12141F;
+}
+.light_sidebar {
+    background-color: white;
+}
+.navbar-dark{
+    background-color: #191B29!important;
+}
+
+.dark-bar-item{
+    color: white!important;
+}
+.light-bar-item{
+    color:#12141F!important;
+}
+.size-font{
+    font-size: 12px;
+}
+
+.brchart{
+    height: 300px!important;
+}
+/* ************** end Sidebar change color ******************* */
+
+.font_text{
+    font-size: 12px;
+}
+.font_subtext{
+    font-size: 10px;
+    color: #B4BFCC;
+}
+
+.table>:not(caption)>*>* {
+    padding: 0.8rem 0.5rem;
+}
+td{
+    font-size: small!important;
+    color: #B4BFCC;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .sidebar_grid{
+    margin-top: 330px;
+  }
+
+  /************************************* Modal Right Code **********************************/
+  
+  .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 270px;
+    height: 100%;
+    right: 0px;
+  }
+  
+  .modal-content {
+  
+    height: 100%;
+  
+  }
+
+  .modal-btn:hover{
+    background-color: #252839;
+    cursor: pointer;
+  }
+
+
+  .active {
+    color: var(--bs-info);
+    background-color: #252839;
+}
+/*******************  Pagination ******************/
+.pagination{
+    --bs-pagination-bg: #252839;
+    --bs-pagination-color: #ffff;
+    --bs-pagination-border-width: 0px;
+    --bs-pagination-hover-bg: #323E66;
+    --bs-pagination-hover-color: #ffff;
+    --bs-pagination-focus-color: white;
+    --bs-pagination-focus-bg: #323E66;
+    
+    --bs-pagination-padding-x: 0.7rem;
+}
+.page-link {
+    border-radius:30px ;
+}
+.page-item:first-child .page-link{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.page-item:last-child .page-link {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+  /**************************** End of Modal Right Code ***********************************/
+
+  .drpdwn{
+    margin-left: -17.9rem!important;
+    margin-top: -22.6rem!important;
+    height: 100vh;
+    background-color: #252839;
+    --bs-dropdown-min-width: 34rem;
+    border-radius: 0;
+  }
+  .drpdwn2{
+    margin-left: -17.9rem!important;
+    margin-top: -27rem!important;
+    height: 100vh;
+    background-color: #252839;
+    --bs-dropdown-min-width: 34rem;
+    border-radius: 0;
+  }
+
+  .drpdwn3{
+    margin-left: -17.9rem!important;
+    margin-top: -31.20rem!important;
+    height: 100vh;
+    background-color: #252839;
+    --bs-dropdown-min-width: 45rem;
+    border-radius: 0;
+  }
+  .drpdwn4{
+    margin-left: -17.9rem!important;
+    margin-top: -35.4rem!important;
+    height: 100vh;
+    background-color: #252839;
+    --bs-dropdown-min-width: 34rem;
+    border-radius: 0;
+  }
+  .drpdwn5{
+    margin-left: -17.9rem!important;
+    margin-top: -39.5rem!important;
+    height: 100vh;
+    background-color: #252839;
+    --bs-dropdown-min-width: 34rem;
+    border-radius: 0;
+  }
+  .inputcolor{
+    background-color: #2B3047;
+  }
+
+  .btn-white{
+    --bs-btn-border-color: white;
+    --bs-btn-color: white;
+    --bs-btn-border-radius: 5px;
+    --bs-btn-font-size: 0.8rem;
+    --bs-btn-padding-x: 1.5rem;
+  }
+  .btn-info{
+    --bs-btn-color: white;
+    --bs-btn-border-radius: 5px;
+    --bs-btn-font-size: 0.8rem;
+    --bs-btn-padding-x: 2rem;
+  }
+  /************************************************************ Media **************************************************************/
+@media (min-width:1475px) {
+    .chartbox{
+        height: 200px!important;
+    }
+    .clm{
+        height: 140%!important;
+    }
+    .pie_chart{
+        height: 205px!important;
+    }
+}
+@media (max-width:1192px){
+  .sidebar_grid{
+    margin-top: 230px;
+  }
+
+}
